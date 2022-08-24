@@ -1,0 +1,260 @@
+.enterprise{
+  &_section-top{
+    padding-top: 250px;
+    padding-bottom: 380px;
+    .pattern{
+      bottom: 0;
+      right: 0;
+    }
+
+  }
+  &_col-text{
+    max-width: 483px;
+    .it_section-top__title{
+      margin-top: 12px;
+    }
+    .section-top_description, .section-top_caption{
+      font-size: 20px;
+      line-height: 32px;
+    }
+    .btn-wrap{
+      display: flex;
+      margin-top: 40px;
+    }
+    .btn-no-credit{
+      padding: 0;
+      margin-left: 32px;
+    }
+  }
+  &-benefits{
+    padding-top: 60px;
+    padding-bottom: 180px;
+    .blocks{
+      margin-top: 60px;
+      justify-content: space-between;
+      .block{
+
+        &-select{
+          ul{
+            li{
+              display: flex;
+              align-items: center;
+              font-family: 'Poppins-Medium', sans-serif;
+              font-size: 24px;
+              line-height: 40px;
+              padding: 16px 0 16px 38px;
+              border-left: 2px solid @stroke;
+              position: relative;
+              &.active{
+                &:before{
+                  content: '';
+                  display: block;
+                  position: absolute;
+                  left: -2px;
+                  top: 0;
+                  width: 4px;
+                  height: 72px;
+                  background: @main_light_blue;
+                  border-radius: 0 3px 3px 0;
+                }
+                .number{
+                  background: @main_light_blue;
+                }
+                .text{
+                  color: @main_text;
+                }
+              }
+              .number{
+                font-family: "Inter-Regular", sans-serif;
+                font-size: 16px;
+                line-height: 24px;
+                background: @icon;
+                border-radius: @main_radius * 2;
+                padding: 4px 16px;
+                color: white;
+              }
+              .text{
+                margin-left: 16px;
+              }
+            }
+          }
+        }
+        &-pic{
+          padding: 24px 24px 40px;
+          max-width: 712px;
+          border-radius: @main_radius;
+          &-text{
+            margin-top: 14px;
+            font-size: 20px;
+            line-height: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+.our-mission{
+  padding-top: 80px;
+  padding-bottom: 100px;
+  &_container{
+      max-width: 1240px;
+  }
+  .blocks{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    .block{
+      &_text{
+        max-width: 500px;
+        .tools-like_text{
+          font-size: 20px;
+          line-height: 32px;
+        }
+        &-percent{
+          margin-top: 144px;
+          font-family: "Poppins-SemiBold", sans-serif;
+          font-size: 20px;
+          line-height: 32px;
+        }
+        &-down{
+          margin-top: 8px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        &-pic{
+          max-width: 414px;
+          top: 69px;
+          right: -90px;
+        }
+      }
+      &_pic{
+        max-width: 590px;
+        .progress-bar{
+          display: flex;
+          align-items: center;
+          width: 100%;
+          margin-top: 30px;
+          border-radius: @main_radius;
+          box-shadow: @cards_shadow;
+          background: @background_white;
+          padding: 24px;
+          &_icon{
+            height: 72px;
+          }
+          &_wrap{
+            margin-left: 24px;
+            position: relative;
+          }
+          &_title{
+            display: inline-block;
+            font-family: "Inter-Regular", sans-serif;
+            font-size: 20px;
+            line-height: 32px;
+            margin-bottom: 12px;
+            //color: @body_text;
+          }
+          &_percent{
+            position: absolute;
+            right: 0;
+            margin-left: auto;
+            font-size: 20px;
+            line-height: 32px;
+            font-family: "Poppins-SemiBold", sans-serif;
+          }
+          &:first-of-type{
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Relevant progress bar CSS */
+.bar {
+  background: @background_grey;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  margin: auto;
+  &.winn{
+    background: @green_3;
+    .progress{
+      background: @main_green;
+    }
+  }
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background: @stroke;
+  transition: 600ms cubic-bezier(0.6, 0, 0.38, 1);
+}
+
+
+/* Pen Asthetics */
+
+#barcontainer {
+  position: relative;
+  top: 8px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+
+.reliable{
+  &_row{
+    &-trial{
+      margin-top: 60px;
+      justify-content: flex-start;
+      padding-left: 25px;
+      .block{
+        width: 100%;
+        max-width: 380px;
+        height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: @main_radius;
+        box-shadow: @cards_shadow;
+        background: @background_white;
+        margin-right: 30px;
+      }
+      .btn{
+        align-self: center;
+        margin-left: 118px;
+      }
+    }
+  }
+}
+
+.loved-by{
+  .line{
+    width: 70px;
+    height: 2px;
+    background: rgba(255, 255, 255, .1);
+    &+.block_description{
+      color: rgba(146, 164, 216, 1);
+    }
+  }
+  &_flags{
+    display: block;
+    margin: 60px auto 0;
+  }
+  .every-month{
+    margin-top: 24px;
+  }
+  .bg-right{
+    right: 0;
+    top: 10%;
+  }
+  .bg-left{
+    bottom: 0;
+    left: 0;
+  }
+}

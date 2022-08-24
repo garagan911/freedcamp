@@ -1,0 +1,1419 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Features</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/Favicon.svg">
+    <link href="assets/style/css/style.css" rel="stylesheet">
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script>-->
+    <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendor/jquery-migrate-1.2.1.min.js"></script>
+</head>
+<body>
+<header class="header position-fixed d-flex">
+    <div class="header_logo">
+        <a href="/">
+            <img class="white-logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+            <img class="dark-logo" src="assets/images/Header/dark-logo.svg" alt="freedcamp">
+        </a>
+    </div>
+    <button class="mob-menu">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+    </button>
+    <nav class="header-nav">
+        <ul class="d-flex inter-m">
+            <li class="sub-menu position-relative">Products</li>
+            <li class="sub-menu position-relative">Features</li>
+            <li class="header-nav_enterprise"><a href="file-edit.html" class="enterprise">Enterprise</a></li>
+            <li><a href="Issue-Tracker.html" class="price">Pricing</a></li>
+            <li><a class="inter-b login position-relative" id="login" href="#">Login</a></li>
+            <li><a class="btn header-nav_btn btn-secondary-darkbg inter-b" href="#">Get Started For Free</a></li>
+        </ul>
+    </nav>
+    <div class="menu-login position-absolute">
+        <img class="position-absolute arrow-top" src="assets/images/login/Polygon 6.svg" alt="">
+        <div class="login_body-content">
+            <div class="login_form">
+                <h1 class="login_title">Login</h1>
+                <form class="login_form-wrapper" action="">
+                    <!----------------------------------------------------------------------------------------
+                    When the field is valid, you can use the class 'valid' when the field is invalid 'invalid
+                    ----------------------------------------------------------------------------------------->
+                    <label class="label-text position-relative">
+                        <svg class="position-absolute z-index-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                                  stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#969DB3"
+                                  stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                        <img class="position-absolute info-field z-index-1 invalid-pic d-none"
+                             src="assets/images/login/Attention.svg" alt="">
+                        <img class="position-absolute info-field z-index-1 valid-pic d-none"
+                             src="assets/images/login/Check.svg" alt="">
+                        <input class="form-field" type="text" placeholder="Email Address">
+                    </label>
+                    <label class="label-text position-relative">
+                        <img class="position-absolute z-index-1" src="assets/images/login/Password.svg" alt="">
+                        <input class="form-field" type="password" id="myInput" placeholder="Password">
+                        <img src="assets/images/login/Eye.svg" id="pass-status" class="eye position-absolute"
+                             aria-hidden="true" onClick="viewPassword()">
+
+                        <script>
+                            function viewPassword() {
+                                var passwordInput = document.getElementById('myInput');
+                                var passStatus = document.getElementById('pass-status');
+
+                                if (passwordInput.type == 'password') {
+                                    passwordInput.type = 'text';
+                                    passStatus.className = 'eye-slash position-absolute';
+                                    passStatus.src = "assets/images/login/Eye-text.svg";
+
+                                } else {
+                                    passwordInput.type = 'password';
+                                    passStatus.className = 'eye position-absolute';
+                                    passStatus.src = "assets/images/login/Eye.svg";
+                                }
+                            }
+                        </script>
+                    </label>
+                    <div class="form-group">
+                        <input type="checkbox" id="logged">
+                        <label for="logged" class="text-dark">Keep me logged in for 2 weeks</label>
+                    </div>
+                    <button class="btn btn-main_big btn-continue text-white w-100 d-block">Continue</button>
+                    <a class="btn_forgot-pass text-blue d-block" href="">Forgot Password?</a>
+                    <div class="text-gray login-with position-relative"><span
+                            class="bg-white position-relative z-index-1 text-dark">or login with</span></div>
+                    <div class="gmail_login">
+                        <img src="assets/images/login/btn_google_signin.png" alt="">
+                    </div>
+                    <div class="social">
+                        <a href=""><img src="assets/images/login/facebook.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/linkedin.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/twitter.svg" alt=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="features">
+    <section class="section-top fe_section-top bg-blue-gradient position-relative">
+        <img class="position-absolute pattern" src="assets/images/file-edit/Mask Group.png" alt="">
+        <!--        <img class="position-absolute pattern-2" src="assets/images/file-edit/Group 48096083.svg" alt="">-->
+        <div class="section-top_container container position-relative">
+            <div class="content-wrap position-relative">
+                <div class="section-top_caption text-white poppins-b text-center text-caption-yellow">features
+                </div>
+                <h1 class="section-top_title text-white poppins-sb text-center">boost Your productivity with hundrets of
+                    features</h1>
+                <p class="section-top_description inter-r text-center text-white-top">Freedcamp comes with all the
+                    mission critical collaboration tools you need to boost productivity <span
+                            class="text-white title-m">(for free).</span></p>
+                <form class="features_form-wrap" action="">
+                    <label class="form-wrap" for="">
+                        <input class="form-field" type="search" id="gsearch" name="gsearch"
+                               placeholder="Looking for some specific feature?">
+                        <button class="d-flex form-submit poppins-b text-dark"><img
+                                src="assets/images/features/Search.svg" alt=""><span class="mob-none">Search</span>
+                        </button>
+                    </label>
+                    <p class="features_form-caption">f.e. subtasks, list view, discussions</p>
+                </form>
+                <div class="text-center text-white features-top_pointer">View Features <img
+                        src="assets/images/features/Arrow down.svg" alt="pic"></div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="section-tabs">
+        <div class="container section-tabs_container">
+            <div class="vertical-tabs">
+                <ul class="tabs vertical" data-tab="">
+                    <li class="tab-title active"><a href="#block1" aria-selected="true" tabindex="0"><img
+                            src="assets/images/features/tab-icon-1.svg"
+                            alt="">Administration</a></li>
+                    <li class="tab-title"><a href="#block2" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-2.svg" alt="">Application</a></li>
+                    <li class="tab-title"><a href="#block3" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-3.svg" alt="">Calendar</a></li>
+                    <li class="tab-title"><a href="#block4" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-4.svg" alt="">Collaboration</a></li>
+                    <li class="tab-title"><a href="#block5" aria-selected="true" tabindex="0"><img
+                            src="assets/images/features/tab-icon-5.svg"
+                            alt="">Comments</a></li>
+                    <li class="tab-title"><a href="#block6" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-6.svg" alt="">Customisation</a></li>
+                    <li class="tab-title"><a href="#block7" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-7.svg" alt="">Files</a></li>
+                    <li class="tab-title"><a href="#block8" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-8.svg" alt="">Integration</a></li>
+                    <li class="tab-title"><a href="#block9" aria-selected="true" tabindex="0"><img
+                            src="assets/images/features/tab-icon-9.svg"
+                            alt="">Issue Tracker</a></li>
+                    <li class="tab-title"><a href="#block10" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-10.svg" alt="">Milestones</a></li>
+                    <li class="tab-title"><a href="#block11" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-11.svg" alt="">Native Applications</a></li>
+                    <li class="tab-title"><a href="#block12" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-12.svg" alt="">Planning</a></li>
+                    <li class="tab-title"><a href="#block13" aria-selected="true" tabindex="0"><img
+                            src="assets/images/features/tab-icon-13.svg"
+                            alt="">Productivity</a></li>
+                    <li class="tab-title"><a href="#block14" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-14.svg" alt="">Reporting</a></li>
+                    <li class="tab-title"><a href="#block15" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-15.svg" alt="">Security</a></li>
+                    <li class="tab-title"><a href="#block16" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-16.svg" alt="">Tasks</a></li>
+                    <li class="tab-title"><a href="#block17" aria-selected="false" tabindex="-1"><img
+                            src="assets/images/features/tab-icon-17.svg" alt="">Views</a></li>
+                </ul>
+                <div class="tabs-content">
+                    <div class="content active" id="block1" aria-hidden="false">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/Icon-1.svg" alt="icon">
+                                <div class="head_text">integrations, security, administration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">SAML with company active directory</h6>
+                            <p class="content_block-text title-s">Use SAML to add an extra level of protection. Works
+                                with Azure, Okta, Citrix, AWS, and others.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/Icon-2.svg" alt="icon">
+                                <div class="head_text">security, administration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Backup and access all your data including
+                                files </h6>
+                            <p class="content_block-text title-s">Protect your business, your processes, and all your
+                                data with backups from Freedcamp.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/Icon-3.svg" alt="icon">
+                                <div class="head_text">administration, customization</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Read-only and guest users are free on all paid
+                                plans </h6>
+                            <p class="content_block-text title-s">Invite those outside your organization into Freedcamp
+                                so they can keep track of what’s going on, without accidentally deleting something or
+                                breaking your workflow.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/Icon-4.svg" alt="icon">
+                                <div class="head_text">administration, customization</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Advanced permissions available on all plans <a
+                                    href="">Permissions</a></h6>
+                            <p class="content_block-text title-s">Our highly flexible (and very comprehensive)
+                                permissions make it easy to give users any level of control you want, from read-only
+                                access to the ability to add items to a project. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/Icon-5.svg" alt="icon">
+                                <div class="head_text">administration, customization</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Private cloud for a single tenant enhanced
+                                security</h6>
+                            <p class="content_block-text title-s">Need to make sure that everything you do with us is
+                                super secure? Get your own private cloud with Freedcamp. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/Icon-6.svg" alt="icon">
+                                <div class="head_text">integrations, security, administration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Single Sign-on with Apple, LinkedIn, Facebook,
+                                Twitter, and Google</h6>
+                            <p class="content_block-text title-s">Easily log in while reducing the number of passwords
+                                you need to remember with SSO. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/Icon-7.svg" alt="icon">
+                                <div class="head_text">administration, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Unlimited users, projects, and storage</h6>
+                            <p class="content_block-text title-s">Start using Freedcamp with a piece of mind. Upgrade or
+                                downgrade when needed - no strings attached.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/Icon-8.svg" alt="icon">
+                                <div class="head_text">files, administration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Unlimited file storage on all plans </h6>
+                            <p class="content_block-text title-s">Your images, PDFs, and documents are an important part
+                                of your team’s collaboration.</p>
+                        </div>
+                    </div>
+                    <div class="content" id="block2" aria-hidden="true" tabindex="-1">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/app-icon-1.svg" alt="icon">
+                                <div class="head_text">application, productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Issue Tracking </h6>
+                            <p class="content_block-text title-s">Turn Freedcamp into an issue tracker/bug reporting
+                                system to create a smoother process for reporting, tracking, and fixing issues that you
+                                and your customers find. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/app-icon-2.svg" alt="icon">
+                                <div class="head_text">application</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Milestones</h6>
+                            <p class="content_block-text title-s">mark important moments and tasks in your projects with
+                                Milestones. Never lose track of the key deadlines or critical tasks you need to hit to
+                                complete a project.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/app-icon-3.svg" alt="icon">
+                                <div class="head_text">application, collaboaration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Discussions</h6>
+                            <p class="content_block-text title-s">Have asynchronous conversations with your team about
+                                your project that don’t crowd your email inbox. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/app-icon-4.svg" alt="icon">
+                                <div class="head_text">application, planning, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Calendar</h6>
+                            <p class="content_block-text title-s">Manage all the dates related to projects and tasks,
+                                from the entire timeline to the due dates for individual tasks. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/app-icon-5.svg" alt="icon">
+                                <div class="head_text">application</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Invoicing</h6>
+                            <p class="content_block-text title-s">Create invoices and get paid directly in Freedcamp to
+                                save both time and money by not switching to an outside service. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/app-icon-6.svg" alt="icon">
+                                <div class="head_text">application</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Wikis</h6>
+                            <p class="content_block-text title-s">Build a repository of knowledge for all your projects,
+                                including helpful resources, conversations, and files.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/app-icon-7.svg" alt="icon">
+                                <div class="head_text">application, planning, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">CRM</h6>
+                            <p class="content_block-text title-s">Manage customers relationships, as well projects with
+                                our built-in CRM. Keep track of current customers, or gain new ones, to drive more
+                                business.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/app-icon-8.svg" alt="icon">
+                                <div class="head_text">application, collaboaration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Passwords sharing</h6>
+                            <p class="content_block-text title-s">Securely share relevant passwords with your team
+                                without having to subscribe to yet another service. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/app-icon-9.svg" alt="icon">
+                                <div class="head_text">application, productivity, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Time Tracking</h6>
+                            <p class="content_block-text title-s">Keep track of how long projects take your team to
+                                complete by tracking time on tasks and issues. Not only does this help you figure out
+                                your most profitable projects, but it also helps you create highly accurate estimates
+                                when bidding on new jobs.</p>
+                        </div>
+                    </div>
+                    <div class="content" id="block3" aria-hidden="true" tabindex="-1">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/cal-Icon-1.svg" alt="icon">
+                                <div class="head_text">integrations, calendar, tasks, milestones, issues</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Google Calendar instant sync</h6>
+                            <p class="content_block-text title-s">Push your Freedcamp calendar to your Google Calendar
+                                with instant sync.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/cal-Icon-2.svg" alt="icon">
+                                <div class="head_text">integration, calendar</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Sync with iCal, Outlook </h6>
+                            <p class="content_block-text title-s">Easily integrate Freedcamp calendar with both iCal and
+                                Outlook calendar types.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/cal-Icon-3.svg" alt="icon">
+                                <div class="head_text">tasks, calendar, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Recurring tasks, subtasks, and calendar
+                                events</h6>
+                            <p class="content_block-text title-s">The “set it and forget it” of the project management
+                                world. Create tasks, subtasks, and meetings once and they automatically fill in for the
+                                rest of the project. </p>
+                        </div>
+                    </div>
+                    <div class="content" id="block4" aria-hidden="true" tabindex="-1">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/coll-icon-1.svg" alt="icon">
+                                <div class="head_text">productivity, collaboaration, comments</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Get links to comments</h6>
+                            <p class="content_block-text title-s">Create hypers-specific links that take team members to
+                                the exact comment you’re talking about.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/coll-icon-2.svg" alt="icon">
+                                <div class="head_text">collaboaration, comments</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Rich text editor</h6>
+                            <p class="content_block-text title-s">Enhance comments, descriptions, and Wikis with HTML
+                                using the built-in rich text editor.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/coll-icon-3.svg" alt="icon">
+                                <div class="head_text">collaboaration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">‘Like’ comments </h6>
+                            <p class="content_block-text title-s">Don’t have much to say, but want people to know you’ve
+                                seen their post? Mark a comment as liked, similar to how you would with social
+                                media.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/coll-icon-4.svg" alt="icon">
+                                <div class="head_text">productivity, collaboaration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Inline images </h6>
+                            <p class="content_block-text title-s">Add images to descriptions and comments (as well as
+                                copy/paste images directly to them) to help provide context and inspiration for
+                                tasks. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/coll-icon-5.svg" alt="icon">
+                                <div class="head_text">collaboaration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Emojis supported across the board</h6>
+                            <p class="content_block-text title-s">Love emojis, you can use them to your heart's
+                                content.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/coll-icon-6.svg" alt="icon">
+                                <div class="head_text">application, collaboaration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Discussions</h6>
+                            <p class="content_block-text title-s">Have asynchronous conversations with your team about
+                                your project that don’t crowd your email inbox. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/coll-icon-7.svg" alt="icon">
+                                <div class="head_text">collaboaration, customization</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Public projects</h6>
+                            <p class="content_block-text title-s">Open your project up to the world and make it so
+                                search engines crawl the project to include it in their search results, helping spread
+                                awareness about your work.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/coll-icon-8.svg" alt="icon">
+                                <div class="head_text">collaboaration, comments</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Easily quote to reply</h6>
+                            <p class="content_block-text title-s">Reply the specific chunks of text easily with a quote
+                                to reply so everyone knows exactly what you’re commenting on, even if you’re responding
+                                to a wall of text. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/coll-icon-9.svg" alt="icon">
+                                <div class="head_text">collaboaration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Mention people </h6>
+                            <p class="content_block-text title-s">Easily bring others into conversations with
+                                mentions.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/coll-icon-10.svg" alt="icon">
+                                <div class="head_text">collaboaration, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Set project status, project managers, project
+                                start and due dates</h6>
+                            <p class="content_block-text title-s">Assign project managers, create start and end dates,
+                                and set the status for each project you manage. </p>
+                        </div>
+                    </div>
+                    <div class="content" id="block5" aria-hidden="false">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/comments-icon-1.svg" alt="icon">
+                                <div class="head_text">productivity, comments</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Email Notifications</h6>
+                            <p class="content_block-text title-s">Reply to email notifications to add comments and
+                                update projects directly through email to work more efficiently on the go.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/comments-icon-2.svg" alt="icon">
+                                <div class="head_text">productivity, collaboaration, comments</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Get links to comments</h6>
+                            <p class="content_block-text title-s">Create hypers-specific links that take team members to
+                                the exact comment you’re talking about.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/comments-icon-3.svg" alt="icon">
+                                <div class="head_text">collaboaration, comments</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Rich text editor</h6>
+                            <p class="content_block-text title-s">Enhance comments, descriptions, and Wikis with HTML
+                                using the built-in rich text editor.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/comments-icon-4.svg" alt="icon">
+                                <div class="head_text">collaboaration, comments</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Easily quote to reply</h6>
+                            <p class="content_block-text title-s">Reply the specific chunks of text easily with a quote
+                                to reply so everyone knows exactly what you’re commenting on, even if you’re responding
+                                to a wall of text. </p>
+                        </div>
+                    </div>
+                    <div class="content" id="block6" aria-hidden="true" tabindex="-1">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/customisation-icon-1.svg" alt="icon">
+                                <div class="head_text">productivity, customisation</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Advanced filters</h6>
+                            <p class="content_block-text title-s">Create filters for calendars and tasks that show you
+                                only the information that you want to see and help you. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/customisation-icon-2.svg" alt="icon">
+                                <div class="head_text">tasks, customisation</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Custom Statuses</h6>
+                            <p class="content_block-text title-s">Use project-specific statuses to help you know exactly
+                                what’s happening for each stage of your projects. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/customisation-icon-3.svg" alt="icon">
+                                <div class="head_text">productivity, customisation</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Personal private task management app</h6>
+                            <p class="content_block-text title-s">Prefer privacy? Use Freedcamp to manage personal
+                                projects privately.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/customisation-icon-4.svg" alt="icon">
+                                <div class="head_text">productivity, customisation</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Save and share filters </h6>
+                            <p class="content_block-text title-s">Use links to share specific views with people outside
+                                your team or organization.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/customisation-icon-5.svg" alt="icon">
+                                <div class="head_text">customization, administration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Private cloud for a single tenant enhanced
+                                security</h6>
+                            <p class="content_block-text title-s">Need to make sure that everything you do with us is
+                                super secure? Get your own private cloud with Freedcamp. </p>
+                        </div>
+                    </div>
+                    <div class="content" id="block7" aria-hidden="true" tabindex="-1">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/files-icon-1.svg" alt="icon">
+                                <div class="head_text">files</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">FileEdit app</h6>
+                            <p class="content_block-text title-s">Streamline the editing process by making quick changes
+                                to your files using the FileEdit app directly in Freedcamp.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/files-icon-2.svg" alt="icon">
+                                <div class="head_text">files, administration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Unlimited file storage on all plans </h6>
+                            <p class="content_block-text title-s">Your images, PDFs, and documents are an important part
+                                of your team’s collaboration. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/files-icon-3.svg" alt="icon">
+                                <div class="head_text">files</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">File versions </h6>
+                            <p class="content_block-text title-s">Keep track of all the changes across documents or code
+                                with version control that makes it easy to always have backups handy. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/files-icon-4.svg" alt="icon">
+                                <div class="head_text">integration, files</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">GDrive, Onedrive, and Dropbox integrations</h6>
+                            <p class="content_block-text title-s">Integrate with the file storage platform of your
+                                choice and always have direct and easy access to your files.</p>
+                        </div>
+                    </div>
+                    <div class="content" id="block8" aria-hidden="true" tabindex="-1">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-1.svg" alt="icon">
+                                <div class="head_text">productivity, integration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Gmail and Outlook integrations</h6>
+                            <p class="content_block-text title-s">Seamlessly merge Freedcamp with Gmail and Outlook for
+                                enhanced functionality when working from your inbox.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-2.svg" alt="icon">
+                                <div class="head_text">integration, security, administration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Single Sign-on with Apple, LinkedIn, Facebook,
+                                Twitter, and Google</h6>
+                            <p class="content_block-text title-s">Easily log in while reducing the number of passwords
+                                you need to remember with SSO. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-3.svg" alt="icon">
+                                <div class="head_text">integration, calendar, tasks, milestones, issues</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Google Calendar instant sync</h6>
+                            <p class="content_block-text title-s">Push your Freedcamp calendar to your Google Calendar
+                                with instant sync.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-4.svg" alt="icon">
+                                <div class="head_text">integration, calendar</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Sync with iCal, Outlook </h6>
+                            <p class="content_block-text title-s">Easily integrate Freedcamp calendar with both iCal and
+                                Outlook calendar types.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-5.svg" alt="icon">
+                                <div class="head_text">integration, reporting</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Data Feed Links to create your own reports in
+                                Google Sheets or Excel</h6>
+                            <p class="content_block-text title-s">Easily export data to the spreadsheet of your choice
+                                for sharing without those outside your organization</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-6.svg" alt="icon">
+                                <div class="head_text">iintegration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">API</h6>
+                            <p class="content_block-text title-s">Generate API keys for Freedcamp. You can create two
+                                types of keys: secured by API secret and not secured (you may change at any time).</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-7.svg" alt="icon">
+                                <div class="head_text">integration, files</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">GDrive, Onedrive, and Dropbox integrations</h6>
+                            <p class="content_block-text title-s">Integrate with the file storage platform of your
+                                choice and always have direct and easy access to your files.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-8.svg" alt="icon">
+                                <div class="head_text">integrations, security, administration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">SAML with company active directory</h6>
+                            <p class="content_block-text title-s">Use SAML to add an extra level of protection. Works
+                                with Azure, Okta, Citrix, AWS, and others.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-9.svg" alt="icon">
+                                <div class="head_text">productivity, integration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Email In </h6>
+                            <p class="content_block-text title-s">Create tasks, issues, discussions, add files directly
+                                through email to work more efficiently on the go.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-10.svg" alt="icon">
+                                <div class="head_text">integration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Zapier integration</h6>
+                            <p class="content_block-text title-s">Customize how you use Freedcamp with our Zapier
+                                integration. Open up thousands of possibilities. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/integration-icon-11.svg" alt="icon">
+                                <div class="head_text">integration, productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Slack integration</h6>
+                            <p class="content_block-text title-s">Make updates to projects, like creating tasks, events,
+                                issues, discussions, and comments) directly in Slack using our integration. You can also
+                                receive notifications and links to specific projects from inside Slack (coming
+                                soon). </p>
+                        </div>
+                    </div>
+                    <div class="content" id="block9" aria-hidden="false">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/issue-icon-1.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Kanban View</h6>
+                            <p class="content_block-text title-s">Use cards and columns just like on a whiteboard that
+                                helps you visualize your workflow and maximize efficiency. One-click columns and section
+                                selection change - use assignees as columns for a team meeting and statuses for your
+                                agile standups </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/issue-icon-2.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Start and due dates</h6>
+                            <p class="content_block-text title-s">Set clear beginning and end dates for all projects,
+                                tasks, and whatever else you’re working on to help you crush your deadlines. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/issue-icon-3.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">List view</h6>
+                            <p class="content_block-text title-s">The classic list view with super easy drag and drop
+                                reorder, and check things off as you finish them just like your notepad. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/issue-icon-4.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Table View </h6>
+                            <p class="content_block-text title-s">Our table view breaks things down into an
+                                easy-to-track table that tells you a priority, due dates, who’s assigned to what tasks,
+                                and more. Great to see all your custom fields and attributes aligned perfectly and all
+                                easy to change. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/issue-icon-5.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Priorities</h6>
+                            <p class="content_block-text title-s">Make sure that everyone knows which tasks absolutely
+                                need to be done today and which can wait (a little bit) by setting clear priorities for
+                                each task. </p>
+                        </div>
+                    </div>
+                    <div class="content" id="block10" aria-hidden="true" tabindex="-1">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-1.svg" alt="icon">
+                                <div class="head_text">integrations, calendar, tasks, milestones, issues</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Google Calendar instant sync</h6>
+                            <p class="content_block-text title-s">Push your Freedcamp calendar to your Google Calendar
+                                with instant sync.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-2.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">List view</h6>
+                            <p class="content_block-text title-s">The classic list view with super easy drag and drop
+                                reorder, and check things off as you finish them just like your notepad. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-3.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, planning, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Gantt view with resources allocation</h6>
+                            <p class="content_block-text title-s">Use Gantt charts to establish timelines and allocate
+                                resources across projects based on availability.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-4.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Start and due dates</h6>
+                            <p class="content_block-text title-s">Set clear beginning and end dates for all projects,
+                                tasks, and whatever else you’re working on to help you crush your deadlines.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-5.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Table View </h6>
+                            <p class="content_block-text title-s">Our table view breaks things down into an
+                                easy-to-track table that tells you a priority, due dates, who’s assigned to what tasks,
+                                and more. Great to see all your custom fields and attributes aligned perfectly and all
+                                easy to change. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-6.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Kanban View</h6>
+                            <p class="content_block-text title-s">Use cards and columns just like on a whiteboard that
+                                helps you visualize your workflow and maximize efficiency. One-click columns and section
+                                selection change - use assignees as columns for a team meeting and statuses for your
+                                agile standups </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-7.svg" alt="icon">
+                                <div class="head_text">tasks, productivity, milestones, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Shift Dates</h6>
+                            <p class="content_block-text title-s">Move start and end dates on tasks to adjust timelines
+                                or add new stages to projects. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-8.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Slack time </h6>
+                            <p class="content_block-text title-s">See the time that a task or milestone can slip without
+                                affecting other tasks or milestones.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-9.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Priorities</h6>
+                            <p class="content_block-text title-s">Make sure that everyone knows which tasks absolutely
+                                need to be done today and which can wait (a little bit) by setting clear priorities for
+                                each task. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-10.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, issue tracker</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Dependencies</h6>
+                            <p class="content_block-text title-s">Make sure that no task or milestone is left behind by
+                                adding dependencies to your workflow using the Gantt view. </p>
+                        </div>
+
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-11.svg" alt="icon">
+                                <div class="head_text">tasks, milestones</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Critical Path</h6>
+                            <p class="content_block-text title-s">Set the ideal order to tasks within each project to
+                                ensure everything happens according to plan</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/milestones-icon-12.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Auto and relative scheduling</h6>
+                            <p class="content_block-text title-s">Automatically set and adjust scheduling across your
+                                tasks within each project. If you need to update something, it’s automatically updated
+                                across the entire project. </p>
+                        </div>
+                    </div>
+                    <div class="content" id="block11" aria-hidden="true" tabindex="-1">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-1.svg" alt="icon">
+                                <div class="head_text">native applications</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Android and iOS applications</h6>
+                            <p class="content_block-text title-s">Manage projects from your phone, regardless of what
+                                kind of device you use with our native mobile apps.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-2.svg" alt="icon">
+                                <div class="head_text">native applications</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Desktop application macOS and Windows</h6>
+                            <p class="content_block-text title-s">Don’t like working from your browser? We have apps for
+                                both macOS and Windows operating systems. </p>
+                        </div>
+                    </div>
+                    <div class="content" id="block12" aria-hidden="true" tabindex="-1">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-1.svg" alt="icon">
+                                <div class="head_text">application, planning, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Calendar</h6>
+                            <p class="content_block-text title-s">Manage all the dates related to projects and tasks,
+                                from the entire timeline to the due dates for individual tasks.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-2.svg" alt="icon">
+                                <div class="head_text">productivity, planning, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Global boards</h6>
+                            <p class="content_block-text title-s">Tasks, Calendar, Issues, Milestones, Widgets bring
+                                information from all the projects you’re working on into one place. Click on an app and
+                                choose the project you want updates on. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-3.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Dependencies</h6>
+                            <p class="content_block-text title-s">Make sure that no task or milestone is left behind by
+                                adding dependencies to your workflow using the Gantt view. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-4.svg" alt="icon">
+                                <div class="head_text">tasks, calendar, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Recurring tasks, subtasks, and calendar
+                                events</h6>
+                            <p class="content_block-text title-s">The “set it and forget it” of the project management
+                                world. Create tasks, subtasks, and meetings once and they automatically fill in for the
+                                rest of the project.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-5.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Slack time </h6>
+                            <p class="content_block-text title-s">See the time that a task or milestone can slip without
+                                affecting other tasks or milestones.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-6.svg" alt="icon">
+                                <div class="head_text">reporting, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Import and export from/to XLS</h6>
+                            <p class="content_block-text title-s">Import and export using the XLS format to either bring
+                                projects or customers into Freedcamp or export their data for other uses. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-7.svg" alt="icon">
+                                <div class="head_text">reporting, planning, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Create custom reports</h6>
+                            <p class="content_block-text title-s">Create customizable interactive reports with auto
+                                drill down for your projects containing only the information you want to see and share
+                                it with your team, customers, or stakeholders. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-8.svg" alt="icon">
+                                <div class="head_text">collaboaration, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Set project status, project managers, project
+                                start and due dates</h6>
+                            <p class="content_block-text title-s">Assign project managers, create start and end dates,
+                                and set the status for each project you manage. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-9.svg" alt="icon">
+                                <div class="head_text">productivity, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Set deadlines</h6>
+                            <p class="content_block-text title-s">Set deadlines by either indicating the final date or
+                                by highlighting the duration in the calendar so you know how many days your project will
+                                take.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-10.svg" alt="icon">
+                                <div class="head_text">administration, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Unlimited users, projects, and storage</h6>
+                            <p class="content_block-text title-s">Start using Freedcamp with a piece of mind. Upgrade or
+                                downgrade when needed - no strings attached.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-11.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, planning, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Gantt view with resources allocation</h6>
+                            <p class="content_block-text title-s">Use Gantt charts to establish timelines and allocate
+                                resources across projects based on availability.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-12.svg" alt="icon">
+                                <div class="head_text">productivity, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Bulk Edit</h6>
+                            <p class="content_block-text title-s">Set deadlines by either indicating the final date or
+                                by highlighting the duration in the calendar so you know how many days your project will
+                                take.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-13.svg" alt="icon">
+                                <div class="head_text">tasks, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Subtasks</h6>
+                            <p class="content_block-text title-s">Break down bigger tasks into smaller chunks or use
+                                subtasks to tackle smaller parts of a project as they come up. Add convenient drag and
+                                drop to reorganize and unlimited subtasks nesting while still having the full visibility
+                                of every part without drilling down.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-14.svg" alt="icon">
+                                <div class="head_text">application, productivity, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Time Tracking</h6>
+                            <p class="content_block-text title-s">Keep track of how long projects take your team to
+                                complete by tracking time on tasks and issues. Not only does this help you figure out
+                                your most profitable projects, but it also helps you create highly accurate estimates
+                                when bidding on new jobs. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-15.svg" alt="icon">
+                                <div class="head_text">tasks, milestones, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Auto and relative scheduling</h6>
+                            <p class="content_block-text title-s">Automatically set and adjust scheduling across your
+                                tasks within each project. If you need to update something, it’s automatically updated
+                                across the entire project. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-16.svg" alt="icon">
+                                <div class="head_text">planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Update project status</h6>
+                            <p class="content_block-text title-s">Change the status of projects to reflect the current
+                                state. If you find the default status options don’t provide enough information, you can
+                                customize them.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-17.svg" alt="icon">
+                                <div class="head_text">productivity, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Copy and move projects, items, and lists</h6>
+                            <p class="content_block-text title-s">Create templates from existing projects, items, or
+                                lists and move them to different projects as needed.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-18.svg" alt="icon">
+                                <div class="head_text">tasks, productivity, milestones, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Shift Dates</h6>
+                            <p class="content_block-text title-s">Move start and end dates on tasks to adjust timelines
+                                or add new stages to projects. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/planning-icon-19.svg" alt="icon">
+                                <div class="head_text">planning, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Reports</h6>
+                            <p class="content_block-text title-s">Get visual updates like graphs that show you how
+                                projects are coming along. See what’s completed, how much of a project is completed, and
+                                what still needs to be taken care of for each project.</p>
+                        </div>
+                    </div>
+                    <div class="content" id="block13" aria-hidden="false">
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-1.svg" alt="icon">
+                                <div class="head_text">tasks, productivity, milestones, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Shift Dates</h6>
+                            <p class="content_block-text title-s">Move start and end dates on tasks to adjust timelines
+                                or add new stages to projects. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-2.svg" alt="icon">
+                                <div class="head_text">productivity, collaboaration, comments</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Get links to comments</h6>
+                            <p class="content_block-text title-s">Create hypers-specific links that take team members to
+                                the exact comment you’re talking about. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-3.svg" alt="icon">
+                                <div class="head_text">productivity, customisation</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Advanced filters</h6>
+                            <p class="content_block-text title-s">Create filters for calendars and tasks that show you
+                                only the information that you want to see and help you.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-4.svg" alt="icon">
+                                <div class="head_text">productivity, comments</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Email Notifications</h6>
+                            <p class="content_block-text title-s">Reply to email notifications to add comments and
+                                update projects directly through email to work more efficiently on the go.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-5.svg" alt="icon">
+                                <div class="head_text">productivity, integration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Email In </h6>
+                            <p class="content_block-text title-s">Create tasks, issues, discussions, add files directly
+                                through email to work more efficiently on the go.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-6.svg" alt="icon">
+                                <div class="head_text">productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Smart Links</h6>
+                            <p class="content_block-text title-s">Create links to specific tasks or comments using Smart
+                                Links. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-7.svg" alt="icon">
+                                <div class="head_text">productivity, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Set deadlines</h6>
+                            <p class="content_block-text title-s">Set deadlines by either indicating the final date or
+                                by highlighting the duration in the calendar so you know how many days your project will
+                                take. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-8.svg" alt="icon">
+                                <div class="head_text">productivity, collaboaration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Inline images /h6>
+                                <p class="content_block-text title-s">Add images to descriptions and comments (as well
+                                    as copy/paste images directly to them) to help provide context and inspiration for
+                                    tasks.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-9.svg" alt="icon">
+                                <div class="head_text">productivity, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Bulk Edit</h6>
+                            <p class="content_block-text title-s">Set deadlines by either indicating the final date or
+                                by highlighting the duration in the calendar so you know how many days your project will
+                                take.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-10.svg" alt="icon">
+                                <div class="head_text">productivity, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Copy and move projects, items, and lists</h6>
+                            <p class="content_block-text title-s">Create templates from existing projects, items, or
+                                lists and move them to different projects as needed.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-11.svg" alt="icon">
+                                <div class="head_text">views, productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Recap page</h6>
+                            <p class="content_block-text title-s">Quickly catch up on what’s going on with projects
+                                using the recap page. See important notifications, deadlines, and any other items that
+                                require your immediate attention for the upcoming week.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-12.svg" alt="icon">
+                                <div class="head_text">productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Favorite bookmarked items</h6>
+                            <p class="content_block-text title-s">Keep your most important tasks and projects close at
+                                hand by bookmarking them for easy access later. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-13.svg" alt="icon">
+                                <div class="head_text">integrations, productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Slack integration</h6>
+                            <p class="content_block-text title-s">Make updates to projects, like creating tasks, events,
+                                issues, discussions, and comments) directly in Slack using our integration. You can also
+                                receive notifications and links to specific projects from inside Slack (coming
+                                soon). </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-14.svg" alt="icon">
+                                <div class="head_text">productivity, planning, views</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Global boards</h6>
+                            <p class="content_block-text title-s">Tasks, Calendar, Issues, Milestones, Widgets bring
+                                information from all the projects you’re working on into one place. Click on an app and
+                                choose the project you want updates on.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-15.svg" alt="icon">
+                                <div class="head_text">productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">State of the art intelligent notifications</h6>
+                            <p class="content_block-text title-s">Prioritized by importance, interactive, and easy to
+                                catch up with. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-16.svg" alt="icon">
+                                <div class="head_text">productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Tags</h6>
+                            <p class="content_block-text title-s">Add tags to projects, tasks, comments, files, and more
+                                to create a searchable database for all things related to your projects.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-17.svg" alt="icon">
+                                <div class="head_text">productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Post comments by replying to Freedcamp
+                                notifications</h6>
+                            <p class="content_block-text title-s">You can respond directly to notifications as they come
+                                in, and add inline images and attachments.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-18.svg" alt="icon">
+                                <div class="head_text">productivity, integration</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Gmail and Outlook integrations</h6>
+                            <p class="content_block-text title-s">Seamlessly merge Freedcamp with Gmail and Outlook for
+                                enhanced functionality when working from your inbox.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-19.svg" alt="icon">
+                                <div class="head_text">application, productivity, planning</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Time Tracking</h6>
+                            <p class="content_block-text title-s">Keep track of how long projects take your team to
+                                complete by tracking time on tasks and issues. Not only does this help you figure out
+                                your most profitable projects, but it also helps you create highly accurate estimates
+                                when bidding on new jobs.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-20.svg" alt="icon">
+                                <div class="head_text">productivity, customisation</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Personal private task management app</h6>
+                            <p class="content_block-text title-s">Prefer privacy? Use Freedcamp to manage personal
+                                projects privately.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-21.svg" alt="icon">
+                                <div class="head_text">application, productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Issue Tracking </h6>
+                            <p class="content_block-text title-s">Turn Freedcamp into an issue tracker/bug reporting
+                                system to create a smoother process for reporting, tracking, and fixing issues that you
+                                and your customers find. </p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-22.svg" alt="icon">
+                                <div class="head_text">productivity, customisation</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Save and share filters </h6>
+                            <p class="content_block-text title-s">Use links to share specific views with people outside
+                                your team or organization.</p>
+                        </div>
+                        <div class="content_block">
+                            <div class="head">
+                                <img class="head_icon" src="assets/images/features/productivity-icon-23.svg" alt="icon">
+                                <div class="head_text">views, productivity</div>
+                            </div>
+                            <h6 class="text-dark content_block-title">Home page with all essential data</h6>
+                            <p class="content_block-text title-s">The main dashboard contains all the critical pieces of
+                                information related to your projects, including a calendar view so you can see what’s
+                                happening at a glance.</p>
+                        </div>
+                    </div>
+                    <div class="content" id="block14" aria-hidden="true" tabindex="-1">
+                        <p>This is the second panel of the basic tab example. Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit. Voluptas, nesciunt. Aperiam sed expedita quo. Ipsam iusto sapiente animi?
+                            Voluptatem ut facilis maxime minima. Aperiam, at non sequi molestias tempora. Enim.</p>
+                    </div>
+                    <div class="content" id="block15" aria-hidden="true" tabindex="-1">
+                        <p>This is the third panel of the basic tab example. This is the third panel of the basic tab
+                            example.</p>
+                    </div>
+                    <div class="content" id="block16" aria-hidden="true" tabindex="-1">
+                        <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab
+                            example.</p>
+                    </div>
+                    <div class="content" id="block17" aria-hidden="true" tabindex="-1">
+                        <p>This is the fourth panel of the basic tab example. This is the fourth panel of the basic tab
+                            example.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="multiple-projects position-relative it_multiple-projects">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <!--        <img class="position-absolute bg-10" src="assets/images/bg/multiple_projects_left.svg" alt="bg">-->
+        <!--        <img class="position-absolute bg-11" src="assets/images/bg/multiple_projects_right.svg" alt="bg">-->
+        <div class="container multiple-projects_container">
+            <h2 class="text-center text-dark multiple-projects_title">Get started with Freedcamp Platform today</h2>
+            <button class="btn btn-main_dark btn-secondary-darkbg multiple-projects_btn d-block">Try it Free</button>
+            <div class="text-foot">Have a question? <a class="" href="">Contact our sales team</a> for a demo or volume
+                discounts.
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="position-relative footer">
+    <svg class="white-bg-up position-absolute z-index-1" width="1920" height="120" viewBox="0 0 1920 120"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 0H0V120L1920 0Z" fill="#F7F8FA"/>
+    </svg>
+    <div class="container footer_container">
+        <div class="footer_wrapper-nav">
+            <div class="footer_wrap-logo">
+                <img class="footer_logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+                <div class="footer_text text-white-darken">Free Effortless Collaboration for Teams</div>
+                <div class="footer_wrap-soc">
+                    <a target="_blank" href="https://www.facebook.com/"><img src="assets/images/footer/Facebook.svg"
+                                                                             alt="Facebook"></a>
+                    <a target="_blank" href="https://twitter.com/"><img src="assets/images/footer/Twitter.svg"
+                                                                        alt="Twitter"></a>
+                    <a target="_blank" href="https://www.linkedin.com/"><img src="assets/images/footer/Linkedin.svg"
+                                                                             alt="Linkedin"></a>
+                </div>
+            </div>
+            <nav class="footer_wrap-nav">
+                <div class="nav_block">
+                    <div class="title-xs text-white">About</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Explore</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Community</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Download</div>
+                    <ul class="nav_ul">
+                        <li><a href="">IOS</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">Desktop</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Resources</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Developers API - Zapier</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="footer_bottom">
+            <p class="footer_allright text-white-darken">All Rights Reserved © Freedcamp Inc. 2021</p>
+            <div class="lang text-white position-relative">English</div>
+        </div>
+    </div>
+</footer>
+<script>
+    $().ready(function () {
+        $('.tab-title>a').click(function (e) {
+            e.preventDefault();
+            var index = $(this).parent().index();
+            $(this).parent().addClass('active')
+                .siblings().removeClass('active')
+                .parent('ul.tabs').siblings('.tabs-content').children('.content').removeClass('active')
+                .eq(index).addClass('active');
+        });
+    })
+</script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

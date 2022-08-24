@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File edit</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/Favicon.svg">
+    <link href="assets/vendor/slick.css" rel="stylesheet">
+    <link href="assets/style/css/style.css" rel="stylesheet">
+    <link href="assets/vendor/slick-theme.css" rel="stylesheet">
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script>-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/vendor/slick.min.js"></script>
+</head>
+<body>
+<header class="header position-fixed d-flex">
+    <div class="header_logo">
+        <a href="/">
+            <img class="white-logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+            <img class="dark-logo" src="assets/images/Header/dark-logo.svg" alt="freedcamp">
+        </a>
+    </div>
+    <button class="mob-menu">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+    </button>
+    <nav class="header-nav">
+        <ul class="d-flex inter-m">
+            <li class="sub-menu position-relative">Products</li>
+            <li class="sub-menu position-relative">Features</li>
+            <li class="header-nav_enterprise"><a href="#" class="enterprise">Enterprise</a></li>
+            <li><a href="#" class="price">Pricing</a></li>
+            <li><a class="inter-b login position-relative" href="#" id="login">Login</a></li>
+            <li><a class="btn header-nav_btn btn-secondary-darkbg inter-b" href="#">Get Started For Free</a></li>
+        </ul>
+    </nav>
+    <div class="menu-login position-absolute">
+        <img class="position-absolute arrow-top" src="assets/images/login/Polygon 6.svg" alt="">
+        <div class="login_body-content">
+            <div class="login_form">
+                <h1 class="login_title">Login</h1>
+                <form class="login_form-wrapper" action="">
+                    <!----------------------------------------------------------------------------------------
+                    When the field is valid, you can use the class 'valid' when the field is invalid 'invalid
+                    ----------------------------------------------------------------------------------------->
+                    <label class="label-text position-relative">
+                        <svg class="position-absolute z-index-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                                  stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#969DB3"
+                                  stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                        <img class="position-absolute info-field z-index-1 invalid-pic d-none"
+                             src="assets/images/login/Attention.svg" alt="">
+                        <img class="position-absolute info-field z-index-1 valid-pic d-none"
+                             src="assets/images/login/Check.svg" alt="">
+                        <input class="form-field" type="text" placeholder="Email Address">
+                    </label>
+                    <label class="label-text position-relative">
+                        <img class="position-absolute z-index-1" src="assets/images/login/Password.svg" alt="">
+                        <input class="form-field" type="password" id="myInput" placeholder="Password">
+                        <img src="assets/images/login/Eye.svg" id="pass-status" class="eye position-absolute"
+                             aria-hidden="true" onClick="viewPassword()">
+
+                        <script>
+                            function viewPassword() {
+                                var passwordInput = document.getElementById('myInput');
+                                var passStatus = document.getElementById('pass-status');
+
+                                if (passwordInput.type == 'password') {
+                                    passwordInput.type = 'text';
+                                    passStatus.className = 'eye-slash position-absolute';
+                                    passStatus.src = "assets/images/login/Eye-text.svg";
+
+                                } else {
+                                    passwordInput.type = 'password';
+                                    passStatus.className = 'eye position-absolute';
+                                    passStatus.src = "assets/images/login/Eye.svg";
+                                }
+                            }
+                        </script>
+                    </label>
+                    <div class="form-group">
+                        <input type="checkbox" id="logged">
+                        <label for="logged" class="text-dark">Keep me logged in for 2 weeks</label>
+                    </div>
+                    <button class="btn btn-main_big btn-continue text-white w-100 d-block">Continue</button>
+                    <a class="btn_forgot-pass text-blue d-block" href="">Forgot Password?</a>
+                    <div class="text-gray login-with position-relative"><span
+                            class="bg-white position-relative z-index-1 text-dark">or login with</span></div>
+                    <div class="gmail_login">
+                        <img src="assets/images/login/btn_google_signin.png" alt="">
+                    </div>
+                    <div class="social">
+                        <a href=""><img src="assets/images/login/facebook.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/linkedin.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/twitter.svg" alt=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="discussions notification-email-in tasks">
+    <section class="it_section-top fe_section-top bg-green-gradient position-relative">
+        <img class="position-absolute pattern" src="assets/images/file-edit/Mask Group.png" alt="">
+        <!--        <img class="position-absolute pattern-2" src="assets/images/file-edit/Group 48096083.svg" alt="">-->
+        <div class="container it_section-top__container fe_section-top__container position-relative">
+            <div class="wrap-top-row">
+                <div class="wrap-top-col it_section-top__col-text">
+                    <h1 class="text-white it_section-top__title fe_section-top__title position-relative tt_section-top__title">
+                        Notification email-in <img
+                            class="position-absolute" src="assets/images/notification-email-in/Notification-on.svg"
+                            alt="bug"></h1>
+                    <p class="h5 text-white it_section-top__caption">Work smarter with notifications and email settings
+                        that boost productivity, no matter where you are </p>
+                    <button class="btn btn-top it_section-top__button">Try it free</button>
+                    <p class="tt-caption text-white">Option: Being able to work flexibly is critical to your business.
+                        We've made it easy for you and your team to update Freedcamp via email</p>
+                </div>
+                <div class="wrap-top-col pic">
+                    <img src="assets/images/notification-email-in/banner-top.svg" alt="banner-top">
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="manage-system tt_manage-system fe_manage-system pass_manage-system">
+        <div class="container manage-system_container">
+            <h2 class="tools-like_title text-dark mob">Notifications</h2>
+            <div class="manage-system_row">
+                <div class="fe_manage-system_col manage-system_col text">
+                    <h2 class="tools-like_title text-dark">Notifications</h2>
+                    <p class="">Get notified of project updates, new tasks, comments, issues, and more with
+                        notifications.
+                        Notifications can be set up to alert you to any number of different triggers within Freedcamp.
+                        You can pick and choose the projects you receive updates from and whether notifications are
+                        within Freedcamp or through email.</p>
+                    <div class="item position-relative d-flex w-100">
+                        <img src="assets/images/icons/check.svg" alt="check">
+                        <p>Save time with change summaries. </p>
+                    </div>
+                    <div class="item position-relative d-flex w-100">
+                        <img src="assets/images/icons/check.svg" alt="check">
+                        <p>Scan notifications and mark them as read.</p>
+                    </div>
+                    <div class="item position-relative d-flex w-100">
+                        <img src="assets/images/icons/check.svg" alt="check">
+                        <p>Notifications are grouped by importance to see what needs your attention. </p>
+                    </div>
+                    <div class="item position-relative d-flex w-100">
+                        <img src="assets/images/icons/check.svg" alt="check">
+                        <p>Read, like, or comment on notifications directly from the notification page. </p>
+                    </div>
+                </div>
+                <div class="po_manage-system_col tt_manage-system_col pic position-relative bg-red_5">
+                    <img class="position-absolute bg w-100" src="assets/images/notification-email-in/Mask Group.svg"
+                         alt="">
+                    <img class="position-relative girl w-100"
+                         src="assets/images/notification-email-in/surprised-happy-girl.png" alt="girl">
+                    <img class="position-absolute file file-1" src="assets/images/notification-email-in/block-1.svg"
+                         alt="man">
+                    <img class="position-absolute file file-2" src="assets/images/notification-email-in/block-2.svg"
+                         alt="man">
+                    <img class="position-absolute file file-3" src="assets/images/notification-email-in/block-3.svg"
+                         alt="man">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="project-management position-relative email-in">
+        <img class="position-absolute email-in_bg-1" src="assets/images/notification-email-in/section-3-bg-1.svg"
+             alt="">
+        <img class="position-absolute email-in_bg-2" src="assets/images/notification-email-in/section-3-bg-2.svg"
+             alt="">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <div class="container">
+            <h2 class="text-white project-management_title text-center title-h2-center email-in_title"><span
+                    class="bg-main_light_blue">Email in</span></h2>
+            <p class="email-in_description text-center text-white-darken">Create tasks, discussions, Wikis, and comments
+                through email using our email in functionality. You can
+                effectively manage projects without ever logging into Freedcamp. </p>
+            <p class="email-in_description text-center text-white-darken">To make it even easier to manage projects
+                through email, you import all your tasks to your email address
+                book. This creates an email address for each of your different projects. From there, you can email the
+                project to create tasks, assign projects, and contribute to conversations all from your email. </p>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="#f7f8fa"/>
+        </svg>
+    </section>
+    <section class="gray-section bg-gray position-relative gmail-outlook">
+        <div class="container gmail-outlook_container">
+            <div class="blocks">
+                <h2 class="block_title text-dark clients_title">Gmail and Outlook  <span
+                        class="text-white d-inline-block">integrations</span></h2>
+                <div class="block_text">
+                    <p class="body-l">Gmail and Outlook users can take advantage of our integration to make managing
+                        projects through email even more effortless. You can save time by eliminating the constant copy
+                        and pasting that comes when moving project details from your email to Freedcamp. Now you can
+                        work within Gmail or Outlook directly to create or update tasks, comments, discussions, issues,
+                        events, etc.</p>
+                </div>
+                <div class="block_email">
+                    <img src="assets/images/notification-email-in/gmail-icon.svg" alt="">
+                    <h6 class="poppins-m text-body">You learn more about the Gmail integration <a class="text-blue" href="">here.</a></h6>
+                </div>
+                <div class="block_email">
+                    <img src="assets/images/notification-email-in/outlook-icon.svg" alt="">
+                    <h6 class="poppins-m text-body">For more information about the Outlook integration, <a class="text-blue" href="">go here.</a></h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-gradient experience position-relative it_experience">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="#F7F8FA"/>
+        </svg>
+        <div class="position-absolute bg-circle big desc-block"></div>
+        <div class="position-absolute bg-circle small desc-block"></div>
+        <img class="position-absolute bg-polygon desc-block" src="assets/images/bg/Polygon 33.svg" alt="bg">
+        <div class="container experience_container">
+            <h2 class="text-white experience_title text-center">We Care About Our Customers Experience</h2>
+            <div class="blocks blocks_slider">
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Danilo Zafani</div>
+                            <div class="position text-white-darken">Diretor at Cia da Gestão</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“Freedcamp provides a super low entry barrier due to great user
+                        experience
+                        and ease to use. Its
+                        customer support is very fast and efficient. Every time I have a suggestion for improvement I
+                        speak directly with the decision makers and get instant responses”</p>
+                </div>
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava2.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Emily Freeman</div>
+                            <div class="position text-white-darken">Freeman Land Surveying</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“You guys are fantastic! We were jdiscussing the nature of
+                        "Customer
+                        Service", and how horrendous our experiences usually are. We thank you for being a shining
+                        example of how companies should respond to and treat their customers!”</p>
+                </div>
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava3.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Marcelo M</div>
+                            <div class="position text-white-darken">Production Diretor</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“Freedcamp is a very intuitive project management platform! I use
+                        less than
+                        half of all features and, yet, I have everything I need. It is easy to add lists and tasks and
+                        but also see the big picture. I like that I can add as many people as I want for a project while
+                        having full control of what they can see and do.”</p>
+                </div>
+            </div>
+            <div class="blocks_slider-navigation">
+                <button class="btn-slider next"><img src="assets/images/icons/next.svg" alt="next"></button>
+                <button class="btn-slider prev"><img src="assets/images/icons/prev.svg" alt="prev"></button>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="words position-relative">
+        <div class="container words_container">
+            <img class="words_stars" src="assets/images/it-page/stars.svg" alt="stars">
+            <h2 class="text-center text-dark multiple-projects_title">An Award-winning system</h2>
+            <div class="blocks">
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-1.svg" alt="Leaders">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-2.png" alt="happiest users">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-3.png" alt="capterra">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-5.svg" alt="high performer">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/word/pic-5.png" alt="crozdesk">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="multiple-projects position-relative it_multiple-projects">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <!--        <img class="position-absolute bg-10" src="assets/images/bg/multiple_projects_left.svg" alt="bg">-->
+        <!--        <img class="position-absolute bg-11" src="assets/images/bg/multiple_projects_right.svg" alt="bg">-->
+        <div class="container multiple-projects_container">
+            <h2 class="text-center text-dark multiple-projects_title">Issue Tracker provides a clear and centralized
+                overview for requests and their current state</h2>
+            <button class="btn btn-main_dark btn-secondary-darkbg multiple-projects_btn d-block">Try it Free</button>
+        </div>
+    </section>
+</main>
+<footer class="position-relative footer">
+    <svg class="white-bg-up position-absolute z-index-1" width="1920" height="120" viewBox="0 0 1920 120"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 0H0V120L1920 0Z" fill="#F7F8FA"/>
+    </svg>
+    <div class="container footer_container">
+        <div class="footer_wrapper-nav">
+            <div class="footer_wrap-logo">
+                <img class="footer_logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+                <div class="footer_text text-white-darken">Free Effortless Collaboration for Teams</div>
+                <div class="footer_wrap-soc">
+                    <a target="_blank" href="https://www.facebook.com/"><img src="assets/images/footer/Facebook.svg"
+                                                                             alt="Facebook"></a>
+                    <a target="_blank" href="https://twitter.com/"><img src="assets/images/footer/Twitter.svg"
+                                                                        alt="Twitter"></a>
+                    <a target="_blank" href="https://www.linkedin.com/"><img src="assets/images/footer/Linkedin.svg"
+                                                                             alt="Linkedin"></a>
+                </div>
+            </div>
+            <nav class="footer_wrap-nav">
+                <div class="nav_block">
+                    <div class="title-xs text-white">About</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Explore</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Community</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Download</div>
+                    <ul class="nav_ul">
+                        <li><a href="">IOS</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">Desktop</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Resources</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Developers API - Zapier</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="footer_bottom">
+            <p class="footer_allright text-white-darken">All Rights Reserved © Freedcamp Inc. 2021</p>
+            <div class="lang text-white position-relative">English</div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

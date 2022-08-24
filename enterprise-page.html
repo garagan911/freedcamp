@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Enterprise Page</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/Favicon.svg">
+    <link href="assets/vendor/slick.css" rel="stylesheet">
+    <link href="assets/style/css/style.css" rel="stylesheet">
+    <link href="assets/vendor/slick-theme.css" rel="stylesheet">
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script>-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/vendor/slick.min.js"></script>
+</head>
+<body>
+<header class="header position-fixed d-flex">
+    <div class="header_logo">
+        <a href="/">
+            <img class="white-logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+            <img class="dark-logo" src="assets/images/Header/dark-logo.svg" alt="freedcamp">
+        </a>
+    </div>
+    <button class="mob-menu">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+    </button>
+    <nav class="header-nav">
+        <ul class="d-flex inter-m">
+            <li class="sub-menu position-relative">Products</li>
+            <li class="sub-menu position-relative">Features</li>
+            <li class="header-nav_enterprise"><a href="#" class="enterprise">Enterprise</a></li>
+            <li><a href="#" class="price">Pricing</a></li>
+            <li><a class="inter-b login position-relative" href="#" id="login">Login</a></li>
+            <li><a class="btn header-nav_btn btn-secondary-darkbg inter-b" href="#">Get Started For Free</a></li>
+        </ul>
+    </nav>
+    <div class="menu-login position-absolute">
+        <img class="position-absolute arrow-top" src="assets/images/login/Polygon 6.svg" alt="">
+        <div class="login_body-content">
+            <div class="login_form">
+                <h1 class="login_title">Login</h1>
+                <form class="login_form-wrapper" action="">
+                    <!----------------------------------------------------------------------------------------
+                    When the field is valid, you can use the class 'valid' when the field is invalid 'invalid
+                    ----------------------------------------------------------------------------------------->
+                    <label class="label-text position-relative">
+                        <svg class="position-absolute z-index-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <img class="position-absolute info-field z-index-1 invalid-pic d-none" src="assets/images/login/Attention.svg" alt="">
+                        <img class="position-absolute info-field z-index-1 valid-pic d-none" src="assets/images/login/Check.svg" alt="">
+                        <input class="form-field" type="text" placeholder="Email Address">
+                    </label>
+                    <label class="label-text position-relative">
+                        <img class="position-absolute z-index-1" src="assets/images/login/Password.svg" alt="">
+                        <input class="form-field" type="password" id="myInput" placeholder="Password">
+                        <img src="assets/images/login/Eye.svg" id="pass-status" class="eye position-absolute" aria-hidden="true" onClick="viewPassword()">
+
+                        <script>
+                            function viewPassword()
+                            {
+                                var passwordInput = document.getElementById('myInput');
+                                var passStatus = document.getElementById('pass-status');
+
+                                if (passwordInput.type == 'password'){
+                                    passwordInput.type='text';
+                                    passStatus.className='eye-slash position-absolute';
+                                    passStatus.src = "assets/images/login/Eye-text.svg";
+
+                                }
+                                else{
+                                    passwordInput.type='password';
+                                    passStatus.className='eye position-absolute';
+                                    passStatus.src = "assets/images/login/Eye.svg";
+                                }
+                            }
+                        </script>
+                    </label>
+                    <div class="form-group">
+                        <input type="checkbox" id="logged">
+                        <label for="logged" class="text-dark">Keep me logged in for 2 weeks</label>
+                    </div>
+                    <button class="btn btn-main_big btn-continue text-white w-100 d-block">Continue</button>
+                    <a class="btn_forgot-pass text-blue d-block" href="">Forgot Password?</a>
+                    <div class="text-gray login-with position-relative"><span class="bg-white position-relative z-index-1 text-dark">or login with</span></div>
+                    <div class="gmail_login">
+                        <img src="assets/images/login/btn_google_signin.png" alt="">
+                    </div>
+                    <div class="social">
+                        <a href=""><img src="assets/images/login/facebook.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/linkedin.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/twitter.svg" alt=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="it_section-top enterprise_section-top bg-blue-gradient position-relative overflow-hidden">
+<!--        <img class="position-absolute pattern w-100" src="assets/images/passwords/Group 48096097.svg" alt="">-->
+        <img class="position-absolute pattern" src="assets/images/enterprise/Individual.svg" alt="">
+        <div class="container it_section-top__container fe_section-top__container position-relative">
+            <div class="wrap-top-row">
+                <div class="wrap-top-col enterprise_col-text">
+                    <div class="section-top_caption text-white poppins-b text-caption-yellow">special plan for</div>
+                    <h1 class="text-white it_section-top__title fe_section-top__title position-relative tt_section-top__title">
+                        Enterprise </h1>
+                    <p class="section-top_description inter-r text-white-top">Feature-rich ecosystem of tools that are
+                        precisely engineered to work smoothly together to help organizations to achieve their goals
+                        faster.</p>
+                    <div class="btn-wrap">
+                        <button class="btn btn-top btn-main_dark">Try Enterprise plan free</button>
+                        <button class="btn btn-main_dark bg-transparent btn-no-credit">no credit card required</button>
+                    </div>
+                </div>
+                <!--        <div class="wrap-top-col">-->
+                <!--          <img src="assets/images/passwords/banner-top.svg" alt="banner-top">-->
+                <!--        </div>-->
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="#F7F8FA"/>
+        </svg>
+    </section>
+    <section class="enterprise-benefits bg-gray position-relative">
+        <div class="container manage-system_container">
+            <h2 class="text-center text-dark enterprise-benefits_title">Enterprise Benefits</h2>
+            <div class="blocks d-flex">
+                <div class="block-select">
+                    <ul class="text-gray">
+                        <li class="active"><span class="number">01</span><span class="text">SSO with SAML</span></li>
+                        <li><span class="number">02</span><span class="text">Dashboards</span></li>
+                        <li><span class="number">03</span><span class="text">Professional Services</span></li>
+                        <li><span class="number">04</span><span class="text">2FA</span></li>
+                        <li><span class="number">05</span><span class="text">White Label</span></li>
+                        <li><span class="number">06</span><span class="text">Custom Fields for Projects</span></li>
+                        <li><span class="number">07</span><span class="text">Private Cloud</span></li>
+                        <li><span class="number">08</span><span class="text">Project Overview</span></li>
+                        <li><span class="number">09</span><span class="text">Daily data snapshots</span></li>
+                    </ul>
+                </div>
+                <div class="block-pic bg-white">
+                    <img src="assets/images/enterprise/Group 48096098.svg" alt="Enterprise Benefits">
+                    <p class="block-pic-text text-center">Provide access securely and instantly with Google, Azure, AWS,
+                        Okta, Citrix or custom SAML identity provider.</p>
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="our-mission">
+        <div class="container our-mission_container">
+            <div class="blocks">
+                <div class="block_text position-relative">
+                    <div class="tools-like_up text-up text-caption-orange">our mission</div>
+                    <h2 class="tools-like_title text-dark">Do less work about work</h2>
+                    <p class="tools-like_text">Increase your team effectiveness by up to 20% with Freedcamp all-in-one
+                        productivity suite and see real results in less than a week!</p>
+                    <div class="text-dark block_text-percent">61%</div>
+                    <div class="block_text-down">Work about work</div>
+<!--                    <img class="position-absolute block_text-pic" src="assets/images/enterprise/Group-48095739.svg"-->
+<!--                         alt="">-->
+<!--                    <picture class="position-absolute block_text-pic">-->
+<!--                        <source srcset="assets/images/enterprise/mob-pic.svg" media="(max-width: 540px)">-->
+<!--                        <source srcset="assets/images/enterprise/table-pic.svg" media="(max-width: 1024px)">-->
+<!--                        <img src="assets/images/enterprise/Group-48095739.svg" alt="Flowers">-->
+<!--                    </picture>-->
+                    <picture class="position-absolute block_text-pic">
+                        <source srcset="assets/images/enterprise/Group-48095739.svg" media="(min-width: 1060px)">
+                        <source srcset="assets/images/enterprise/table-pic.svg" media="(min-width: 767px)">
+                        <img srcset="assets/images/enterprise/mob-pic.svg" alt="…">
+                    </picture>
+                </div>
+                <div class="block_pic" id="barcontainer">
+                    <div class="progress-bar">
+                        <div class="progress-bar_icon"><img src="assets/images/enterprise/icon-1.svg" alt=""></div>
+                        <div class="progress-bar_wrap w-100">
+                            <span class="progress-bar_title">Real Work</span>
+                            <span class="progress-bar_percent text-dark">39%</span>
+                            <div class="bar winn">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar_icon"><img src="assets/images/enterprise/icon-2.svg" alt=""></div>
+                        <div class="progress-bar_wrap w-100">
+                            <span class="progress-bar_title">Scheduling</span>
+                            <span class="progress-bar_percent text-dark">22%</span>
+                            <div class="bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar_icon"><img src="assets/images/enterprise/icon-3.svg" alt=""></div>
+                        <div class="progress-bar_wrap w-100">
+                            <span class="progress-bar_title">Planning</span>
+                            <span class="progress-bar_percent text-dark">20%</span>
+                            <div class="bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-bar_icon"><img src="assets/images/enterprise/icon-4.svg" alt=""></div>
+                        <div class="progress-bar_wrap w-100">
+                            <span class="progress-bar_title">Coordinating</span>
+                            <span class="progress-bar_percent text-dark">19%</span>
+                            <div class="bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="multiple-projects position-relative reliable">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <!--        <img class="position-absolute bg-10" src="assets/images/bg/multiple_projects_left.svg" alt="bg">-->
+        <!--        <img class="position-absolute bg-11" src="assets/images/bg/multiple_projects_right.svg" alt="bg">-->
+        <div class="tools-like_container2 container">
+            <div class="text-up text-center text-caption-orange tools-like_up2">freedcamp is</div>
+            <h2 class="text-center text-dark tools-like_title2">Secure and reliable</h2>
+            <div class="row tools-like_row2">
+                <div class="col-50">
+                    <div class="tools-like_item position-relative">
+                        <img class="position-absolute" src="assets/images/icons/check.svg" alt="check">
+                        <h6 class="text-dark">Encryption</h6>
+                        <p>To make it impossible for any third party to interfere with the session and get private
+                            information, the data are encrypted in transit and at rest with 256-bit encryption.</p>
+                    </div>
+                    <div class="tools-like_item position-relative">
+                        <img class="position-absolute" src="assets/images/icons/check.svg" alt="check">
+                        <h6 class="text-dark">Independent Security Audits</h6>
+                        <p>We are audited by independent security companies for penetration and vulnerabilities 4 times
+                            a year.</p>
+                    </div>
+                    <div class="tools-like_item position-relative">
+                        <img class="position-absolute" src="assets/images/icons/check.svg" alt="check">
+                        <h6 class="text-dark">Reliability and security </h6>
+                        <p>Freedcamp is hosted on Amazon Web Services (AWS) providing end-to-end security and privacy
+                            features built-in. Our team deploys best practices for Freedcamp high availability and data
+                            recovery. </p>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="tools-like_item position-relative">
+                        <img class="position-absolute" src="assets/images/icons/check.svg" alt="check">
+                        <h6 class="text-dark">Permissions</h6>
+                        <p>To prevent possible data leaks and access to unauthorized data we provide a flexible set of
+                            permissions to make your company's team management easy.</p>
+                    </div>
+                    <div class="tools-like_item position-relative">
+                        <img class="position-absolute" src="assets/images/icons/check.svg" alt="check">
+                        <h6 class="text-dark">Data safety and availability</h6>
+                        <p>Your data and files are safe, encrypted, and securely replicated across multiple regions and
+                            the availability zone of AWS. You can automate all data and files downloads daily using our
+                            API too.</p>
+                    </div>
+                    <div class="tools-like_item position-relative">
+                        <img class="position-absolute" src="assets/images/icons/check.svg" alt="check">
+                        <h6 class="text-dark">Systems security</h6>
+                        <p>Freedcamp uses Security-Enhanced Linux (SELinux), internet firewalls, and intrusion detection
+                            systems on all compute instances. </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row reliable_row-trial">
+                <div class="block">
+                    <img src="assets/images/enterprise/gdpr.png" alt="">
+                </div>
+                <div class="block">
+                    <img src="assets/images/enterprise/privacy-shield.png" alt="">
+                </div>
+                <button class="btn btn-main_dark btn-secondary-darkbg">Start Trial</button>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="featured position-relative">
+        <h2 class="featured_title text-dark text-center">We help teams to achieve their goals</h2>
+        <div class="featured_container-fluid featured_slider-fluid d-flex">
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/file-edit/Calendar.svg" alt="Calendar"></div>
+                    <span class="title">Calendar</span>
+                </div>
+                <div class="description">Get a birds-eye-view of your team’s work.</div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Files.svg" alt="Files"></div>
+                    <span class="title">File</span>
+                </div>
+                <div class="description">Bring all your files and cloud content together, regardless of where you keept
+                    them.
+                </div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Discussions.svg" alt="Discussions">
+                    </div>
+                    <span class="title">Discussions</span>
+                </div>
+                <div class="description">Create a hub for common questions, interesting ideas, and useful discussion.
+                </div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Milestone.svg" alt="Milestone"></div>
+                    <span class="title">Milestones</span>
+                </div>
+                <div class="description">Ensure that critical project deadlines are met.</div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Time.svg" alt="Time"></div>
+                    <span class="title">Time</span>
+                </div>
+                <div class="description">Measure productivity and activity levels of your team.</div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Passwords.svg" alt="Passwords"></div>
+                    <span class="title">Passwords</span>
+                </div>
+                <div class="description">Password manager for your business.</div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/file-edit/Calendar.svg" alt="Calendar"></div>
+                    <span class="title">Calendar</span>
+                </div>
+                <div class="description">Get a birds-eye-view of your team’s work.</div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Files.svg" alt="Files"></div>
+                    <span class="title">File</span>
+                </div>
+                <div class="description">Bring all your files and cloud content together, regardless of where you keept
+                    them.
+                </div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Discussions.svg" alt="Discussions">
+                    </div>
+                    <span class="title">Discussions</span>
+                </div>
+                <div class="description">Create a hub for common questions, interesting ideas, and useful discussion.
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blue-section bg-blue-gradient position-relative loved-by">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <img class="position-absolute bg-left" src="assets/images/enterprise/bg-left.svg" alt="">
+        <img class="position-absolute bg-right" src="assets/images/enterprise/bg-right.svg" alt="">
+        <div class="loved-by_container container">
+            <h2 class="loved-by_title text-white text-center">Loved by more than <span
+                    class="bg-text text-white d-inline-block bg-green">500K</span> teams in <span
+                    class="bg-text text-white d-inline-block bg-blue">195</span> countries</h2>
+            <img class="loved-by_flags" src="assets/images/enterprise/flags-blur.svg" alt="">
+            <div class="blocks w-100">
+                <div class="block">
+                    <img src="assets/images/enterprise/icon-c-1.svg" alt="">
+                    <div class="d-flex block_price text-white">
+                        <span class="block_price-summa">500K</span>
+                        <div class="block_price-description"></div>
+                    </div>
+                    <div class="line"></div>
+                    <p class="block_description block_text">Tasks are created *</p>
+                </div>
+                <div class="block">
+                    <img src="assets/images/enterprise/icon-c-2.svg" alt="">
+                    <div class="d-flex block_price text-white"><span
+                            class="block_price-summa">250K</span>
+                    </div>
+                    <div class="line"></div>
+                    <p class="block_description block_text">Comments are added *</p>
+                </div>
+                <div class="block">
+                    <img src="assets/images/enterprise/icon-c-3.svg" alt="">
+                    <div class="d-flex block_price text-white"><span
+                            class="block_price-summa">200K</span>
+                    </div>
+                    <div class="line"></div>
+                    <p class="block_description block_text">Files are uploaded *</p>
+                </div>
+                <div class="block">
+                    <img src="assets/images/enterprise/icon-c-4.svg" alt="">
+                    <div class="d-flex block_price text-white"><span
+                            class="block_price-summa">10K</span>
+                    </div>
+                    <div class="line"></div>
+                    <p class="block_description block_text">New users join Freedcamp *</p>
+                </div>
+            </div>
+            <div class="text-center text-white-top every-month">* Every Month</div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="manage-system tt_manage-system fe_manage-system">
+        <div class="container manage-system_container">
+            <div class="manage-system_row">
+                <div class="fe_manage-system_col manage-system_col text">
+                    <div class="tools-like_up text-up text-caption-green">enterprise features</div>
+                    <h2 class="tools-like_title text-dark">Easily spread throuhout your team</h2>
+                    <p class="tools-like_text">Freedcamp has features to support teams with hundreds of people who
+                        require larger-scale user management, access control, and security support. </p>
+                    <p class="tools-like_text">With Freedcamp Enterprise, it’s much easier for large companies with
+                        legal departments, contract reviews, and IT checklists to use Freedcamp formally and spread it
+                        throughout their teams. </p>
+                </div>
+                <div class="po_manage-system_col tt_manage-system_col pic position-relative bg-gray">
+                    <img class="position-absolute bg" src="assets/images/project-overview/bg.svg" alt="">
+                    <img class="position-relative girl"
+                         src="assets/images/project-overview/portrait-handsome.png" alt="girl">
+<!--                    <img class="position-absolute file file-1" src="assets/images/project-overview/frame-1.png"-->
+<!--                         alt="man">-->
+<!--                    <img class="position-absolute file file-2" src="assets/images/project-overview/frame-2.png"-->
+<!--                         alt="man">-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="multiple-projects position-relative it_multiple-projects">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <!--        <img class="position-absolute bg-10" src="assets/images/bg/multiple_projects_left.svg" alt="bg">-->
+        <!--        <img class="position-absolute bg-11" src="assets/images/bg/multiple_projects_right.svg" alt="bg">-->
+        <div class="container multiple-projects_container">
+            <h2 class="text-center text-dark multiple-projects_title">Issue Tracker provides a clear and centralized
+                overview for requests and their current state</h2>
+            <button class="btn btn-main_dark btn-secondary-darkbg multiple-projects_btn d-block">Try it Free</button>
+        </div>
+    </section>
+</main>
+<footer class="position-relative footer">
+    <svg class="white-bg-up position-absolute z-index-1" width="1920" height="120" viewBox="0 0 1920 120"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 0H0V120L1920 0Z" fill="#F7F8FA"/>
+    </svg>
+    <div class="container footer_container">
+        <div class="footer_wrapper-nav">
+            <div class="footer_wrap-logo">
+                <img class="footer_logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+                <div class="footer_text text-white-darken">Free Effortless Collaboration for Teams</div>
+                <div class="footer_wrap-soc">
+                    <a target="_blank" href="https://www.facebook.com/"><img src="assets/images/footer/Facebook.svg"
+                                                                             alt="Facebook"></a>
+                    <a target="_blank" href="https://twitter.com/"><img src="assets/images/footer/Twitter.svg"
+                                                                        alt="Twitter"></a>
+                    <a target="_blank" href="https://www.linkedin.com/"><img src="assets/images/footer/Linkedin.svg"
+                                                                             alt="Linkedin"></a>
+                </div>
+            </div>
+            <nav class="footer_wrap-nav">
+                <div class="nav_block">
+                    <div class="title-xs text-white">About</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Explore</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Community</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Download</div>
+                    <ul class="nav_ul">
+                        <li><a href="">IOS</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">Desktop</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Resources</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Developers API - Zapier</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="footer_bottom">
+            <p class="footer_allright text-white-darken">All Rights Reserved © Freedcamp Inc. 2021</p>
+            <div class="lang text-white position-relative">English</div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/sliders.js"></script>
+<script>
+    function resize() {
+        let bar = document.getElementsByClassName("progress");
+        let percent = document.getElementsByClassName("progress-bar_percent");
+        bar[0].style.width = 39 + "%";
+        bar[1].style.width = 22 + "%";
+        bar[2].style.width = 20 + "%";
+        bar[3].style.width = 19 + "%";
+        percent[0].innerText = 39 + "%";
+        percent[1].innerText = 22 + "%";
+        percent[2].innerText = 20 + "%";
+        percent[3].innerText = 19 + "%";
+    }
+    resize()
+</script>
+</body>
+</html>

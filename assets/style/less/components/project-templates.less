@@ -1,0 +1,77 @@
+.project-templates{
+  .pattern-2{
+    left: unset;
+    right: 0;
+    max-width: unset;
+    width: unset !important;
+  }
+  .tt_section-top__title img {
+    right: 167px;
+    left: unset;
+    top: -7px;
+    transform: rotate(0deg);
+  }
+  .it_section-top__caption {
+    max-width: 406px;
+  }
+  .gmail-outlook{
+    padding-bottom: 180px;
+    &_pic{
+      right: 15%;
+      bottom: 3%;
+      z-index: 1;
+    }
+    &_bg{
+      top: 1%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .blocks {
+      grid-template-rows: repeat(1, 1fr);
+    }
+
+  }
+  .clients_title{
+    img{
+      top: -23%;
+      right: 18%;
+    }
+    span{
+      background: linear-gradient(107.31deg, #73BC78 -11.95%, #438A62 99.99%);
+    }
+  }
+  .tt_manage-system_col.pic{
+    img{
+      max-width: 590px;
+    }
+  }
+}
+
+.block_check{
+  align-items: flex-start;
+  max-width: 344px;
+  img{
+    margin-top: 16px;
+  }
+  p{
+    margin-left: 16px;
+    max-width: 296px;
+  }
+  &-wrap{
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    //grid-template-columns: repeat(3, [col] 344px ) ;
+    //grid-template-rows: repeat(3, [row] 128px );
+
+    grid-column-gap: 84px;
+    grid-row-gap: 48px;
+  }
+  &.last{
+    p{
+      min-width: 457px;
+    }
+  }
+}

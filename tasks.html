@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File edit</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/Favicon.svg">
+    <link href="assets/vendor/slick.css" rel="stylesheet">
+    <link href="assets/style/css/style.css" rel="stylesheet">
+    <link href="assets/vendor/slick-theme.css" rel="stylesheet">
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script>-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/vendor/slick.min.js"></script>
+</head>
+<body>
+<header class="header position-fixed d-flex">
+    <div class="header_logo">
+        <a href="/">
+            <img class="white-logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+            <img class="dark-logo" src="assets/images/Header/dark-logo.svg" alt="freedcamp">
+        </a>
+    </div>
+    <button class="mob-menu">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+    </button>
+    <nav class="header-nav">
+        <ul class="d-flex inter-m">
+            <li class="sub-menu position-relative">Products</li>
+            <li class="sub-menu position-relative">Features</li>
+            <li class="header-nav_enterprise"><a href="#" class="enterprise">Enterprise</a></li>
+            <li><a href="#" class="price">Pricing</a></li>
+            <li><a class="inter-b login position-relative" href="#" id="login">Login</a></li>
+            <li><a class="btn header-nav_btn btn-secondary-darkbg inter-b" href="#">Get Started For Free</a></li>
+        </ul>
+    </nav>
+    <div class="menu-login position-absolute">
+        <img class="position-absolute arrow-top" src="assets/images/login/Polygon 6.svg" alt="">
+        <div class="login_body-content">
+            <div class="login_form">
+                <h1 class="login_title">Login</h1>
+                <form class="login_form-wrapper" action="">
+                    <!----------------------------------------------------------------------------------------
+                    When the field is valid, you can use the class 'valid' when the field is invalid 'invalid
+                    ----------------------------------------------------------------------------------------->
+                    <label class="label-text position-relative">
+                        <svg class="position-absolute z-index-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                                  stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#969DB3"
+                                  stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                        <img class="position-absolute info-field z-index-1 invalid-pic d-none"
+                             src="assets/images/login/Attention.svg" alt="">
+                        <img class="position-absolute info-field z-index-1 valid-pic d-none"
+                             src="assets/images/login/Check.svg" alt="">
+                        <input class="form-field" type="text" placeholder="Email Address">
+                    </label>
+                    <label class="label-text position-relative">
+                        <img class="position-absolute z-index-1" src="assets/images/login/Password.svg" alt="">
+                        <input class="form-field" type="password" id="myInput" placeholder="Password">
+                        <img src="assets/images/login/Eye.svg" id="pass-status" class="eye position-absolute"
+                             aria-hidden="true" onClick="viewPassword()">
+
+                        <script>
+                            function viewPassword() {
+                                var passwordInput = document.getElementById('myInput');
+                                var passStatus = document.getElementById('pass-status');
+
+                                if (passwordInput.type == 'password') {
+                                    passwordInput.type = 'text';
+                                    passStatus.className = 'eye-slash position-absolute';
+                                    passStatus.src = "assets/images/login/Eye-text.svg";
+
+                                } else {
+                                    passwordInput.type = 'password';
+                                    passStatus.className = 'eye position-absolute';
+                                    passStatus.src = "assets/images/login/Eye.svg";
+                                }
+                            }
+                        </script>
+                    </label>
+                    <div class="form-group">
+                        <input type="checkbox" id="logged">
+                        <label for="logged" class="text-dark">Keep me logged in for 2 weeks</label>
+                    </div>
+                    <button class="btn btn-main_big btn-continue text-white w-100 d-block">Continue</button>
+                    <a class="btn_forgot-pass text-blue d-block" href="">Forgot Password?</a>
+                    <div class="text-gray login-with position-relative"><span
+                            class="bg-white position-relative z-index-1 text-dark">or login with</span></div>
+                    <div class="gmail_login">
+                        <img src="assets/images/login/btn_google_signin.png" alt="">
+                    </div>
+                    <div class="social">
+                        <a href=""><img src="assets/images/login/facebook.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/linkedin.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/twitter.svg" alt=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="tasks">
+    <section class="it_section-top fe_section-top bg-pink position-relative">
+        <img class="position-absolute pattern" src="assets/images/tasks/bg-top.svg" alt="">
+        <!--        <img class="position-absolute pattern-2" src="assets/images/file-edit/Group 48096083.svg" alt="">-->
+        <div class="container it_section-top__container fe_section-top__container position-relative">
+            <div class="wrap-top-row">
+                <div class="wrap-top-col it_section-top__col-text">
+                    <h1 class="text-white it_section-top__title fe_section-top__title position-relative tt_section-top__title">
+                        Tasks <img
+                            class="position-absolute title-pic" src="assets/images/tasks/title-pic.svg" alt="bug"></h1>
+                    <p class="h5 text-white it_section-top__caption">Take full control over everything that you’re
+                        responsible for </p>
+                    <button class="btn btn-top it_section-top__button">Try it free</button>
+                </div>
+                <div class="wrap-top-col">
+                    <img class="banner-top" src="assets/images/tasks/top-pic.svg" alt="banner-top">
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="create-better-systems">
+        <div class="container create-better-systems_container">
+            <h2 class="text-dark text-center create-better-systems_title">Create better systems that drive the core of
+                your business</h2>
+            <div class="blocks">
+                <div class="block-text body-l">
+                    <p>Managing all your tasks is serious work. If everything isn’t easy to find and set up
+                        exactly the way you like it, looking after all the tasks in your projects can be more work than
+                        the
+                        projects themselves.</p>
+                    <p>That’s why our tasks app is customizable to the way you work and intuitive enough to master in no
+                        time.</p>
+                </div>
+                <div class="block block-2 bg-blue-5">
+                    <img class="position-absolute block-img" src="assets/images/tasks/block-2-line.svg" alt="bg">
+                    <div class="icon icon-1"><img src="assets/images/tasks/block-2-icon-1.svg" alt="message"></div>
+                    <div class="icon icon-2"><img src="assets/images/tasks/block-2-icon-2.svg" alt="calendar"></div>
+                    <div class="icon icon-3"><img src="assets/images/tasks/block-2-icon-3.svg" alt="file"></div>
+                </div>
+                <div class="block block-3 bg-green_3">
+                    <img src="assets/images/tasks/block-3-pic.png" alt="pic">
+                </div>
+                <div class="block block-4 bg-green_3">
+                    <img src="assets/images/tasks/block-4-pic.png" alt="pic">
+                </div>
+                <div class="block block-5 bg-blue-5">
+                    <img src="assets/images/tasks/block-5-pic.svg" alt="pic">
+                </div>
+                <div class="block block-6 bg-orange-5">
+                    <img src="assets/images/tasks/block-6-pic.png" alt="pic">
+                </div>
+                <div class="block block-7 bg-blue-5">
+                    <img class="position-absolute block-img" src="assets/images/tasks/block-7-bg.svg" alt="bg">
+                    <img class="position-absolute pic" src="assets/images/tasks/block-7-pic.png" alt="pic">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-gradient position-relative suits-best">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <div class="container suits-best_container">
+            <h2 class="text-white text-center">Work the way that suits you best</h2>
+            <div class="blocks">
+                <div class="block-text">
+                    <div class="block-text_number text-white bg-sub-dark-orange">01</div>
+                    <h6 class="block-text_title text-white">Save Time</h6>
+                    <p class="block-text_description text-white-darken body-l">Stop wasting time with inefficient task
+                        management setups. </p>
+
+                    <div class="block-text_number text-white bg-main_light_blue">02</div>
+                    <h6 class="block-text_title text-white">Easy Flow</h6>
+                    <p class="block-text_description text-white-darken body-l">You don’t have to work with systems that
+                        keep you from getting into a flow state. </p>
+
+                    <div class="block-text_number text-white bg-sub_orange">03</div>
+                    <h6 class="block-text_title text-white">Intuitive multytasking</h6>
+                    <p class="block-text_description text-white-darken body-l">To help you better manage your tasks,
+                        projects, and all your team members in one place. </p>
+                    <button class="btn btn-main_dark d-block block-text_btn">Try it Free</button>
+                </div>
+                <div class="block-pic position-relative">
+                    <img src="assets/images/tasks/suite-bet-pic.png" alt="pic">
+                    <div class="block-pic_card card-1 body-l text-dark position-absolute"><img
+                            src="assets/images/icons/check.svg" alt="check">Subtasks
+                    </div>
+                    <div class="block-pic_card card-2 body-l text-dark position-absolute"><img
+                            src="assets/images/icons/check.svg" alt="check">Different Views
+                    </div>
+                    <div class="block-pic_card card-3 body-l text-dark position-absolute"><img
+                            src="assets/images/icons/check.svg" alt="check">Set dates
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="position-relative file-edit">
+        <div class="file-edit_container container">
+            <div class="text-up text-center text-pink tools-like_up2">clean workflows</div>
+            <h2 class="text-center text-dark multiple-projects_title">Basic task management </h2>
+            <p class="text-caption multiple-projects_caption">Everything you need to create clean workflows for your
+                projects. You get everything laid out in a customized view to help you best capture your projects at a
+                glance. Import and export single projects, or whole projects at once with Tasks. You can also push tasks
+                to Google Sheets to share or report. </p>
+            <div class="file-edit_blocks">
+                <div class="file-edit_block">
+                    <div class="icon-block bg-sky-blue-3"><img src="assets/images/file-edit/Calendar.svg"
+                                                               alt="Calendar"></div>
+                    <div class="title-m text-dark title">Establish start and end dates</div>
+                </div>
+                <div class="file-edit_block">
+                    <div class="icon-block bg-pink-3"><img src="assets/images/tasks/icon-2.svg" alt="Attach"></div>
+                    <div class="title-m text-dark title">Set the priority of each task</div>
+                </div>
+                <div class="file-edit_block">
+                    <div class="icon-block bg-green_3"><img src="assets/images/tasks/icon-3.svg" alt="Pencil"></div>
+                    <div class="title-m text-dark title">Manage recurring tasks</div>
+                </div>
+                <div class="file-edit_block">
+                    <div class="icon-block bg-orange-5"><img src="assets/images/tasks/icon-4.svg" alt="Manage"></div>
+                    <div class="title-m text-dark title">Include tags and comments</div>
+                </div>
+            </div>
+            <button class="btn btn-main_dark btn-secondary-darkbg d-block block-text_btn file-edit_btn-bot">All
+                Features
+            </button>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="#2448b1"/>
+        </svg>
+    </section>
+    <section class="project-management position-relative">
+        <!--        <img class="position-absolute" src="assets/images/tasks/Mask Group.png" alt="">-->
+        <div class="container">
+            <div class="text-up text-center text-caption-orange-origin tools-like_up2">Customize the view</div>
+            <h2 class="text-white project-management_title text-center title-h2-center">Personalized views to help you work better </h2>
+            <div class="blocks blocks_slider-management text-center position-relative w-100">
+                <div class="project-management_block block1 position-relative">
+                    <img src="assets/images/tasks/man-icon-1.svg" alt="icon">
+                    <h6 class="text-white">List</h6>
+                    <p class="text-white-darken">The classic view that organizes your tasks into specific lists that
+                        help you prioritize work and crush your deadlines. </p>
+                </div>
+                <div class="project-management_block block2 position-relative">
+                    <svg class="project-management_line left position-absolute" width="227" height="51"
+                         viewBox="0 0 227 51"
+                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.05" d="M225.977 41.9233C155.624 61.7576 79.5138 40.2816 0.998503 1.46211"
+                              stroke="#F7F8FA" stroke-width="3"/>
+                    </svg>
+                    <img src="assets/images/tasks/man-icon-2.svg" alt="icon">
+                    <h6 class="text-white">Kanban</h6>
+                    <p class="text-white-darken">Kanban boards help you create streamlined workflows with clearly
+                        identified tasks for each member of your team. Perfect for finding blockers. </p>
+                    <svg class="project-management_line right position-absolute" width="227" height="43"
+                         viewBox="0 0 227 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.05" d="M226.577 3.75135C132.536 -7.90043 102.889 32.6512 0.412713 41.2492"
+                              stroke="#F7F8FA" stroke-width="3"/>
+                    </svg>
+                </div>
+                <div class="project-management_block block3 position-relative">
+                    <img src="assets/images/tasks/man-icon-3.svg" alt="icon">
+                    <h6 class="text-white">Calendar</h6>
+                    <p class="text-white-darken"> Dedicated global board that tells you the status of your projects,
+                        who’s doing what, and where you have room to add more.</p>
+                </div>
+                <div class="project-management_block block3 position-relative">
+                    <svg class="project-management_line left position-absolute" width="227" height="51"
+                         viewBox="0 0 227 51"
+                         fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.05" d="M225.977 41.9233C155.624 61.7576 79.5138 40.2816 0.998503 1.46211"
+                              stroke="#F7F8FA" stroke-width="3"/>
+                    </svg>
+                    <img src="assets/images/tasks/man-icon-3.svg" alt="icon">
+                    <h6 class="text-white">Calendar</h6>
+                    <p class="text-white-darken"> Dedicated global board that tells you the status of your projects,
+                        who’s doing what, and where you have room to add more.</p>
+                    <svg class="project-management_line right position-absolute" width="227" height="43"
+                         viewBox="0 0 227 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.05" d="M226.577 3.75135C132.536 -7.90043 102.889 32.6512 0.412713 41.2492"
+                              stroke="#F7F8FA" stroke-width="3"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="blocks_slider-navigation">
+                <button class="btn-slider next-m"><img src="assets/images/icons/next.svg" alt="next"></button>
+                <button class="btn-slider prev-m"><img src="assets/images/icons/prev.svg" alt="prev"></button>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="#fff"/>
+        </svg>
+    </section>
+    <section class="gantt-view position-relative">
+        <!--        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"-->
+        <!--             xmlns="http://www.w3.org/2000/svg">-->
+        <!--            <path d="M1920 0H0V120L1920 0Z" fill="#2448b1"/>-->
+        <!--        </svg>-->
+        <div class="container gantt-view_container">
+            <div class="text-up text-center text-caption-blue tools-like_up2">gantt view</div>
+            <h2 class="text-center text-dark gantt-view_title">Take full advantage of <span
+                    class="word-wrap text-white bg-green">Gantt</span></h2>
+            <p class="text-caption gantt-view_caption">Gantt view lets you set your tasks on a timeline to get a
+                clear view of what needs to be done, when. Timeline view helps you allocate resources across projects or
+                a portfolio of projects. </p>
+            <div class="blocks d-flex">
+                <ul class="block_text">
+                    <li class="block_text-wrap active">
+                        <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
+                                                                 alt="icon-check"><span class="title-m text-dark title">Track dependencies</span>
+                            <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
+                                 alt="arrow"></div>
+                        <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
+                            remove dependencies, as needed to your project view.</p>
+                    </li>
+                    <li class="block_text-wrap">
+                        <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
+                                                                 alt="icon-check"><span class="title-m text-dark title">Adjust entire project timelines</span>
+                            <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
+                                 alt="arrow"></div>
+                        <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
+                            remove dependencies, as needed to your project view.</p>
+                    </li>
+                    <li class="block_text-wrap">
+                        <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
+                                                                 alt="icon-check"><span class="title-m text-dark title">Auto-scheduling</span>
+                            <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
+                                 alt="arrow"></div>
+                        <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
+                            remove dependencies, as needed to your project view.</p>
+                    </li>
+                    <li class="block_text-wrap">
+                        <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
+                                                                 alt="icon-check"><span class="title-m text-dark title">Relative scheduling</span>
+                            <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
+                                 alt="arrow"></div>
+                        <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
+                            remove dependencies, as needed to your project view.</p>
+                    </li>
+                    <li class="block_text-wrap">
+                        <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
+                                                                 alt="icon-check"><span class="title-m text-dark title">See (and set) progress</span>
+                            <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
+                                 alt="arrow"></div>
+                        <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
+                            remove dependencies, as needed to your project view.</p>
+                    </li>
+                    <li class="block_text-wrap">
+                        <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
+                                                                 alt="icon-check"><span class="title-m text-dark title">Create a critical path</span>
+                            <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
+                                 alt="arrow"></div>
+                        <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
+                            remove dependencies, as needed to your project view.</p>
+                    </li>
+                    <li class="block_text-wrap">
+                        <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
+                                                                 alt="icon-check"><span class="title-m text-dark title">Drag and drop deadlines</span>
+                            <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
+                                 alt="arrow"></div>
+                        <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
+                            remove dependencies, as needed to your project view.</p>
+                    </li>
+                    <li class="block_text-wrap">
+                        <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
+                                                                 alt="icon-check"><span class="title-m text-dark title">Gantt for projects</span>
+                            <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
+                                 alt="arrow"></div>
+                        <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
+                            remove dependencies, as needed to your project view.</p>
+                    </li>
+                </ul>
+                <div class="block_img">
+                    <img src="assets/images/tasks/pic-right-block.svg" alt="right-pic">
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="#f7f8fa"/>
+        </svg>
+    </section>
+    <section class="clean-workflows bg-gray">
+        <div class="container clean-workflows_container">
+            <div class="text-up text-center text-pink tools-like_up2">clean workflows</div>
+            <h2 class="text-center text-dark gantt-view_title">Streamline your planning </h2>
+            <p class="text-caption clean-workflows_caption">Stop wasting time organizing all the little details. We make
+                it easy to do management duties like: </p>
+            <div class="slider-clean-workflows">
+                <div class="slide">
+                    <div class="slide_icon bg-pink-3">
+                        <img src="assets/images/tasks/icon-slider/icon-3.svg" alt="icon">
+                    </div>
+                    <h6 class="slide_title text-dark">Breaking down projects</h6>
+                    <p class="slide_description title-s">Split big projects into easily manageable deliverables and
+                        assignable milestones. </p>
+                </div>
+                <div class="slide">
+                    <div class="slide_icon bg-blue-5">
+                        <img src="assets/images/tasks/icon-slider/icon-4.svg" alt="icon">
+                    </div>
+                    <h6 class="slide_title text-dark">Accurately tracking time</h6>
+                    <p class="slide_description title-s">Keep track of how long projects take to complete to understand
+                        how long certain tasks take. And, you can use that information to create highly accurate
+                        estimates for quoting jobs to customers.</p>
+                </div>
+                <div class="slide">
+                    <div class="slide_icon bg-orange-5">
+                        <img src="assets/images/tasks/icon-slider/icon-1.svg" alt="icon">
+                    </div>
+                    <h6 class="slide_title text-dark">Adjusting timelines</h6>
+                    <p class="slide_description title-s">Easily delay or speed up parts of projects (or entire projects)
+                        with a few clicks. </p>
+                </div>
+                <div class="slide">
+                    <div class="slide_icon bg-sky-blue-3">
+                        <img src="assets/images/tasks/icon-slider/icon-2.svg" alt="icon">
+                    </div>
+                    <h6 class="slide_title text-dark">Implementing bulk actions</h6>
+                    <p class="slide_description title-s">Stop doing one thing at a time and update all the relevant
+                        tasks at once. </p>
+                </div>
+                <div class="slide">
+                    <div class="slide_icon bg-pink-3">
+                        <img src="assets/images/tasks/icon-slider/icon-3.svg" alt="icon">
+                    </div>
+                    <h6 class="slide_title text-dark">Breaking down projects</h6>
+                    <p class="slide_description title-s">Split big projects into easily manageable deliverables and
+                        assignable milestones. </p>
+                </div>
+                <div class="slide">
+                    <div class="slide_icon bg-blue-5">
+                        <img src="assets/images/tasks/icon-slider/icon-4.svg" alt="icon">
+                    </div>
+                    <h6 class="slide_title text-dark">Accurately tracking time</h6>
+                    <p class="slide_description title-s">Keep track of how long projects take to complete to understand
+                        how long certain tasks take. And, you can use that information to create highly accurate
+                        estimates for quoting jobs to customers.</p>
+                </div>
+            </div>
+            <div class="blocks_slider-navigation clean-workflows_slider-navigation">
+                <button class="btn-slider next2"><img src="assets/images/icons/next-dark.svg" alt="next"></button>
+                <button class="btn-slider prev2"><img src="assets/images/icons/prev-dark.svg" alt="prev"></button>
+            </div>
+        </div>
+    </section>
+    <section class="within-tasks position-relative">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="#f7f8fa"/>
+        </svg>
+        <div class="container within-tasks_container">
+            <h2 class="within-tasks_title text-dark text-center">Manage tasks within tasks </h2>
+            <div class="blocks d-flex">
+                <div class="block-pic position-relative">
+                    <img class="position-absolute block-pic_dec" src="assets/images/tasks/pic-dec_2.svg" alt="pic-dec">
+                    <img class="position-relative z-index-1" src="assets/images/tasks/women-pic.png" alt="women-pic">
+                    <p class="block-pic_description h5 text-white position-absolute text-center">“Sometimes, you need to ensure that everything is done in a certain order or smaller tasks pop up
+                        during a project.”</p>
+                </div>
+                <ul class="block-list">
+                    <li><span class="block-list_circle text-dark">1</span><span class="block-list_text title-s">Create a specific order for tasks to be completed</span></li>
+                    <li><span class="block-list_circle text-dark">2</span><span class="block-list_text title-s">Manage smaller tasks pop up during a project. </span></li>
+                    <li><span class="block-list_circle text-dark">3</span><span class="block-list_text title-s">Get unlimited nesting subtasks to make sure you cover all the details. </span></li>
+                    <li><span class="block-list_circle text-dark">4</span><span class="block-list_text title-s">Branching tasks in and out is simple with drag and drop functionality.</span></li>
+                    <li><span class="block-list_circle text-dark">5</span><span class="block-list_text title-s">Subtasks have all the same attributes as main tasks, making them easy to scan. </span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-gradient experience position-relative it_experience">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="#fff"/>
+        </svg>
+        <div class="position-absolute bg-circle big desc-block"></div>
+        <div class="position-absolute bg-circle small desc-block"></div>
+        <img class="position-absolute bg-polygon desc-block" src="assets/images/bg/Polygon 33.svg" alt="bg">
+        <div class="container experience_container">
+            <h2 class="text-white experience_title text-center">We Care About Our Customers Experience</h2>
+            <div class="blocks blocks_slider">
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Danilo Zafani</div>
+                            <div class="position text-white-darken">Diretor at Cia da Gestão</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“Freedcamp provides a super low entry barrier due to great user
+                        experience
+                        and ease to use. Its
+                        customer support is very fast and efficient. Every time I have a suggestion for improvement I
+                        speak directly with the decision makers and get instant responses”</p>
+                </div>
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava2.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Emily Freeman</div>
+                            <div class="position text-white-darken">Freeman Land Surveying</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“You guys are fantastic! We were jdiscussing the nature of
+                        "Customer
+                        Service", and how horrendous our experiences usually are. We thank you for being a shining
+                        example of how companies should respond to and treat their customers!”</p>
+                </div>
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava3.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Marcelo M</div>
+                            <div class="position text-white-darken">Production Diretor</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“Freedcamp is a very intuitive project management platform! I use
+                        less than
+                        half of all features and, yet, I have everything I need. It is easy to add lists and tasks and
+                        but also see the big picture. I like that I can add as many people as I want for a project while
+                        having full control of what they can see and do.”</p>
+                </div>
+            </div>
+            <div class="blocks_slider-navigation">
+                <button class="btn-slider next"><img src="assets/images/icons/next.svg" alt="next"></button>
+                <button class="btn-slider prev"><img src="assets/images/icons/prev.svg" alt="prev"></button>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="words position-relative">
+        <div class="container words_container">
+            <img class="words_stars" src="assets/images/it-page/stars.svg" alt="stars">
+            <h2 class="text-center text-dark multiple-projects_title">An Award-winning system</h2>
+            <div class="blocks">
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-1.svg" alt="Leaders">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-2.png" alt="happiest users">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-3.png" alt="capterra">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-5.svg" alt="high performer">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/word/pic-5.png" alt="crozdesk">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="multiple-projects position-relative it_multiple-projects">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <!--        <img class="position-absolute bg-10" src="assets/images/bg/multiple_projects_left.svg" alt="bg">-->
+        <!--        <img class="position-absolute bg-11" src="assets/images/bg/multiple_projects_right.svg" alt="bg">-->
+        <div class="container multiple-projects_container">
+            <h2 class="text-center text-dark multiple-projects_title">Issue Tracker provides a clear and centralized
+                overview for requests and their current state</h2>
+            <button class="btn btn-main_dark btn-secondary-darkbg multiple-projects_btn d-block">Try it Free</button>
+        </div>
+    </section>
+</main>
+<footer class="position-relative footer">
+    <svg class="white-bg-up position-absolute z-index-1" width="1920" height="120" viewBox="0 0 1920 120"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 0H0V120L1920 0Z" fill="#F7F8FA"/>
+    </svg>
+    <div class="container footer_container">
+        <div class="footer_wrapper-nav">
+            <div class="footer_wrap-logo">
+                <img class="footer_logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+                <div class="footer_text text-white-darken">Free Effortless Collaboration for Teams</div>
+                <div class="footer_wrap-soc">
+                    <a target="_blank" href="https://www.facebook.com/"><img src="assets/images/footer/Facebook.svg"
+                                                                             alt="Facebook"></a>
+                    <a target="_blank" href="https://twitter.com/"><img src="assets/images/footer/Twitter.svg"
+                                                                        alt="Twitter"></a>
+                    <a target="_blank" href="https://www.linkedin.com/"><img src="assets/images/footer/Linkedin.svg"
+                                                                             alt="Linkedin"></a>
+                </div>
+            </div>
+            <nav class="footer_wrap-nav">
+                <div class="nav_block">
+                    <div class="title-xs text-white">About</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Explore</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Community</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Download</div>
+                    <ul class="nav_ul">
+                        <li><a href="">IOS</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">Desktop</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Resources</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Developers API - Zapier</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="footer_bottom">
+            <p class="footer_allright text-white-darken">All Rights Reserved © Freedcamp Inc. 2021</p>
+            <div class="lang text-white position-relative">English</div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/sliders.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

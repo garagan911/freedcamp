@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Freedcamp</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/Favicon.svg">
+    <link href="assets/vendor/slick.css" rel="stylesheet">
+    <link href="assets/style/css/style.css" rel="stylesheet">
+    <link href="assets/vendor/slick-theme.css" rel="stylesheet">
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script>-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/vendor/slick.min.js"></script>
+</head>
+<body>
+<header class="header position-fixed d-flex">
+    <div class="header_logo">
+        <a href="/">
+            <img class="white-logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+            <img class="dark-logo" src="assets/images/Header/dark-logo.svg" alt="freedcamp">
+        </a>
+    </div>
+    <button class="mob-menu">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+    </button>
+    <nav class="header-nav">
+        <ul class="d-flex inter-m">
+            <li class="sub-menu products">Products <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.84094 6.34472C7.96471 7.22095 6.53529 7.22095 5.65906 6.34472L0.71967 1.40533C0.426777 1.11244 0.426777 0.637563 0.71967 0.34467C1.01256 0.0517766 1.48744 0.0517766 1.78033 0.34467L6.71972 5.28406C7.01016 5.5745 7.48984 5.5745 7.78028 5.28406L12.7197 0.34467C13.0126 0.0517766 13.4874 0.0517766 13.7803 0.34467C14.0732 0.637563 14.0732 1.11244 13.7803 1.40533L8.84094 6.34472Z" fill="#A5ADC5"/>
+            </svg>
+                <div class="menu position-absolute w-100 bg-white d-flex products">
+                    <div class="block-big d-flex">
+                        <div class="block-head d-flex w-100">
+                            <div class="title">Products</div>
+                            <button class="btn-view-all">View All <img src="assets/images/Header/arrow-right.svg" alt=""></button>
+                        </div>
+                        <div class="block-wrap w-100 d-flex">
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/icon-menu-1.svg" alt="">
+                                <h6 class="text-dark">Tasks</h6>
+                                <p>Organize all the tasks within your project, assign them, etc.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/icon-menu-2.svg" alt="">
+                                <h6 class="text-dark">Discussions</h6>
+                                <p>Discussions are the place for asynchronous conversations.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/icon-menu-3.svg" alt="">
+                                <h6 class="text-dark">Milestones</h6>
+                                <p>Keep track of key moments in your project timeline. </p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/icon-menu-4.svg" alt="">
+                                <h6 class="text-dark">Time</h6>
+                                <p>All your team time - tracked in one place.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/icon-menu-5.svg" alt="">
+                                <h6 class="text-dark">Files</h6>
+                                <p>Store all your Files with unlimited storage space.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/icon-menu-6.svg" alt="">
+                                <h6 class="text-dark">Calendar</h6>
+                                <p>Create a customized calendar to track all the projects.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/icon-menu-7.svg" alt="">
+                                <h6 class="text-dark">Project Overview</h6>
+                                <p>All the important project updates you need in one place.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/icon-menu-8.svg" alt="">
+                                <h6 class="text-dark">Issue Tracker</h6>
+                                <p>Report, track, prioritize, and manage issues. </p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/icon-menu-9.svg" alt="">
+                                <h6 class="text-dark">Wiki</h6>
+                                <p>The single source of information your team needs.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-plans d-flex">
+                        <div class="block-head d-flex w-100">
+                            <div class="title">Plans</div>
+                            <button class="btn-view-all">View All <img src="assets/images/Header/arrow-right.svg" alt=""></button>
+                        </div>
+                        <div class="block-wrap d-flex w-100">
+                            <div class="block-item small position-relative">
+                                <h6 class="text-dark">Free</h6>
+                                <p>For individuals or teams just getting started</p>
+                            </div>
+                            <div class="block-item small position-relative">
+                                <h6 class="text-dark">Pro</h6>
+                                <p>Project planning and team collaboration</p>
+                            </div>
+                            <div class="block-item small position-relative">
+                                <h6 class="text-dark">Business</h6>
+                                <p>Customized platform for any team or use case</p>
+                            </div>
+                            <div class="block-item small position-relative">
+                                <h6 class="text-dark">Enterprise</h6>
+                                <p>Advanced tools and analytics, enterprise-grade support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="sub-menu features">Features <svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.84094 6.34472C7.96471 7.22095 6.53529 7.22095 5.65906 6.34472L0.71967 1.40533C0.426777 1.11244 0.426777 0.637563 0.71967 0.34467C1.01256 0.0517766 1.48744 0.0517766 1.78033 0.34467L6.71972 5.28406C7.01016 5.5745 7.48984 5.5745 7.78028 5.28406L12.7197 0.34467C13.0126 0.0517766 13.4874 0.0517766 13.7803 0.34467C14.0732 0.637563 14.0732 1.11244 13.7803 1.40533L8.84094 6.34472Z" fill="#A5ADC5"/>
+            </svg>
+                <div class="menu position-absolute w-100 bg-white d-flex features">
+                    <div class="block-big d-flex">
+                        <div class="block-head d-flex w-100">
+                            <div class="title">Features</div>
+                            <button class="btn-view-all">View All <img src="assets/images/Header/arrow-right.svg" alt=""></button>
+                        </div>
+                        <div class="block-wrap w-100 d-flex">
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/feature-icon-1.svg" alt="">
+                                <h6 class="text-dark">File Edit</h6>
+                                <p>Organize all the tasks within your project, assign them, etc.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/feature-icon-2.svg" alt="">
+                                <h6 class="text-dark">Notification Email-in</h6>
+                                <p>Discussions are the place for asynchronous conversations.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/feature-icon-3.svg" alt="">
+                                <h6 class="text-dark">Passwords</h6>
+                                <p>Keep track of key moments in your project timeline. </p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/feature-icon-4.svg" alt="">
+                                <h6 class="text-dark">Permissions and System Management</h6>
+                                <p>All your team time - tracked in one place.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/feature-icon-5.svg" alt="">
+                                <h6 class="text-dark">Tags, Mentions, and Smart Quote</h6>
+                                <p>Store all your Files with unlimited storage space.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/feature-icon-6.svg" alt="">
+                                <h6 class="text-dark">Turn on Apps and Features</h6>
+                                <p>Create a customized calendar to track all the projects.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                            <div class="block-item big position-relative">
+                                <img class="position-absolute" src="assets/images/Header/feature-icon-7.svg" alt="">
+                                <h6 class="text-dark">Project Overview</h6>
+                                <p>Organize all the tasks within your project, assign them, etc.</p>
+                                <a href="/" class="link-menu"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="block-plans d-flex">
+                        <div class="block-head d-flex w-100">
+                            <div class="title">Plans</div>
+                            <button class="btn-view-all">View All <img src="assets/images/Header/arrow-right.svg" alt=""></button>
+                        </div>
+                        <div class="block-wrap d-flex w-100">
+                            <div class="block-item small position-relative">
+                                <h6 class="text-dark">Free</h6>
+                                <p>For individuals or teams just getting started</p>
+                            </div>
+                            <div class="block-item small position-relative">
+                                <h6 class="text-dark">Pro</h6>
+                                <p>Project planning and team collaboration</p>
+                            </div>
+                            <div class="block-item small position-relative">
+                                <h6 class="text-dark">Business</h6>
+                                <p>Customized platform for any team or use case</p>
+                            </div>
+                            <div class="block-item small position-relative">
+                                <h6 class="text-dark">Enterprise</h6>
+                                <p>Advanced tools and analytics, enterprise-grade support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="header-nav_enterprise"><a href="file-edit.html" class="enterprise">Enterprise</a></li>
+            <li><a href="Issue-Tracker.html" class="price">Pricing</a></li>
+            <li class="btn-mob login"><a class="inter-b login position-relative" id="login" href="#">Login</a></li>
+            <li class="btn-mob get-free"><a class="btn header-nav_btn btn-secondary-darkbg inter-b" href="#">Get Started For Free</a></li>
+        </ul>
+    </nav>
+    <div class="menu-login position-absolute">
+        <img class="position-absolute arrow-top" src="assets/images/login/Polygon 6.svg" alt="">
+        <div class="login_body-content">
+            <div class="login_form">
+                <h1 class="login_title">Login</h1>
+                <form class="login_form-wrapper" action="">
+                    <!----------------------------------------------------------------------------------------
+                    When the field is valid, you can use the class 'valid' when the field is invalid 'invalid
+                    ----------------------------------------------------------------------------------------->
+                    <label class="label-text position-relative">
+                        <svg class="position-absolute z-index-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <img class="position-absolute info-field z-index-1 invalid-pic d-none" src="assets/images/login/Attention.svg" alt="">
+                        <img class="position-absolute info-field z-index-1 valid-pic d-none" src="assets/images/login/Check.svg" alt="">
+                        <input class="form-field" type="text" placeholder="Email Address">
+                    </label>
+                    <label class="label-text position-relative">
+                        <img class="position-absolute z-index-1" src="assets/images/login/Password.svg" alt="">
+                        <input class="form-field" type="password" id="myInput" placeholder="Password">
+                        <img src="assets/images/login/Eye.svg" id="pass-status" class="eye position-absolute" aria-hidden="true" onClick="viewPassword()">
+
+                        <script>
+                            function viewPassword()
+                            {
+                                var passwordInput = document.getElementById('myInput');
+                                var passStatus = document.getElementById('pass-status');
+
+                                if (passwordInput.type == 'password'){
+                                    passwordInput.type='text';
+                                    passStatus.className='eye-slash position-absolute';
+                                    passStatus.src = "assets/images/login/Eye-text.svg";
+
+                                }
+                                else{
+                                    passwordInput.type='password';
+                                    passStatus.className='eye position-absolute';
+                                    passStatus.src = "assets/images/login/Eye.svg";
+                                }
+                            }
+                        </script>
+                    </label>
+                    <div class="form-group">
+                        <input type="checkbox" id="logged">
+                        <label for="logged" class="text-dark">Keep me logged in for 2 weeks</label>
+                    </div>
+                    <button class="btn btn-main_big btn-continue text-white w-100 d-block">Continue</button>
+                    <a class="btn_forgot-pass text-blue d-block" href="">Forgot Password?</a>
+                    <div class="text-gray login-with position-relative"><span class="bg-white position-relative z-index-1 text-dark">or login with</span></div>
+                    <div class="gmail_login">
+                        <img src="assets/images/login/btn_google_signin.png" alt="">
+                    </div>
+                    <div class="social">
+                        <a href=""><img src="assets/images/login/facebook.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/linkedin.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/twitter.svg" alt=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+<main>
+    <section class="section-top bg-blue-gradient position-relative">
+        <div class="section-top_container container position-relative">
+            <div class="content-wrap position-relative">
+                <div class="section-top_caption text-white poppins-b text-center text-caption-blue">A better way to
+                    manage
+                    everything
+                </div>
+                <h1 class="section-top_title text-white poppins-sb text-center">All your favorite business collab tools
+                    in
+                    one place</h1>
+                <p class="section-top_description inter-r text-center text-white-top">Freedcamp gives you the tools you
+                    need
+                    to reduce the amount of time and energy project management takes, regardless of the complexity of
+                    the
+                    project or the size of your business.</p>
+                <button class="btn btn-main_dark section-top_btn">Start Now</button>
+            </div>
+
+            <!--            <img class="section-top_pic d-block desk" src="assets/images/top-illustration.png" alt="top-illustration">-->
+            <!--            <div class="section-top_pic desk"></div>-->
+            <lottie-player class="section-top_pic desk" src="assets/animation/Header2.json" background="transparent"
+                           speed="1" loop autoplay></lottie-player>
+        </div>
+        <img class="section-top_pic mob" src="assets/images/top-illustration-mob.png" alt="top-illustration">
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="white-section position-relative partners">
+        <div class="container">
+            <div class="partners-block d-flex">
+                <img src="assets/images/partners/partner-1.png" alt="jooble">
+                <img src="assets/images/partners/partner-2.png" alt="paypal">
+                <img src="assets/images/partners/partner-3.png" alt="google">
+                <img src="assets/images/partners/partner-4.png" alt="apple">
+                <img src="assets/images/partners/partner-5.png" alt="deloitte">
+                <img src="assets/images/partners/partner-6.png" alt="gettyimages">
+            </div>
+            <div class="our-achievement">
+                <h2 class="text-dark our-achievement_title text-center title-h2-center">Our achievement in the journey
+                    depicted in words and numbers</h2>
+                <div class="our-achievement_blocks d-flex text-center poppins-sb">
+                    <div class="block-hover">
+                        <div class="block-hover_title text-dark">229</div>
+                        <div class="block-hover_description text-gray">Countries and Territories</div>
+                    </div>
+                    <div class="block-hover">
+                        <div class="block-hover_title text-dark">150K+</div>
+                        <div class="block-hover_description text-gray">Teams use Freedcamp</div>
+                    </div>
+                    <div class="block-hover">
+                        <div class="block-hover_title text-dark">285K+</div>
+                        <div class="block-hover_description text-gray">People use Freedcamp</div>
+                    </div>
+                </div>
+            </div>
+            <div class="management-hard">
+                <h2 class="text-dark text-center title-h2-center">Project management doesn't have to be hard</h2>
+                <div class="blocks">
+                    <div class="blocks-illustration position-relative">
+                        <div class="blocks-illustration_block card-1 position-absolute">
+                            <div class="block-title title-xs text-dark">
+                                Organizing people
+                            </div>
+                            <img src="assets/images/vuesax/people.svg" alt="people">
+                        </div>
+                        <div class="blocks-illustration_block card-2 position-absolute">
+                            <div class="block-title title-xs text-dark">
+                                Managing the work
+                            </div>
+                            <img src="assets/images/vuesax/graph.svg" alt="graph">
+                        </div>
+                        <div class="blocks-illustration_block card-3 position-absolute">
+                            <div class="block-title title-xs text-dark">
+                                Updating clients
+                            </div>
+                            <img src="assets/images/vuesax/direct-send.svg" alt="direct-send">
+                        </div>
+                    </div>
+                    <div class="blocks-description">
+                        <h3 class="blocks-description_title title-m text-dark">Keeping track of all the fine points of a
+                            pocket can feel like a nearly impossible task.</h3>
+                        <div class="blocks-description_text body-l">
+                            <p>It can sometimes feel like all your time is spent fiddling around with the details,
+                                rather than running your business.</p>
+                            <p>With the right tools, however, it can be a smooth process that practically runs
+                                itself.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="position-absolute bg-1" src="assets/images/bg/Group 48095773.svg" alt="bg">
+        <img class="position-absolute bg-2" src="assets/images/bg/Vector 458.svg" alt="bg">
+        <img class="position-absolute bg-3" src="assets/images/bg/Group 48096081.svg" alt="bg">
+    </section>
+    <section class="blue-section bg-blue-gradient position-relative manag-solutions">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <div class="container">
+            <h2 class="text-white text-center title-h2-center manag-solutions_title">Why is it, then, that most project
+                management solutions don't feel like they were designed to make life
+                easier?</h2>
+            <div class="manag-solutions_blocks text-center">
+                <div class="block">
+                    <img src="assets/images/icons/interface.svg" alt="interface">
+                    <h5 class="block_title text-white">Interface</h5>
+                    <div class="block_description text-dark-bg">They have an interface that’s clunky and time-consuming
+                        to work with.
+                    </div>
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/functionality.svg" alt="functionality">
+                    <h5 class="block_title text-white">Functionality</h5>
+                    <div class="block_description text-dark-bg">They offer functionality that is too restricted and not
+                        at all customizable
+                    </div>
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/support.svg" alt="support">
+                    <h5 class="block_title text-white">Support</h5>
+                    <div class="block_description text-dark-bg">They provide lackluster support.</div>
+                </div>
+            </div>
+            <button class="btn btn-main_dark d-block manag-solutions_btn">Learn More</button>
+        </div>
+        <img class="position-absolute bg-4" src="assets/images/bg/bg-m.svg" alt="bg">
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="project-management position-relative">
+        <div class="container">
+            <h2 class="text-dark project-management_title text-center title-h2-center">Project management shouldn't take
+                you away from your business.</h2>
+            <p class="text-caption project-management_caption">Freedcamp helps you stay on track, on deadline, and save
+                time on project management. We help you…</p>
+            <div class="blocks text-center position-relative">
+                <div class="project-management_block block1">
+                    <img src="assets/images/pm-icon1.svg" alt="icon">
+                    <h6 class="text-dark">Put your to-dos</h6>
+                    <p>in writing so you can stop scrambling and free up time to work deliberately. </p>
+                </div>
+                <svg class="project-management_line left position-absolute" width="227" height="51" viewBox="0 0 227 51"
+                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M225.977 41.9233C155.624 61.7576 79.5138 40.2816 0.998503 1.46211" stroke="#F7F8FA"
+                          stroke-width="3"/>
+                </svg>
+                <div class="project-management_block block2">
+                    <img src="assets/images/pm-icon2.svg" alt="icon">
+                    <h6 class="text-dark">Keep project information</h6>
+                    <p>like plans and meeting notes, so everyone pulls from the same pool of knowledge.</p>
+                </div>
+                <svg class="project-management_line right position-absolute" width="227" height="43"
+                     viewBox="0 0 227 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M226.582 3.75135C132.541 -7.90043 102.894 32.6512 0.417595 41.2492" stroke="#F7F8FA"
+                          stroke-width="3"/>
+                </svg>
+                <div class="project-management_block block3">
+                    <img src="assets/images/pm-icon3.svg" alt="icon">
+                    <h6 class="text-dark">Save time with templates</h6>
+                    <p>Reuse common workflows to not only save time, but reduce error and provide a process everyone can
+                        follow.</p>
+                </div>
+            </div>
+        </div>
+        <img class="position-absolute bg-5" src="assets/images/bg/Group 48095788.svg" alt="bg">
+    </section>
+    <section class="blue-section bg-blue-gradient position-relative testimonials">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <div class="testimonials_container container">
+            <img class="testimonials_pic" src="assets/images/“.svg" alt="“">
+            <p class="text-center testimonials_text quate-m text-white">“Excellent feature set that integrates task,
+                project, and time management apps together very nicely.
+                Handles both internal and external teams/projects and users well. Customizable. Offers many robust
+                functionalities that make it much stronger than you'd first notice.”</p>
+            <div class="testimonials_people">
+                <div class="avatar"><img src="assets/images/avatar.jpg" alt=""></div>
+                <div class="info">
+                    <div class="info_name title-xs text-white">Alexandra Kapelos-Peters</div>
+                    <div class="info_position">Founder and Consultant</div>
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="white-section position-relative tools-like">
+        <div class="tools-like_container container">
+            <div class="row">
+                <div class="col-50">
+                    <div class="tools-like_up text-up text-caption-orange">for free</div>
+                    <h2 class="tools-like_title text-dark">All the mission critical collaboration tools you need to
+                        boost productivity</h2>
+                    <p class="tools-like_text">It's hard to work, when you don't have everything you need to work
+                        efficiently. It's worse, when
+                        you’re just starting out and you want to organize, but everything you try to use hides all the
+                        best features behind more expensive tiers.</p>
+                    <p class="tools-like_text">With Freedcamp, you get the features you need to get the job done, free,
+                        with unlimited storage,
+                        users, control over permissions, and no project limits. That’s right. We know that, especially
+                        when you’re just getting started, the right tools can turn your side-hustle into an enterprise,
+                        that’s why we offer one of the strongest free plans out there.</p>
+                    <button class="btn btn-main_dark btn-secondary-darkbg tools-like_btn">Try it Free</button>
+                </div>
+                <div class="col-50 pic">
+                    <img class="tools-like_img" src="assets/images/mission-pic.png" alt="mission pic">
+                </div>
+            </div>
+            <div class="tools-like_container2">
+                <div class="text-up text-center text-caption-orange tools-like_up2">A better way to manage</div>
+                <h2 class="text-center text-dark tools-like_title2">Tools like</h2>
+                <div class="row tools-like_row2">
+                    <div class="col-50">
+                        <div class="tools-like_item position-relative">
+                            <img class="position-absolute" src="assets/images/icons/tools-1.svg" alt="">
+                            <h6 class="text-dark">Tasks</h6>
+                            <p>Organize all the tasks within your project, assign them, and create deadlines to make
+                                sure that everything...</p>
+                        </div>
+                        <div class="tools-like_item position-relative">
+                            <img class="position-absolute" src="assets/images/icons/tools-2.svg" alt="">
+                            <h6 class="text-dark">Calendar</h6>
+                            <p>Create a customized calendar to track all the projects that you’re in charge of (or
+                                working on). Never lose track of what...</p>
+                        </div>
+                        <div class="tools-like_item position-relative">
+                            <img class="position-absolute" src="assets/images/icons/tools-3.svg" alt="">
+                            <h6 class="text-dark">Discussions</h6>
+                            <p>A place for asynchronous conversations that doesn’t crowd your inbox. Discussions lets
+                                you talk about the details of your project, without hopping on a call. </p>
+                        </div>
+                        <div class="tools-like_item position-relative">
+                            <img class="position-absolute" src="assets/images/icons/tools-4.svg" alt="">
+                            <h6 class="text-dark">Files</h6>
+                            <p>Store all your Files in Freedcamp with unlimited storage space. Upload, tag, add
+                                comments, and manage the...</p>
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <div class="tools-like_item position-relative">
+                            <img class="position-absolute" src="assets/images/icons/tools-5.svg" alt="">
+                            <h6 class="text-dark">Milestones</h6>
+                            <p>Track the important moments of all your projects with Milestones. Highlight the critical
+                                moments in your projects...</p>
+                        </div>
+                        <div class="tools-like_item position-relative">
+                            <img class="position-absolute" src="assets/images/icons/tools-6.svg" alt="">
+                            <h6 class="text-dark">Password sharing</h6>
+                            <p>Built-in password sharing helps you securely manage all the passwords related to your
+                                projects. Easily share passwords...</p>
+                        </div>
+                        <div class="tools-like_item position-relative">
+                            <img class="position-absolute" src="assets/images/icons/tools-7.svg" alt="">
+                            <h6 class="text-dark">Time tracking</h6>
+                            <p>Time tracking doesn’t just give you what you need to track how long tasks are taking you.
+                                It also gives you the ability...</p>
+                        </div>
+                        <div class="tools-like_item position-relative last">
+                            <img class="position-absolute" src="assets/images/icons/tools-8.svg" alt="">
+                            <h6 class="text-dark">And many more...</h6>
+                            <button class="btn btn-main_dark btn-secondary-darkbg tools-like_item-btn">See All
+                                Features
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="position-absolute bg-6" src="assets/images/Lined _Tools like_ block.svg" alt="">
+    </section>
+    <section class="gray-section bg-gray position-relative testimonials-left">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <div class="testimonials-left_container container">
+            <p class="testimonials_text left text-dark h2 poppins-mi">“I asked about an automation feature I needed to
+                maximize my workflow,
+                and they rolled it out across the whole platform not long after! I have tons of experience with SaaS but
+                this is next level.”</p>
+            <div class="testimonials_people">
+                <img src="assets/images/Chris-1024x1024 1.png" alt="">
+                <div class="info">
+                    <div class="info_name h6 text-dark">Christopher Johnson</div>
+                    <div class="info_position">Owl Digital Services LLC</div>
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="integrate position-relative">
+        <svg class="position-absolute integrate_bg" width="1920" height="498" viewBox="0 0 1920 498" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_3349_44550)">
+                <path d="M-586.5 360.5C-509 360.5 -497.5 309.5 -447 309.5C-390 309.5 -376 388.5 -294 387C-212 385.5 -205 299 -155.5 299C-99.5 299 -82.5 418 -33 410.5C16.5 403 18.5 103.399 131 361C243.5 618.601 265 18.5 461.773 32.7049C663.083 47.2374 544.592 389.554 712.696 420.541C880.8 451.528 821.643 122.667 944.887 129.164C1068.13 135.661 1142.57 519.999 1254.97 497.008C1367.37 474.018 1249.54 -11.7764 1401.87 0.218486C1554.2 12.2134 1556.67 414.543 1673.5 345.073C1766.97 289.496 1673.5 32.7049 1814 227.123C1954.5 421.54 1920.42 155.321 1978 145C2031 135.5 2058 227.123 2124.5 227.123C2191 227.123 2162.5 145 2218 145C2273.5 145 2257.5 227.123 2333.5 227.123C2409.5 227.123 2396.5 178.5 2448 178.5C2499.5 178.5 2530.5 219.5 2564.5 219.5"
+                      stroke="#EDF3FE" stroke-width="4"/>
+                <path d="M239.098 367.553C239.283 364.305 236.801 361.521 233.553 361.336C230.306 361.15 227.522 363.632 227.336 366.88C227.151 370.129 229.633 372.912 232.881 373.098C236.128 373.284 238.912 370.801 239.098 367.553Z"
+                      fill="#F2A84C"/>
+                <path d="M246.098 350.553C246.283 347.305 243.801 344.522 240.553 344.336C237.306 344.15 234.522 346.633 234.336 349.881C234.151 353.129 236.633 355.912 239.881 356.098C243.128 356.284 245.912 353.801 246.098 350.553Z"
+                      fill="#F2A84C"/>
+                <path d="M266.098 301.553C266.283 298.305 263.801 295.522 260.553 295.336C257.306 295.15 254.522 297.633 254.336 300.881C254.151 304.129 256.633 306.912 259.881 307.098C263.128 307.284 265.912 304.801 266.098 301.553Z"
+                      fill="#F2A84C"/>
+            </g>
+            <defs>
+                <clipPath id="clip0_3349_44550">
+                    <rect width="2560" height="498" fill="white" transform="translate(-320)"/>
+                </clipPath>
+            </defs>
+        </svg>
+        <img class="position-absolute integrate_bg-mob" src="assets/images/bg/Group 48095758.svg" alt="bg-mob">
+        <div class="container position-relative integrate_container">
+            <h2 class="text-dark integrate_title text-center">Integrate with the tools that drive success.</h2>
+            <button class="btn btn-main_dark btn-secondary-darkbg integrate_btn d-block">Try it Free</button>
+            <div class="blocks-row">
+                <div class="block">
+                    <img src="assets/images/icons/inegrate-icon-1.svg" alt="Microsoft Office OneDrive">
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/inegrate-icon-2.svg" alt="Slack Technologies">
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/inegrate-icon-3.svg" alt="Zapier">
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/inegrate-icon-4.svg" alt="Dropbox">
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/inegrate-icon-5.svg" alt="Microsoft Office Outlook">
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/inegrate-icon-6.svg" alt="Google Sheets logo">
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/inegrate-icon-7.svg" alt="Gmail">
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/inegrate-icon-8.svg" alt="Google Calendar">
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/inegrate-icon-9.svg" alt="Google Drive">
+                    <img class="position-absolute flag" src="assets/images/icons/flag.svg" alt="flag">
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="blue-section bg-blue-gradient position-relative customizables">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <div class="customizables_container container">
+            <h2 class="customizables_title text-center title-h2-center text-white">Customizable to suit your
+                business</h2>
+            <p class="text-caption customizables_caption">You don't need a one-size-fits all solution for your business
+                any more than you want
+                a generic breakfast cereal. Freedcamp lets you customize your workspace to better reflect how you work
+                and how your team works.</p>
+            <h5 class="text-white text-center customizables_h5">You can customize details like:</h5>
+            <div class="blocks">
+                <div class="block">
+                    <img src="assets/images/icons/customizable-icon-1.svg" alt="View">
+                    <h6 class="text-white block_title">The View</h6>
+                    <p class="text-white-darken block_text">Work with Kanban, list, table, or Gannt views. Everyone can
+                        see projects in the way that helps
+                        work most effectively.</p>
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/customizable-icon-2.svg" alt="Calendar">
+                    <h6 class="text-white block_title">The Calendar</h6>
+                    <p class="text-white-darken block_text">Use custom filters that show you only the information that
+                        is relevant. And, select from
+                        a standard calendar view or deadline mode. </p>
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/customizable-icon-3.svg" alt="Notifications">
+                    <h6 class="text-white block_title">Notifications</h6>
+                    <p class="text-white-darken block_text">Choose what projects you (and your team) get notifications
+                        from. And set up outside notifications
+                        for clients and customers who like to stay in the loop.</p>
+                </div>
+                <div class="block">
+                    <img src="assets/images/icons/customizable-icon-4.svg" alt="Permissions">
+                    <h6 class="text-white block_title">Permissions</h6>
+                    <p class="text-white-darken block_text">Get highly customizable permissions that can allow those
+                        outside your team to have access to
+                        certain features, but not others. </p>
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="workflows position-relative">
+        <img class="position-absolute bg-7" src="assets/images/bg/Group 48096091.svg" alt="">
+        <img class="position-absolute bg-8" src="assets/images/bg/Rectangle 3382.svg" alt="">
+        <div class="container workflows_container">
+            <h2 class="workflows_title text-center title-h2-center text-dark">Create friction-free workflows</h2>
+            <p class="text-caption workflows_caption">With everything you need in one place, you can create easy to
+                manage workflows that reduce the time it takes to organize projects. </p>
+            <div class="workflows_items">
+                <div class="item position-relative">
+                    <img src="assets/images/icons/check.svg" alt="check">
+                    <p><span class="text-dark">Custom templates</span> help you get started quickly</p>
+                </div>
+                <div class="item item2 position-relative">
+                    <img src="assets/images/icons/check.svg" alt="check">
+                    <p><span class="text-dark">Wikis</span> help you create a living repository of knowledge related to
+                        your projects</p>
+                </div>
+                <div class="item item3 position-relative">
+                    <img src="assets/images/icons/check.svg" alt="check">
+                    <div class="position-relative">
+                        <p>Store all your <span class="text-dark">files</span> directly in Freedcamp with unlimited file
+                            storage* </p>
+                        <p class="small-text position-absolute">*even on the free plan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="blocks">
+                <div class="block_img">
+                    <img class="desc-block desc-pic" src="assets/images/Illustration _Create friction-free workflows_.svg" alt="workflows">
+                    <img class="mob-block mob-pic" src="assets/images/Frame.svg" alt="workflows">
+                </div>
+                <div class="block_text">
+                    <div class="wrap-img"><img src="assets/images/icons/workflow-icon.svg" alt="workflows-icon"></div>
+                    <h6>Working in a language other than English?</h6>
+                    <p>Being able to work in your native language definitely reduces friction in the workflow.
+                        Freedcamp is used worldwide and supports a variety of different languages to help our
+                        customers.</p>
+                    <button class="btn btn-main_dark btn-secondary-darkbg block_btn">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-section bg-gray position-relative testimonials-center">
+        <img class="position-absolute bg-9" src="assets/images/bg/Teslimonials bg lins 2560.svg" alt="bg">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+
+        <div class="testimonials-center_container container position-relative">
+            <p class="text-center testimonials_text quate-m text-blue">“Freedcamp provides the sweet balance between my
+                learning curve in using the app
+                effectively until go up and running, and all the necessary functionalities, without putting my self too
+                much in configuring all the features with it's bells and whistles.”</p>
+            <div class="testimonials-center_people text-center">
+                <div class="avatar"><img src="assets/images/JAP NeoSentra PP 1.jpg" alt="avatar"></div>
+                <div class="info">
+                    <h6 class="info_name text-dark">Jhody Arya Prabawa</h6>
+                    <div class="info_position text-body">CEO & Founder of NeoSentra Group</div>
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="backed position-relative">
+        <div class="container backed_container">
+            <h2 class="backed_title text-center title-h2-center text-dark">Driven/Backed by a small, but dedicated
+                team</h2>
+            <p class="text-caption backed_caption">Unlike other companies, you’re not dealing with a huge team at
+                Freedcamp. The people you talk to when you reach out to us are, more often than not, the decision
+                makers.
+                This means that when you report a bug or request a custom feature, you’re talking to the people
+                responsible for doing the work, reducing the time it takes to get things done.</p>
+            <div class="blocks">
+                <div class="blocks_text">
+                    <h5 class="text-dark">All the support you need, when you need it</h5>
+                    <p class="blocks_text-p">Our support team is standing by to answer your questions, guide you through
+                        the platform, or fix any bugs you find. We’re available 24/7. </p>
+                    <p class="blocks_text-p">All you have to do is reach out. </p>
+                </div>
+                <div class="blocks_img position-relative">
+                    <img class="position-absolute" src="assets/images/backend-pic.svg" alt="backend-pic">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-blue-gradient experience position-relative">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <div class="position-absolute bg-circle big desc-block"></div>
+        <div class="position-absolute bg-circle small desc-block"></div>
+        <img class="position-absolute bg-polygon desc-block" src="assets/images/bg/Polygon 33.svg" alt="bg">
+        <div class="container experience_container">
+            <h2 class="text-white experience_title text-center">We Care About Our Customers Experience</h2>
+            <div class="blocks blocks_slider">
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Danilo Zafani</div>
+                            <div class="position text-white-darken">Diretor at Cia da Gestão</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“Freedcamp provides a super low entry barrier due to great user
+                        experience
+                        and ease to use. Its
+                        customer support is very fast and efficient. Every time I have a suggestion for improvement I
+                        speak directly with the decision makers and get instant responses”</p>
+                </div>
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava2.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Emily Freeman</div>
+                            <div class="position text-white-darken">Freeman Land Surveying</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“You guys are fantastic! We were jdiscussing the nature of
+                        "Customer
+                        Service", and how horrendous our experiences usually are. We thank you for being a shining
+                        example of how companies should respond to and treat their customers!”</p>
+                </div>
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava3.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Marcelo M</div>
+                            <div class="position text-white-darken">Production Diretor</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“Freedcamp is a very intuitive project management platform! I use
+                        less than
+                        half of all features and, yet, I have everything I need. It is easy to add lists and tasks and
+                        but also see the big picture. I like that I can add as many people as I want for a project while
+                        having full control of what they can see and do.”</p>
+                </div>
+            </div>
+            <div class="blocks_slider-navigation">
+                <button class="btn-slider next"><img src="assets/images/icons/next.svg" alt="next"></button>
+                <button class="btn-slider prev"><img src="assets/images/icons/prev.svg" alt="prev"></button>
+            </div>
+        </div>
+    </section>
+    <section class="clients position-relative">
+        <svg class="white-bg-up position-absolute z-index-1" width="1920" height="120" viewBox="0 0 1920 120"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="#2448B0"/>
+        </svg>
+        <div class="clients_container container ">
+            <h2 class="clients_title text-dark">Trusted by <span class="text-white d-inline-block">500K+</span> Clients
+            </h2>
+            <div class="blocks position-absolute">
+                <div class="blocks_big blocks_wrap">
+                    <img src="assets/images/our-clients/pic-1.png" alt="Netherlands">
+                </div>
+                <div class="blocks_small blocks_wrap">
+                    <img src="assets/images/our-clients/pic-2.png" alt="SARA">
+                </div>
+                <div class="blocks_small blocks_wrap">
+                    <img src="assets/images/our-clients/pic-3.png" alt="EPA">
+                </div>
+                <div class="blocks_big blocks_wrap">
+                    <img src="assets/images/our-clients/pic-4.png" alt="Electric Cooperatives of Arkansas">
+                </div>
+                <div class="blocks_big blocks_wrap">
+                    <img src="assets/images/our-clients/pic-5.png" alt="CIOX">
+                </div>
+                <div class="blocks_small blocks_wrap">
+                    <img src="assets/images/our-clients/pic-6.png" alt="Sun&Ski Sports">
+                </div>
+                <div class="blocks_small blocks_wrap">
+                    <img src="assets/images/our-clients/pic-7.png" alt="Nissan">
+                </div>
+                <div class="blocks_big blocks_wrap">
+                    <img src="assets/images/our-clients/pic-8.png" alt="Place">
+                </div>
+                <div class="blocks_big blocks_wrap">
+                    <img src="assets/images/our-clients/pic-9.png" alt="Amphenol Andronick">
+                </div>
+                <div class="blocks_small blocks_wrap">
+                    <img src="assets/images/our-clients/pic-10.png" alt="DSNY">
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute z-index-1" width="1920" height="120" viewBox="0 0 1920 120"
+             fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="#F7F8FA"/>
+        </svg>
+    </section>
+    <section class="multiple-projects position-relative">
+        <img class="position-absolute bg-10" src="assets/images/bg/multiple_projects_left.svg" alt="bg">
+        <img class="position-absolute bg-11" src="assets/images/bg/multiple_projects_right.svg" alt="bg">
+        <div class="container multiple-projects_container">
+            <div class="text-up text-center text-caption-green tools-like_up2">All from one place</div>
+            <h2 class="text-center text-dark multiple-projects_title">Schedule, manage, & plan multiple projects</h2>
+            <p class="text-caption multiple-projects_caption">Get organized and gain complete visibility over all your
+                tasks. Freedcamp puts you in control and gives
+                you a single place to manage all your projects. </p>
+            <button class="btn btn-main_dark btn-secondary-darkbg multiple-projects_btn d-block">Try it Free</button>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="words position-relative">
+        <div class="container words_container">
+            <img class="words_stars" src="assets/images/word_stars.svg" alt="stars">
+            <h2 class="text-center text-dark multiple-projects_title">Don't just take our word for it.</h2>
+            <p class="text-caption words_caption">Freedcamp's project management software is top-rated by
+                Capterra, CrozDesk, G2, and over 20,000 teams worldwide.</p>
+            <div class="blocks">
+                <div class="blocks_item">
+                    <img src="assets/images/partners/part-1.png" alt="Leaders">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/partners/part-2.png" alt="happiest users">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/partners/part-3.png" alt="capterra">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/partners/part-4.png" alt="high performer">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/partners/part-5.png" alt="crozdesk">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/partners/part-6.png" alt="crozdesk">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="position-relative footer">
+    <svg class="white-bg-up position-absolute z-index-1" width="1920" height="120" viewBox="0 0 1920 120"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+    </svg>
+    <div class="container footer_container">
+        <div class="footer_wrapper-nav">
+            <div class="footer_wrap-logo">
+                <img class="footer_logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+                <div class="footer_text text-white-darken">Free Effortless Collaboration for Teams</div>
+                <div class="footer_wrap-soc">
+                    <a target="_blank" href="https://www.facebook.com/"><img src="assets/images/footer/Facebook.svg"
+                                                                             alt="Facebook"></a>
+                    <a target="_blank" href="https://twitter.com/"><img src="assets/images/footer/Twitter.svg"
+                                                                        alt="Twitter"></a>
+                    <a target="_blank" href="https://www.linkedin.com/"><img src="assets/images/footer/Linkedin.svg"
+                                                                             alt="Linkedin"></a>
+                </div>
+            </div>
+            <nav class="footer_wrap-nav">
+                <div class="nav_block">
+                    <div class="title-xs text-white">About</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Explore</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Community</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Download</div>
+                    <ul class="nav_ul">
+                        <li><a href="">IOS</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">Desktop</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Resources</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Developers API - Zapier</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="footer_bottom">
+            <p class="footer_allright text-white-darken">All Rights Reserved © Freedcamp Inc. 2021</p>
+            <div class="lang text-white position-relative">English</div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

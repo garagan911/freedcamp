@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/Favicon.svg">
+    <link href="assets/style/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <section class="login-wrapper">
+        <div class="login_body position-relative">
+            <header class="login_body-header position-absolute">
+                <button class="back text-body">Back</button>
+                <div class="sign-up-wrap">Don’t have an account? <a class="text-dark" href="sign-up.html">Sign Up</a></div>
+            </header>
+            <div class="login_body-content">
+                <div class="login_form">
+                    <h1 class="login_title">Login</h1>
+                    <form class="login_form-wrapper" action="">
+                        <label class="label-text position-relative">
+                            <img class="position-absolute z-index-1" src="assets/images/login/Email.svg" alt="">
+                            <input class="form-field" type="text" placeholder="Email Address">
+                        </label>
+                        <label class="label-text position-relative">
+                            <img class="position-absolute z-index-1" src="assets/images/login/Password.svg" alt="">
+                            <input class="form-field" type="text" placeholder="Password">
+                        </label>
+                        <div class="form-group">
+                            <input type="checkbox" id="logged">
+                            <label for="logged">Keep me logged in for 2 weeks</label>
+                        </div>
+                        <button class="btn btn-main_big btn-continue text-white w-100 d-block">Continue with email address</button>
+                        <a class="btn_forgot-pass text-blue d-block" href="">Forgot Password?</a>
+                        <div class="text-gray login-with position-relative"><span class="bg-white position-relative z-index-1">or login with</span></div>
+                        <div class="gmail_login">
+                            <img src="assets/images/login/btn_google_signin.png" alt="">
+                        </div>
+                        <div class="social">
+                            <a href=""><img src="assets/images/login/facebook.svg" alt=""></a>
+                            <a href=""><img src="assets/images/login/linkedin.svg" alt=""></a>
+                            <a href=""><img src="assets/images/login/twitter.svg" alt=""></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="login_right-block bg-blue-gradient position-relative">
+            <img class="position-absolute w-100 h-100" src="assets/images/login/bg-right-block.png" alt="bg">
+            <header class="login_right-block-header">
+                <img src="assets/images/Header/Logo.svg" alt="">
+            </header>
+            <div class="login_right-block-body">
+                <h5 class="text-white text-center">All plans include:</h5>
+                <ul class="text-left login_right-list">
+                    <li><img src="assets/images/login/Check in circle.svg" alt="">Unlimited Tasks</li>
+                    <li><img src="assets/images/login/Check in circle.svg" alt="">Projects</li>
+                    <li><img src="assets/images/login/Check in circle.svg" alt="">Core Applications</li>
+                    <li><img src="assets/images/login/Check in circle.svg" alt="">Storage</li>
+                </ul>
+                <img class="login_right-pic" src="assets/images/login/right-pic.svg" alt="right-pic">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

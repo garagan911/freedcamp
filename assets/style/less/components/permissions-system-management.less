@@ -1,0 +1,57 @@
+.different-role{
+  &_container{
+    max-width: 1382px;
+  }
+  .img_wrap{
+    margin-top: 15px;
+  }
+}
+
+.management-tools{
+  padding-bottom: 120px;
+  padding-top: 120px;
+  .po_manage-system_col{
+    min-height: 680px;
+    .bg {
+      max-width: 100%;
+      top: 0;
+      left: 0;
+    }
+    .man{
+      bottom: 0;
+    }
+  }
+  &_row{
+    margin-top: 100px;
+    .blocks{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-column-gap: 30px;
+      grid-row-gap: 25px;
+      margin-top: 60px;
+      .block{
+        display: flex;
+        align-items: center;
+        border-radius: @main_radius;
+        background: @background_white;
+        box-shadow: @cards_shadow;
+        padding: 32px 32px 36px 32px;
+        .title-s{
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
+.manage-users{
+  &_caption{
+    max-width: 855px;
+  }
+}
+.permissions-system-management{
+  .tt_section-top__title img {
+    right: -20px;
+    top: -25px;
+  }
+}

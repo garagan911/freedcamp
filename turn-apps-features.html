@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Turn on apps and features</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/Favicon.svg">
+    <link href="assets/vendor/slick.css" rel="stylesheet">
+    <link href="assets/style/css/style.css" rel="stylesheet">
+    <link href="assets/vendor/slick-theme.css" rel="stylesheet">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/vendor/slick.min.js"></script>
+</head>
+<body>
+<header class="header position-fixed d-flex">
+    <div class="header_logo">
+        <a href="/">
+            <img class="white-logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+            <img class="dark-logo" src="assets/images/Header/dark-logo.svg" alt="freedcamp">
+        </a>
+    </div>
+    <button class="mob-menu">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+    </button>
+    <nav class="header-nav">
+        <ul class="d-flex inter-m">
+            <li class="sub-menu position-relative">Products</li>
+            <li class="sub-menu position-relative">Features</li>
+            <li class="header-nav_enterprise"><a href="#" class="enterprise">Enterprise</a></li>
+            <li><a href="#" class="price">Pricing</a></li>
+            <li><a class="inter-b login position-relative" href="#" id="login">Login</a></li>
+            <li><a class="btn header-nav_btn btn-secondary-darkbg inter-b" href="#">Get Started For Free</a></li>
+        </ul>
+    </nav>
+    <div class="menu-login position-absolute">
+        <img class="position-absolute arrow-top" src="assets/images/login/Polygon 6.svg" alt="">
+        <div class="login_body-content">
+            <div class="login_form">
+                <h1 class="login_title">Login</h1>
+                <form class="login_form-wrapper" action="">
+                    <!----------------------------------------------------------------------------------------
+                    When the field is valid, you can use the class 'valid' when the field is invalid 'invalid
+                    ----------------------------------------------------------------------------------------->
+                    <label class="label-text position-relative">
+                        <svg class="position-absolute z-index-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                                  stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#969DB3"
+                                  stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                        <img class="position-absolute info-field z-index-1 invalid-pic d-none"
+                             src="assets/images/login/Attention.svg" alt="">
+                        <img class="position-absolute info-field z-index-1 valid-pic d-none"
+                             src="assets/images/login/Check.svg" alt="">
+                        <input class="form-field" type="text" placeholder="Email Address">
+                    </label>
+                    <label class="label-text position-relative">
+                        <img class="position-absolute z-index-1" src="assets/images/login/Password.svg" alt="">
+                        <input class="form-field" type="password" id="myInput" placeholder="Password">
+                        <img src="assets/images/login/Eye.svg" id="pass-status" class="eye position-absolute"
+                             aria-hidden="true" onClick="viewPassword()">
+
+                        <script>
+                            function viewPassword() {
+                                var passwordInput = document.getElementById('myInput');
+                                var passStatus = document.getElementById('pass-status');
+
+                                if (passwordInput.type == 'password') {
+                                    passwordInput.type = 'text';
+                                    passStatus.className = 'eye-slash position-absolute';
+                                    passStatus.src = "assets/images/login/Eye-text.svg";
+
+                                } else {
+                                    passwordInput.type = 'password';
+                                    passStatus.className = 'eye position-absolute';
+                                    passStatus.src = "assets/images/login/Eye.svg";
+                                }
+                            }
+                        </script>
+                    </label>
+                    <div class="form-group">
+                        <input type="checkbox" id="logged">
+                        <label for="logged" class="text-dark">Keep me logged in for 2 weeks</label>
+                    </div>
+                    <button class="btn btn-main_big btn-continue text-white w-100 d-block">Continue</button>
+                    <a class="btn_forgot-pass text-blue d-block" href="">Forgot Password?</a>
+                    <div class="text-gray login-with position-relative"><span
+                            class="bg-white position-relative z-index-1 text-dark">or login with</span></div>
+                    <div class="gmail_login">
+                        <img src="assets/images/login/btn_google_signin.png" alt="">
+                    </div>
+                    <div class="social">
+                        <a href=""><img src="assets/images/login/facebook.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/linkedin.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/twitter.svg" alt=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<main class="notification-email-in tasks permissions-system-management turn-features">
+    <section class="it_section-top fe_section-top bg-blue-gradient position-relative">
+        <img class="position-absolute pattern" src="assets/images/file-edit/Mask Group.png" alt="">
+        <!--        <img class="position-absolute pattern-2" src="assets/images/file-edit/Group 48096083.svg" alt="">-->
+        <div class="container it_section-top__container fe_section-top__container position-relative">
+            <div class="wrap-top-row">
+                <div class="wrap-top-col it_section-top__col-text">
+                    <h1 class="text-white it_section-top__title fe_section-top__title position-relative tt_section-top__title">
+                        Turn on apps and features <img
+                            class="position-absolute" src="assets/images/turn-apps-features/top-pic.svg"
+                            alt="bug"></h1>
+                    <p class="h5 text-white it_section-top__caption">Create a nice, clean workspace for your teams and
+                        projects. </p>
+                    <button class="btn btn-top it_section-top__button">Try it free</button>
+                </div>
+                <div class="wrap-top-col pic">
+                    <img src="assets/images/turn-apps-features/banner-top.svg" alt="banner-top">
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="pass_manage-system different-role">
+        <div class="container different-role_container">
+            <div class="blocks">
+                <div class="block_pic">
+                    <img src="assets/images/turn-apps-features/section-2-pic.svg" alt="">
+                </div>
+                <p class="block_text title-s">
+                    Having lots of features and apps can be a good thing, but if you prefer the minimalist look, having
+                    them all turned on at once can be overwhelming for not only you, but your <span
+                        class="title-m text-dark"> teams, customers,
+                    stakeholders - anybody who works with you in Freedcamp.</span> We’ve made it easy to find and turn
+                    off all
+                    the apps and features within Freedcamp, so that you only see what you want to see, whether it’s per
+                    project, project group, or globally regardless of the plan you’re on.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="pass_manage-system bg-gray management-tools position-relative section-2">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="#fff"/>
+        </svg>
+        <div class="container manage-system_container">
+            <div class="manage-system_row">
+                <h2 class="text-dark project-management_title text-center title-h2-center">For those who manage
+                    users</h2>
+                <p class="text-caption manage-users_caption">Delegate management of project groups to those you trust
+                    … other managers. This way, you’re not a single source for people to talk to about changes. Project
+                    group managers can delegate project permissions to those who have permission to manage a
+                    project </p>
+                <div class="d-flex section-2_wrap">
+                    <div class="fe_manage-system_col manage-system_col text">
+                        <img class="icon" src="assets/images/turn-apps-features/section-3-icon.svg" alt="icon">
+                        <h2 class="tools-like_title text-dark">Projects</h2>
+                        <p class="">Select the account you want to work on. Once you do, you’ll see a list of options
+                            along the top related to the project. You’ll be presented with a list of all the available
+                            project applications (what’s available depends on your plan). You can use the toggle switch
+                            to turn apps and features on and off. </p>
+                        <p class="text-dark dark">The items listed here are unique to each project. This is features
+                            like:</p>
+                    </div>
+                    <div class="po_manage-system_col tt_manage-system_col pic position-relative bg-transparent">
+                        <img class="man w-100"
+                             src="assets/images/turn-apps-features/section-3-pic.svg" alt="girl">
+                    </div>
+                </div>
+            </div>
+            <div class="management-tools_row">
+                <div class="blocks">
+                    <div class="block">
+                        <img src="assets/images/permissions-system-management/icon-1.svg" alt="">
+                        <div class="title-s text-dark">Tasks</div>
+                    </div>
+                    <div class="block">
+                        <img src="assets/images/permissions-system-management/icon-2.svg" alt="">
+                        <div class="title-s text-dark">Discussions</div>
+                    </div>
+                    <div class="block">
+                        <img src="assets/images/permissions-system-management/icon-3.svg" alt="">
+                        <div class="title-s text-dark">Milestones</div>
+                    </div>
+                    <div class="block">
+                        <img src="assets/images/permissions-system-management/icon-5.svg" alt="">
+                        <div class="title-s text-dark">Files</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="position-absolute pic-bg" src="assets/images/turn-apps-features/section-3-pic-2.svg" alt="">
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="pass_manage-system management-tools position-relative section-3">
+        <div class="container manage-system_container">
+            <div class="manage-system_row mt-0">
+                <div class="d-flex section-2_wrap">
+                    <div class="po_manage-system_col tt_manage-system_col pic position-relative bg-transparent">
+                        <img class="man w-100"
+                             src="assets/images/turn-apps-features/section-4-pic.png" alt="girl">
+                    </div>
+                    <div class="fe_manage-system_col manage-system_col text">
+                        <img class="icon" src="assets/images/turn-apps-features/section-4-icon.svg" alt="icon">
+                        <h2 class="tools-like_title text-dark">Projects</h2>
+                        <p class="">Select the account you want to work on. Once you do, you’ll see a list of options
+                            along the top related to the project. You’ll be presented with a list of all the available
+                            project applications (what’s available depends on your plan). You can use the toggle switch
+                            to turn apps and features on and off. </p>
+                        <p class="text-dark dark">The items listed here are unique to each project. This is features
+                            like:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="management-tools_row">
+                <div class="blocks">
+                    <div class="block">
+                        <img src="assets/images/turn-apps-features/section-4-icon-1.svg" alt="">
+                        <div class="title-s text-dark">Passwords</div>
+                    </div>
+                    <div class="block">
+                        <img src="assets/images/turn-apps-features/section-4-icon-2.svg" alt="">
+                        <div class="title-s text-dark">CRM</div>
+                    </div>
+                    <div class="block">
+                        <img src="assets/images/turn-apps-features/section-4-icon-3.svg" alt="">
+                        <div class="title-s text-dark">Invoices</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pass_manage-system bg-gray management-tools position-relative section-3 section-2 section-4">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="#fff"/>
+        </svg>
+        <div class="container manage-system_container">
+            <div class="manage-system_row mt-0">
+                <div class="d-flex section-2_wrap">
+                    <div class="fe_manage-system_col manage-system_col text">
+                        <img class="icon" src="assets/images/turn-apps-features/section-5-icon.svg" alt="icon">
+                        <h2 class="tools-like_title text-dark">Global modules</h2>
+                        <p class="">Select Global Modules from the main list of items under Manage System. Then choose
+                            which apps and features you want to turn off and which you’d like to leave on. </p>
+                        <p class="text-dark dark">The apps and features under Global Modules are available to all
+                            projects in your Freedcamp workspace. These are things like:</p>
+                    </div>
+                    <div class="po_manage-system_col tt_manage-system_col pic position-relative bg-transparent">
+                        <img class="man w-100"
+                             src="assets/images/turn-apps-features/section-5-pic.png" alt="girl">
+                    </div>
+                </div>
+            </div>
+            <div class="management-tools_row">
+                <div class="blocks">
+                    <div class="block">
+                        <img src="assets/images/turn-apps-features/section-5-icon-1.svg" alt="">
+                        <div class="title-s text-dark">Google Drive Integration</div>
+                    </div>
+                    <div class="block">
+                        <img src="assets/images/turn-apps-features/section-5-icon-2.svg" alt="">
+                        <div class="title-s text-dark">Custom Fields</div>
+                    </div>
+                    <div class="block">
+                        <img src="assets/images/turn-apps-features/section-5-icon-3.svg" alt="">
+                        <div class="title-s text-dark">Gantt Charts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="position-absolute pic-bg" src="assets/images/turn-apps-features/section-3-pic-2.svg" alt="">
+    </section>
+    <section class="bg-blue-gradient experience position-relative it_experience">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="#f7f8fa"/>
+        </svg>
+        <div class="position-absolute bg-circle big desc-block"></div>
+        <div class="position-absolute bg-circle small desc-block"></div>
+        <img class="position-absolute bg-polygon desc-block" src="assets/images/bg/Polygon 33.svg" alt="bg">
+        <div class="container experience_container">
+            <h2 class="text-white experience_title text-center">We Care About Our Customers Experience</h2>
+            <div class="blocks blocks_slider">
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava1.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Danilo Zafani</div>
+                            <div class="position text-white-darken">Diretor at Cia da Gestão</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“Freedcamp provides a super low entry barrier due to great user
+                        experience
+                        and ease to use. Its
+                        customer support is very fast and efficient. Every time I have a suggestion for improvement I
+                        speak directly with the decision makers and get instant responses”</p>
+                </div>
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava2.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Emily Freeman</div>
+                            <div class="position text-white-darken">Freeman Land Surveying</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“You guys are fantastic! We were jdiscussing the nature of
+                        "Customer
+                        Service", and how horrendous our experiences usually are. We thank you for being a shining
+                        example of how companies should respond to and treat their customers!”</p>
+                </div>
+                <div class="blocks_item">
+                    <div class="blocks_user-info">
+                        <div class="blocks_avatar">
+                            <img src="assets/images/ava3.jpg" alt="ava">
+                        </div>
+                        <div class="blocks_name-position">
+                            <div class="name text-white">Marcelo M</div>
+                            <div class="position text-white-darken">Production Diretor</div>
+                        </div>
+                    </div>
+                    <p class="blocks_text text-white">“Freedcamp is a very intuitive project management platform! I use
+                        less than
+                        half of all features and, yet, I have everything I need. It is easy to add lists and tasks and
+                        but also see the big picture. I like that I can add as many people as I want for a project while
+                        having full control of what they can see and do.”</p>
+                </div>
+            </div>
+            <div class="blocks_slider-navigation">
+                <button class="btn-slider next"><img src="assets/images/icons/next.svg" alt="next"></button>
+                <button class="btn-slider prev"><img src="assets/images/icons/prev.svg" alt="prev"></button>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="words position-relative">
+        <div class="container words_container">
+            <img class="words_stars" src="assets/images/it-page/stars.svg" alt="stars">
+            <h2 class="text-center text-dark multiple-projects_title">An Award-winning system</h2>
+            <div class="blocks">
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-1.svg" alt="Leaders">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-2.png" alt="happiest users">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-3.png" alt="capterra">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/it-page/part-5.svg" alt="high performer">
+                </div>
+                <div class="blocks_item">
+                    <img src="assets/images/word/pic-5.png" alt="crozdesk">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="multiple-projects position-relative it_multiple-projects">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <!--        <img class="position-absolute bg-10" src="assets/images/bg/multiple_projects_left.svg" alt="bg">-->
+        <!--        <img class="position-absolute bg-11" src="assets/images/bg/multiple_projects_right.svg" alt="bg">-->
+        <div class="container multiple-projects_container">
+            <h2 class="text-center text-dark multiple-projects_title">Issue Tracker provides a clear and centralized
+                overview for requests and their current state</h2>
+            <button class="btn btn-main_dark btn-secondary-darkbg multiple-projects_btn d-block">Try it Free</button>
+        </div>
+    </section>
+</main>
+<footer class="position-relative footer">
+    <svg class="white-bg-up position-absolute z-index-1" width="1920" height="120" viewBox="0 0 1920 120"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 0H0V120L1920 0Z" fill="#F7F8FA"/>
+    </svg>
+    <div class="container footer_container">
+        <div class="footer_wrapper-nav">
+            <div class="footer_wrap-logo">
+                <img class="footer_logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+                <div class="footer_text text-white-darken">Free Effortless Collaboration for Teams</div>
+                <div class="footer_wrap-soc">
+                    <a target="_blank" href="https://www.facebook.com/"><img src="assets/images/footer/Facebook.svg"
+                                                                             alt="Facebook"></a>
+                    <a target="_blank" href="https://twitter.com/"><img src="assets/images/footer/Twitter.svg"
+                                                                        alt="Twitter"></a>
+                    <a target="_blank" href="https://www.linkedin.com/"><img src="assets/images/footer/Linkedin.svg"
+                                                                             alt="Linkedin"></a>
+                </div>
+            </div>
+            <nav class="footer_wrap-nav">
+                <div class="nav_block">
+                    <div class="title-xs text-white">About</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Explore</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Community</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Download</div>
+                    <ul class="nav_ul">
+                        <li><a href="">IOS</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">Desktop</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Resources</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Developers API - Zapier</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="footer_bottom">
+            <p class="footer_allright text-white-darken">All Rights Reserved © Freedcamp Inc. 2021</p>
+            <div class="lang text-white position-relative">English</div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

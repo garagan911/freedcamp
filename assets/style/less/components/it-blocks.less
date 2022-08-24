@@ -1,0 +1,207 @@
+.it{
+  &_section-top{
+    padding-top: 160px;
+    padding-bottom: 189px;
+    &__container{
+      max-width: 1300px;
+    }
+    &__col-text{
+      margin-left: 29px;
+      position: relative;
+      top: -25px;
+    }
+    .wrap-top{
+      &-row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      &-col{
+
+      }
+    }
+    &__title{
+      font-size: 72px;
+      line-height: 88px;
+      letter-spacing: -1px;
+      img{
+        left: -86px;
+        top: -49px;
+      }
+    }
+    &__caption{
+      max-width: 400px;
+      margin-top: 32px;
+    }
+    &__button{
+      margin-top: 40px;
+    }
+  }
+  &_experience{
+    padding-bottom: 140px;
+  }
+  &_multiple-projects{
+    padding-top: 180px;
+    padding-bottom: 64px;
+    .multiple-projects_title{
+      max-width: 710px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.manage-system{
+  padding-top: 80px;
+  padding-bottom: 100px;
+  &_container{
+    max-width: 1240px;
+    position: relative;
+    z-index: 1;
+  }
+  &_row{
+    margin-top: 90px;
+    display: flex !important;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &_col{
+    flex: 0 0 50%;
+    .vector{
+      left: 50%;
+      top: -24%;
+      transform: translate(-50%);
+      //transform: translateY(-50%);
+      z-index: -1;
+    }
+    .manager{
+      position: relative;
+      top: 7px;
+      left: 5px;
+    }
+    &.pic{
+      display: flex;
+      justify-content: center;
+    }
+    &.text{
+      align-self: center;
+      p{
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: 32px;
+      }
+    }
+    &.text, &.pic{
+      max-width: 590px;
+    }
+  }
+}
+
+.bugs{
+  padding-top: 179px;
+  padding-bottom: 214px;
+  &_blocks{
+    margin-top: 60px;
+    &-col{
+      background: rgba(@text-white, 0.1);
+      border: 2px solid rgba(@text-white, 0.35);
+      backdrop-filter: blur(13px);
+      border-radius: @main_radius;
+      padding: 24px;
+      //max-width: 278px;
+      max-width: 24%;
+      &-head{
+        display: flex;
+        img{
+          margin-right: 16px;
+        }
+      }
+      &-body{
+        margin-top: 7px;
+      }
+    }
+  }
+}
+
+.robust-issues{
+  padding-top: 98px;
+  &_title{
+    max-width: 488px;
+    span{
+      background: @main_light_blue;
+      border-radius: @main_radius;
+      padding-left: 9px;
+      padding-right:9px;
+      img{
+        right: -50px;
+        top: -46px;
+      }
+    }
+  }
+  &_text{
+    max-width: 590px;
+  }
+  &_col{
+    .title{
+      margin-top: 24px;
+      max-width: 380px;
+    }
+    .description{
+      margin-top: 10px;
+    }
+    &.text{
+      max-width: 560px;
+    }
+    &.pic{
+      max-width: 591px;
+      .frame-1{
+        top: 33px;
+        left: -50px;
+      }
+      .frame-2{
+        top: -44px;
+        right: -161px;
+      }
+      .girl{
+        width: 100%;
+        bottom: -8px;
+      }
+    }
+  }
+  &_block-info{
+    .bg{
+      top: -44px;
+      right: -41px;
+      z-index: 0;
+      width: 54%;
+    }
+    padding: 60px 60px 0;
+    display: flex;
+    justify-content: space-between;
+    background: @text-white;
+    box-shadow: 1px 16px 60px rgba(147, 155, 183, 0.12);
+    border-radius: @main_radius;
+    &_container{
+      max-width: 1360px;
+      margin-top: 60px;
+    }
+  }
+  .row-grid{
+    max-width: 1200px;
+    margin: 73px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0;
+    .robust-issues_col{
+      padding-left: 18px;
+    }
+  }
+}
+.desc-pic{
+  display: block;
+}
+.mob-pic{
+  display: none;
+}

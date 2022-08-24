@@ -1,0 +1,1233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Issue Tracker</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon/Favicon.svg">
+    <link href="assets/vendor/slick.css" rel="stylesheet">
+    <link href="assets/style/css/style.css" rel="stylesheet">
+    <link href="assets/vendor/slick-theme.css" rel="stylesheet">
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie_html.js"></script>-->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="assets/vendor/jquery-3.6.0.min.js"></script>
+    <script src="assets/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="assets/vendor/slick.min.js"></script>
+</head>
+<body>
+<header class="header position-fixed d-flex">
+    <div class="header_logo">
+        <a href="/">
+            <img class="white-logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+            <img class="dark-logo" src="assets/images/Header/dark-logo.svg" alt="freedcamp">
+        </a>
+    </div>
+    <button class="mob-menu">
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+    </button>
+    <nav class="header-nav">
+        <ul class="d-flex inter-m">
+            <li class="sub-menu position-relative">Products</li>
+            <li class="sub-menu position-relative">Features</li>
+            <li class="header-nav_enterprise"><a href="file-edit.html" class="enterprise">Enterprise</a></li>
+            <li><a href="Issue-Tracker.html" class="price">Pricing</a></li>
+            <li><a class="inter-b login position-relative" href="#" id="login">Login</a></li>
+            <li><a class="btn header-nav_btn btn-secondary-darkbg inter-b" href="#">Get Started For Free</a></li>
+        </ul>
+    </nav>
+    <div class="menu-login position-absolute">
+        <img class="position-absolute arrow-top" src="assets/images/login/Polygon 6.svg" alt="">
+        <div class="login_body-content">
+            <div class="login_form">
+                <h1 class="login_title">Login</h1>
+                <form class="login_form-wrapper" action="">
+                    <!----------------------------------------------------------------------------------------
+                    When the field is valid, you can use the class 'valid' when the field is invalid 'invalid
+                    ----------------------------------------------------------------------------------------->
+                    <label class="label-text position-relative">
+                        <svg class="position-absolute z-index-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <img class="position-absolute info-field z-index-1 invalid-pic d-none" src="assets/images/login/Attention.svg" alt="">
+                        <img class="position-absolute info-field z-index-1 valid-pic d-none" src="assets/images/login/Check.svg" alt="">
+                        <input class="form-field" type="text" placeholder="Email Address">
+                    </label>
+                    <label class="label-text position-relative">
+                        <img class="position-absolute z-index-1" src="assets/images/login/Password.svg" alt="">
+                        <input class="form-field" type="password" id="myInput" placeholder="Password">
+                        <img src="assets/images/login/Eye.svg" id="pass-status" class="eye position-absolute" aria-hidden="true" onClick="viewPassword()">
+
+                        <script>
+                            function viewPassword()
+                            {
+                                var passwordInput = document.getElementById('myInput');
+                                var passStatus = document.getElementById('pass-status');
+
+                                if (passwordInput.type == 'password'){
+                                    passwordInput.type='text';
+                                    passStatus.className='eye-slash position-absolute';
+                                    passStatus.src = "assets/images/login/Eye-text.svg";
+
+                                }
+                                else{
+                                    passwordInput.type='password';
+                                    passStatus.className='eye position-absolute';
+                                    passStatus.src = "assets/images/login/Eye.svg";
+                                }
+                            }
+                        </script>
+                    </label>
+                    <div class="form-group">
+                        <input type="checkbox" id="logged">
+                        <label for="logged" class="text-dark">Keep me logged in for 2 weeks</label>
+                    </div>
+                    <button class="btn btn-main_big btn-continue text-white w-100 d-block">Continue</button>
+                    <a class="btn_forgot-pass text-blue d-block" href="">Forgot Password?</a>
+                    <div class="text-gray login-with position-relative"><span class="bg-white position-relative z-index-1 text-dark">or login with</span></div>
+                    <div class="gmail_login">
+                        <img src="assets/images/login/btn_google_signin.png" alt="">
+                    </div>
+                    <div class="social">
+                        <a href=""><img src="assets/images/login/facebook.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/linkedin.svg" alt=""></a>
+                        <a href=""><img src="assets/images/login/twitter.svg" alt=""></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="pricing_top fe_section-top bg-green-gradient position-relative">
+        <img class="position-absolute pattern" src="assets/images/pricing/pattern.svg" alt="">
+        <div class="container pricing__container p-0">
+            <div class="pricing_top-title-up text-up text-center text-caption-yellow">pricing</div>
+            <h1 class="pricing_top-title text-white text-center">Simple Plans</h1>
+            <div class="pricing_top-title-down title-m text-center">All plans include <span class="text-white">Unlimited Tasks, Projects</span>
+                and <span class="text-white">Storage.</span></div>
+            <div class="pricing_top-swither d-flex">
+                <div class="pricing_top-swither-billed d-flex">
+                    <span class="text-white pricing_top-swither-title">Billed Monthly</span>
+                    <input type="checkbox" id="toggle_10" class="chkbx-toggle" value="1">
+                    <label class="d-block" for="toggle_10"></label>
+                </div>
+                <div class="pricing_top-swither-billed d-flex">
+                    <span class="pricing_top-swither-title text-white-darken">Billed Monthly</span>
+                    <div class="pricing_top-swither-leibal">Save 25%</div>
+                </div>
+            </div>
+            <div class="pricing_top-plans pricing_slider">
+                <div class="block-plan text-center">
+                    <div class="block-plan_title text-up text-caption-green">FREE</div>
+                    <div class="block-plan_price text-dark">
+                        $<span class="price">0</span>/mo
+                    </div>
+                    <div class="block-plan_sub-title">per user</div>
+                    <div class="block-plan_description">For individuals or teams just getting started with Freedcamp
+                    </div>
+                    <button class="btn block-plan_btn text-dark">Select this plan</button>
+                </div>
+                <div class="block-plan text-center">
+                    <div class="block-plan_title text-up text-center text-caption-blue">PRO</div>
+                    <div class="block-plan_price text-dark">
+                        $<span class="price">2.49</span>/mo
+                    </div>
+                    <div class="block-plan_sub-title">per user</div>
+                    <div class="block-plan_description">Project planning and team collaboration</div>
+                    <button class="btn block-plan_btn text-dark">Try Free 14 Days</button>
+                </div>
+                <div class="block-plan text-center">
+                    <div class="block-plan_title text-up text-center text-caption-orange-origin">BUSINESS</div>
+                    <div class="block-plan_price text-dark">
+                        $<span class="price">8.99</span>/mo
+                    </div>
+                    <div class="block-plan_sub-title">per user</div>
+                    <div class="block-plan_description">Customized platform for any team or use case</div>
+                    <button class="btn block-plan_btn text-dark">Try Free 14 Days</button>
+                </div>
+                <div class="block-plan text-center">
+                    <div class="block-plan_title text-up text-center text-caption-orange">ENTERPRISE</div>
+                    <div class="block-plan_price text-dark">
+                        $<span class="price">19.99</span>/mo
+                    </div>
+                    <div class="block-plan_sub-title">per user / billed annualy</div>
+                    <div class="block-plan_description">Advanced tools and analytics for complex work, topped with
+                        enterprise-grade support.
+                    </div>
+                    <a href="#" class="block-plan_contact-sales text-blue">Contact Sales for volume discounts</a>
+                    <button class="btn block-plan_btn text-dark">Try Free 14 Days</button>
+                </div>
+            </div>
+            <button class="btn text-center d-block bg-transparent pricing_top-compare text-white">Compare plans</button>
+
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="featured position-relative">
+        <h2 class="featured_title text-dark text-center">Core Applications featured in every plan</h2>
+        <div class="featured_container-fluid featured_slider-fluid d-flex">
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/file-edit/Calendar.svg" alt="Calendar"></div>
+                    <span class="title">Calendar</span>
+                </div>
+                <div class="description">Get a birds-eye-view of your team’s work.</div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Files.svg" alt="Files"></div>
+                    <span class="title">File</span>
+                </div>
+                <div class="description">Bring all your files and cloud content together, regardless of where you keept
+                    them.
+                </div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Discussions.svg" alt="Discussions">
+                    </div>
+                    <span class="title">Discussions</span>
+                </div>
+                <div class="description">Create a hub for common questions, interesting ideas, and useful discussion.
+                </div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Milestone.svg" alt="Milestone"></div>
+                    <span class="title">Milestones</span>
+                </div>
+                <div class="description">Ensure that critical project deadlines are met.</div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Time.svg" alt="Time"></div>
+                    <span class="title">Time</span>
+                </div>
+                <div class="description">Measure productivity and activity levels of your team.</div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Passwords.svg" alt="Passwords"></div>
+                    <span class="title">Passwords</span>
+                </div>
+                <div class="description">Password manager for your business.</div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/file-edit/Calendar.svg" alt="Calendar"></div>
+                    <span class="title">Calendar</span>
+                </div>
+                <div class="description">Get a birds-eye-view of your team’s work.</div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Files.svg" alt="Files"></div>
+                    <span class="title">File</span>
+                </div>
+                <div class="description">Bring all your files and cloud content together, regardless of where you keept
+                    them.
+                </div>
+            </div>
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Discussions.svg" alt="Discussions">
+                    </div>
+                    <span class="title">Discussions</span>
+                </div>
+                <div class="description">Create a hub for common questions, interesting ideas, and useful discussion.
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="#F7F8FA"/>
+        </svg>
+    </section>
+    <section class="position-relative bg-gray addons">
+        <img class="addons_starts" src="assets/images/pricing/Group 48095609.svg" alt="stars">
+        <h2 class="text-center text-dark addons_title">Premium Features & Addons</h2>
+        <div class="container addons_container">
+            <div class="blocks">
+                <div class="block position-relative">
+                    <img class="position-absolute chevron" src="assets/images/pricing/Rectangle 3526.svg" alt="">
+                    <div class="block-status d-flex">
+                        <div class="block-status-info bg-sky-blue-3 text-caption-blue">PRO</div>
+                        <div class="block-status-desk description">and above</div>
+                    </div>
+                    <div class="block-title title-m text-dark text-center">Unlimited subtasks</div>
+                    <p class="block-description text-center">Split bigger tasks into subtasks with unlimited nesting and
+                        total visibility as well as easy drag & drop to rearrange</p>
+                </div>
+                <div class="block position-relative">
+                    <img class="position-absolute chevron" src="assets/images/pricing/Rectangle 3526.svg" alt="">
+                    <div class="block-status d-flex">
+                        <div class="block-status-info bg-orange-5 text-caption-orange-origin">BUSINESS</div>
+                        <div class="block-status-desk description">and above</div>
+                    </div>
+                    <div class="block-title title-m text-dark text-center">Custom fields & statuses</div>
+                    <p class="block-description text-center">Development, marketing and operations projects have
+                        different requirements.</p>
+                </div>
+                <div class="block position-relative">
+                    <img class="position-absolute chevron" src="assets/images/pricing/Rectangle 3526.svg" alt="">
+                    <div class="block-status d-flex">
+                        <div class="block-status-info bg-orange-5 text-caption-orange-origin">BUSINESS</div>
+                        <div class="block-status-desk description">and above</div>
+                    </div>
+                    <div class="block-title title-m text-dark text-center">Multiple assignees</div>
+                    <p class="block-description text-center">Turn on Multiple Assignees if more than one person works on
+                        your tasks.</p>
+                </div>
+                <div class="block position-relative">
+                    <img class="position-absolute chevron" src="assets/images/pricing/Rectangle 3526.svg" alt="">
+                    <div class="block-status d-flex">
+                        <div class="block-status-info bg-sky-blue-3 text-caption-blue">PRO</div>
+                        <div class="block-status-desk description">and above</div>
+                    </div>
+                    <div class="block-title title-m text-dark text-center">Recurrence</div>
+                    <p class="block-description text-center">Easily set tasks and events that recur to never miss a date
+                        and streamline any repetitive workflow.</p>
+                </div>
+                <div class="block position-relative">
+                    <img class="position-absolute chevron" src="assets/images/pricing/Rectangle 3526.svg" alt="">
+                    <div class="block-status d-flex">
+                        <div class="block-status-info bg-orange-5 text-caption-orange-origin">BUSINESS</div>
+                        <div class="block-status-desk description">and above</div>
+                    </div>
+                    <div class="block-title title-m text-dark text-center">Gantt & Resources</div>
+                    <p class="block-description text-center">Schedule, manage dependencies and resources conflicts.
+                        Critical path, slack time and more. </p>
+                </div>
+                <div class="block position-relative">
+                    <img class="position-absolute chevron" src="assets/images/pricing/Rectangle 3526.svg" alt="">
+                    <div class="block-status d-flex">
+                        <div class="block-status-info bg-orange-5 text-caption-orange-origin">BUSINESS</div>
+                        <div class="block-status-desk description">and above</div>
+                    </div>
+                    <div class="block-title title-m text-dark text-center">Issue Tracking</div>
+                    <p class="block-description text-center">Clear and centralized overview for requests and their
+                        current state. </p>
+                </div>
+                <div class="block position-relative">
+                    <img class="position-absolute chevron" src="assets/images/pricing/Rectangle 3526.svg" alt="">
+                    <div class="block-status d-flex">
+                        <div class="block-status-info bg-sky-blue-3 text-caption-blue">PRO</div>
+                        <div class="block-status-desk description">and above</div>
+                    </div>
+                    <div class="block-title title-m text-dark text-center">Reports & Dashboard</div>
+                    <p class="block-description text-center">Use predefined Reports or create beautiful custom
+                        Dashboards to track the progress and share results.</p>
+                </div>
+                <div class="block position-relative">
+                    <img class="position-absolute chevron" src="assets/images/pricing/Rectangle 3526.svg" alt="">
+                    <div class="block-status d-flex">
+                        <div class="block-status-info bg-sky-blue-3 text-caption-blue">PRO</div>
+                        <div class="block-status-desk description">and above</div>
+                    </div>
+                    <div class="block-title title-m text-dark text-center">Project Templates</div>
+                    <p class="block-description text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                        Aenean commodo ligula eget dolor. Aenean massa.</p>
+                </div>
+            </div>
+            <button class="addons_btn text-blue d-flex bg-transparent btn">And More <img
+                    src="assets/images/pricing/Union.svg" alt="Union"></button>
+        </div>
+    </section>
+    <section class="blue-section bg-blue-gradient position-relative enterprise">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="#F7F8FA"/>
+        </svg>
+        <div class="container enterprise_container">
+            <picture class="position-absolute enterprise_bg">
+                <source srcset="assets/images/pricing/mobile.svg" media="(max-width: 540px)">
+                <source srcset="assets/images/pricing/table.svg" media="(max-width: 1024px)">
+                <img src="assets/images/pricing/Group 48095727.svg" alt="Flowers">
+            </picture>
+<!--            <img class="position-absolute enterprise_bg" src="assets/images/pricing/Group 48095727.svg" alt="">-->
+<!--            <img class="position-absolute enterprise_bg" src="assets/images/pricing/table.svg" alt="">-->
+            <div class="enterprise_block">
+                <div class="text-up text-caption-blue tools-like_up2">Enterprise Benefits</div>
+                <h2 class="enterprise_title text-white">Freedcamp Enterprise</h2>
+                <p class="enterprise_description">Freedcamp has features to support teams with hundreds of people who
+                    require larger-scale user management, access control, and security support.</p>
+                <div class="enterprise_btns d-flex">
+                    <button class="btn btn-main_dark d-block">Contact Us</button>
+                    <button class="btn btn-main_dark d-block btn-dark">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <!--        <img class="position-absolute bg-4" src="assets/images/bg/bg-m.svg" alt="bg">-->
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="bg-white position-relative featured-list">
+        <div class="container featured-list_container">
+            <h2 class="text-dark text-center">featured List</h2>
+            <div class="featured-tables">
+                <div class="table-wrapper">
+                    <!--table head start-->
+                    <span class="table_cell table_head collapse text-dark d-flex"><img class="chevron"
+                                                                                       src="assets/images/pricing/Vector.svg"
+                                                                                       alt=""> <span
+                            class="collapse-text">General Features & Integrations</span></span>
+                    <span class="table_head price cell-free"><span
+                            class="price_head bg-green_3 text-caption-green d-inline-block w-100">FREE</span></span>
+                    <span class="table_head price"><span
+                            class="price_head bg-sky-blue-3 text-caption-blue d-inline-block w-100">PRO</span></span>
+                    <span class="table_head price"><span
+                            class="price_head bg-orange-5 text-caption-orange-origin d-inline-block w-100">Business</span></span>
+                    <span class="table_head price"><span class="price_head bg-pink-3 text-pink d-inline-block w-100">Enterprise</span></span>
+                    <!--table head end-->
+
+                    <!--table body start-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex mt-0 table-show">Price per User/Month  <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free">$0</span>
+                    <span class="table_cell table_body table_cell-data cell-pro">$1.49</span>
+                    <span class="table_cell table_body table_cell-data cell-business">$7.49</span>
+                    <span class="table_cell table_body table_cell-data cell-enterprise">$7.49</span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">File Size Limit <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free">10MB</span>
+                    <span class="table_cell table_body table_cell-data cell-pro">25MB</span>
+                    <span class="table_cell table_body table_cell-data cell-business">100MB</span>
+                    <span class="table_cell table_body table_cell-data cell-enterprise">250MB</span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Support <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free">Standard</span>
+                    <span class="table_cell table_body table_cell-data cell-pro">Premium</span>
+                    <span class="table_cell table_body table_cell-data cell-business">Advanced</span>
+                    <span class="table_cell table_body table_cell-data cell-enterprise"><span>⚡</span> Lightning Fast</span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Collaborators <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free">Unlimited</span>
+                    <span class="table_cell table_body table_cell-data cell-pro">Unlimited & Free</span>
+                    <span class="table_cell table_body table_cell-data cell-business">Unlimited & Free</span>
+                    <span class="table_cell table_body table_cell-data cell-enterprise">Unlimited & Free</span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Core Apps <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Public Projects <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">API <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Zapier Integration <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Email <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Google drive integration <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Google shared drives <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">OneDrive integration <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Dropbox integration <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Project Templates <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Tags <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">File Edit <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Reports <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Data snapshots <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">White label <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">2FA <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">SSO with SAML <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+
+                    <!--table body end-->
+                </div>
+                <div class="table-wrapper">
+                    <!--table head start-->
+                    <span class="table_cell table_head collapse text-dark d-flex"><img class="chevron"
+                                                                                       src="assets/images/pricing/Vector.svg"
+                                                                                       alt=""> <span
+                            class="collapse-text">Tasks Features & Addons</span></span>
+                    <span class="table_head price cell-free"><span
+                            class="price_head bg-green_3 text-caption-green d-inline-block w-100 cell-free">FREE</span></span>
+                    <span class="table_head price"><span
+                            class="price_head bg-sky-blue-3 text-caption-blue d-inline-block w-100">PRO</span></span>
+                    <span class="table_head price"><span
+                            class="price_head bg-orange-5 text-caption-orange-origin d-inline-block w-100">Business</span></span>
+                    <span class="table_head price"><span class="price_head bg-pink-3 text-pink d-inline-block w-100">Enterprise</span></span>
+                    <!--table head end-->
+
+                    <!--table body start-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Data Feed Links <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Subtasks Pro <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Copy/Move Tasks & Lists <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Bulk Edit <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Start Date <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Recurring Tasks <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Gantt Chart View <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Table View <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Custom fields <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Custom Statuses <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table body end-->
+                </div>
+                <div class="table-wrapper">
+                    <!--table head start-->
+                    <span class="table_cell table_head collapse text-dark d-flex"><img class="chevron"
+                                                                                       src="assets/images/pricing/Vector.svg"
+                                                                                       alt=""> <span
+                            class="collapse-text">Milestones Features & Addons</span></span>
+                    <span class="table_head price cell-free"><span
+                            class="price_head bg-green_3 text-caption-green d-inline-block w-100">FREE</span></span>
+                    <span class="table_head price"><span
+                            class="price_head bg-sky-blue-3 text-caption-blue d-inline-block w-100">PRO</span></span>
+                    <span class="table_head price"><span
+                            class="price_head bg-orange-5 text-caption-orange-origin d-inline-block w-100">Business</span></span>
+                    <span class="table_head price"><span class="price_head bg-pink-3 text-pink d-inline-block w-100">Enterprise</span></span>
+                    <!--table head end-->
+
+                    <!--table body start-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Start date <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Bulk Edit <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+
+                    <!--table body end-->
+                </div>
+                <div class="table-wrapper">
+                    <!--table head start-->
+                    <span class="table_cell table_head collapse text-dark d-flex"><img class="chevron"
+                                                                                       src="assets/images/pricing/Vector.svg"
+                                                                                       alt=""> <span
+                            class="collapse-text">Calendar Features & Addons</span></span>
+                    <span class="table_head price cell-free"><span
+                            class="price_head bg-green_3 text-caption-green d-inline-block w-100">FREE</span></span>
+                    <span class="table_head price"><span
+                            class="price_head bg-sky-blue-3 text-caption-blue d-inline-block w-100">PRO</span></span>
+                    <span class="table_head price"><span
+                            class="price_head bg-orange-5 text-caption-orange-origin d-inline-block w-100">Business</span></span>
+                    <span class="table_head price"><span class="price_head bg-pink-3 text-pink d-inline-block w-100">Enterprise</span></span>
+                    <!--table head end-->
+
+                    <!--table body start-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Calendar sharing <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Recurring Events <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Google calendar sync <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+
+                    <!--table body end-->
+                </div>
+                <div class="table-wrapper">
+                    <!--table head start-->
+                    <span class="table_cell table_head collapse text-dark d-flex"><img class="chevron"
+                                                                                       src="assets/images/pricing/Vector.svg"
+                                                                                       alt=""> <span
+                            class="collapse-text">Other Premium Applications</span></span>
+                    <span class="table_head price cell-free"><span
+                            class="price_head bg-green_3 text-caption-green d-inline-block w-100">FREE</span></span>
+                    <span class="table_head price"><span
+                            class="price_head bg-sky-blue-3 text-caption-blue d-inline-block w-100">PRO</span></span>
+                    <span class="table_head price"><span
+                            class="price_head bg-orange-5 text-caption-orange-origin d-inline-block w-100">Business</span></span>
+                    <span class="table_head price"><span class="price_head bg-pink-3 text-pink d-inline-block w-100">Enterprise</span></span>
+                    <!--table head end-->
+
+                    <!--table body start-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Wiki <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Invoices+ <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">CRM <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Issue Tracker <span
+                            class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+                    <!--table row start-->
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Overview <span class="tooltips mt-0">
+                        <span class="tooltip position-relative d-inline p-0 m-0"><img
+                                src="assets/images/pricing/Question.svg" alt=""> <span
+                                class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
+                    </span></span>
+                    <span class="table_cell table_body table_cell-data cell-free"></span>
+                    <span class="table_cell table_body table_cell-data"></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <span class="table_cell table_body table_cell-data"><img
+                            src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
+                    <!--table row end-->
+
+                    <!--table body end-->
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="blue-section bg-blue-gradient position-relative loved-by">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <div class="loved-by_container container">
+            <h2 class="loved-by_title text-white text-center">Loved by more than <span
+                    class="bg-text text-white d-inline-block bg-green">500K</span> teams in <span
+                    class="bg-text text-white d-inline-block bg-blue">195</span> countries</h2>
+            <div class="blocks w-100">
+                <div class="block">
+                    <h6 class="text-white block_title text-green_2">Free</h6>
+                    <div class="d-flex block_price text-white"><span class="block_price-currency-code">$</span><span
+                            class="block_price-summa">0</span>
+                        <div class="block_price-description"></div>
+                    </div>
+                    <p class="block_description text-white-darken block_text">for individuals.</p>
+                    <button class="block_btn btn header-nav_btn btn-secondary-darkbg inter-b text-white">Select this
+                        plan
+                    </button>
+                </div>
+                <div class="block">
+                    <h6 class="text-white block_title text-sky_blue_2">PRO</h6>
+                    <div class="d-flex block_price text-white"><span class="block_price-currency-code">$</span><span
+                            class="block_price-summa">1.49</span>
+                        <div class="block_price-description">per month billed annualy</div>
+                    </div>
+                    <p class="block_description text-white-darken block_text">$2.49 billed monthly</p>
+                    <button class="block_btn btn header-nav_btn btn-secondary-darkbg inter-b text-white">Try Free 14
+                        Days
+                    </button>
+                </div>
+                <div class="block">
+                    <h6 class="text-white block_title text-orange_3">Business</h6>
+                    <div class="d-flex block_price text-white"><span class="block_price-currency-code">$</span><span
+                            class="block_price-summa">7.49</span>
+                        <div class="block_price-description">per month billed annualy</div>
+                    </div>
+                    <p class="block_description text-white-darken block_text">$8.99 billed monthly</p>
+                    <button class="block_btn btn btn-main_dark inter-b text-white bg-green">Try Free 14 Days</button>
+                </div>
+                <div class="block">
+                    <h6 class="text-white block_title text-pink_2">Enterprise</h6>
+                    <div class="d-flex block_price text-white"><span class="block_price-currency-code">$</span><span
+                            class="block_price-summa">16.99</span>
+                        <div class="block_price-description">per month billed annualy</div>
+                    </div>
+                    <p class="block_description text-white-darken block_text">$19.99 billed monthly</p>
+                    <button class="block_btn btn header-nav_btn btn-secondary-darkbg inter-b text-white">Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+        <svg class="white-bg-down position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 120H1920V0L0 120Z" fill="white"/>
+        </svg>
+    </section>
+    <section class="manage-system tt_manage-system fe_manage-system pass_manage-system">
+        <div class="container manage-system_container">
+            <div class="manage-system_row">
+                <div class="fe_manage-system_col manage-system_col text">
+                    <div class="fe_manage-system-wrap">
+                        <h2 class="tools-like_title text-dark">Active user billing</h2>
+                        <p class="user-billing title-xs">Freedcamp aims to always offer the most affordable and transparent
+                            pricing and billing. Our
+                            <span class="text-dark title-m">Active User Warning System</span> helps you keep costs down by
+                            giving you an accurate count of the
+                            active user count over your last billing period. This lets you lower the number of seats
+                            purchased and in turn your next month’s bill. Check <span class="user-billing_violet">Billing FAQ</span>
+                            to learn more.</p>
+                    </div>
+                    <div class="item position-relative d-flex user-billing_item">
+                        <img src="assets/images/icons/check.svg" alt="check">
+                        <p class="text">We have Read-Only and Guest roles - 'collaborators' are perfect for clients and
+                            people in
+                            your organization who only need to observe work and/or occasionally comment. </p>
+                    </div>
+                    <div class="item position-relative d-flex user-billing_item">
+                        <img src="assets/images/icons/check.svg" alt="check">
+                        <p class="text">Users invited as collaborators are not counted as active users and are free on
+                            our premium
+                            plans making Freedcamp even more affordable and easy to adopt.</p>
+                    </div>
+                    <div class="item position-relative d-flex user-billing_item">
+                        <img src="assets/images/icons/check.svg" alt="check">
+                        <p class="text">These permissions are perfect for involving contractors, clients, and teammates
+                            from other
+                            departments absolutely for free.</p>
+                    </div>
+                </div>
+                <div class="fe_manage-system_col tt_manage-system_col pic position-relative bg-transparent">
+                    <img class="file w-100" src="assets/images/pricing/Photo.png" alt="man">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gray-section bg-gray position-relative file-edit freedcamp-people">
+        <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <path d="M1920 0H0V120L1920 0Z" fill="white"/>
+        </svg>
+        <div class="file-edit_container container">
+            <h2 class="text-center text-dark">Freedcamp for the People</h2>
+            <p class="text-caption backed_caption">Our mission is to help those who may not be able to afford expensive
+                collaboration tools but need to stay productive. Freedcamp supports thousands of good cause
+                organizations, teachers, and students across 85 countries.</p>
+            <div class="blocks">
+                <div class="block position-relative">
+                    <img class="position-absolute block_img" src="assets/images/pricing/Individual.svg" alt="">
+                    <div class="title-s text-dark">Are you a student, teacher, or part of a non profit organisation?</div>
+                    <p>And want to use Freedcamp to collaborate on projects? Eligibility requirements are explained in
+                        more detail in the Freedcamp <span class="user-billing_violet">for Nonprofits FAQ</span> and the Freedcamp <span class="user-billing_violet">for Education FAQ.</span></p>
+                </div>
+                <div class="block position-relative">
+                    <img class="position-absolute block_img" src="assets/images/pricing/Team.svg" alt="">
+                    <div class="title-s text-dark">Special Options for your team and your company</div>
+                    <p>To be considered for the special pricing options based on your team and company qualifications,
+                        please fill out the Freedcamp <a href="/" class="user-billing_violet">for Nonprofits application</a> or the Freedcamp <a href="/" class="user-billing_violet">for Education
+                            application.</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="position-relative footer">
+    <svg class="white-bg-up position-absolute" width="1920" height="120" viewBox="0 0 1920 120" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M1920 0H0V120L1920 0Z" fill="#F7F8FA"/>
+    </svg>
+    <div class="container footer_container">
+        <div class="footer_wrapper-nav">
+            <div class="footer_wrap-logo">
+                <img class="footer_logo" src="assets/images/Header/Logo.svg" alt="freedcamp">
+                <div class="footer_text text-white-darken">Free Effortless Collaboration for Teams</div>
+                <div class="footer_wrap-soc">
+                    <a target="_blank" href="https://www.facebook.com/"><img src="assets/images/footer/Facebook.svg"
+                                                                             alt="Facebook"></a>
+                    <a target="_blank" href="https://twitter.com/"><img src="assets/images/footer/Twitter.svg"
+                                                                        alt="Twitter"></a>
+                    <a target="_blank" href="https://www.linkedin.com/"><img src="assets/images/footer/Linkedin.svg"
+                                                                             alt="Linkedin"></a>
+                </div>
+            </div>
+            <nav class="footer_wrap-nav">
+                <div class="nav_block">
+                    <div class="title-xs text-white">About</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Explore</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Community</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Download</div>
+                    <ul class="nav_ul">
+                        <li><a href="">IOS</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">Desktop</a></li>
+                    </ul>
+                </div>
+                <div class="nav_block">
+                    <div class="title-xs text-white">Resources</div>
+                    <ul class="nav_ul">
+                        <li><a href="">Developers API - Zapier</a></li>
+                        <li><a href="">Terms & Conditions</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="footer_bottom">
+            <p class="footer_allright text-white-darken">All Rights Reserved © Freedcamp Inc. 2021</p>
+            <div class="lang text-white position-relative">English</div>
+        </div>
+    </div>
+</footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/sliders.js"></script>
+</body>
+</html>

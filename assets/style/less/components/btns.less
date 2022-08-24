@@ -1,0 +1,91 @@
+.btn {
+  border-radius: @main_radius;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  transition: background-color .3s;
+  &-top{
+    font-family: "Inter-Bold", sans-serif;
+    color: @main_text;
+    padding: 24px 55px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &-main {
+    &_big, &_small {
+      background: @main_blue;
+
+      &:hover {
+        background: rgb(50, 118, 246);
+      }
+
+      &:disabled {
+        background: @blue_4;
+      }
+
+      &:focus {
+        background: rgba(74, 134, 247, 1);
+      }
+    }
+
+    &_big, &_dark {
+      padding: 16px 33px;
+    }
+
+    &_small {
+      font-size: 14px;
+      line-height: 22px;
+      padding: 13px 24px;
+    }
+
+    &_dark {
+      font-family: "Inter-Bold", sans-serif;
+      color: @text-white;
+      font-size: 16px;
+      line-height: 24px;
+      background: @main_green;
+      &:hover {
+        background: rgb(118, 178, 98);
+      }
+
+      &:disabled {
+        background: rgba(@main_green, .5);
+        cursor: not-allowed;
+      }
+
+      &:focus {
+        background: @main_green;
+      }
+    }
+  }
+
+  &-secondary {
+    &_big, &_small {
+      border: 2px solid #EBEEF2;
+    }
+    &_big{
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &_small {
+      font-size: 14px;
+      line-height: 22px;
+    }
+    &-darkbg{
+      background: rgb(59, 91, 186);
+      &:hover {
+        background: rgb(70, 100, 190);
+      }
+
+      &:disabled {
+        background: rgb(145, 163, 216);
+      }
+
+      &:focus {
+        background: rgb(59, 91, 186);
+      }
+    }
+  }
+}
