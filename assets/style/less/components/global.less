@@ -614,3 +614,47 @@ input[type=text], input[type=password]{
   cursor: default;
 }
 
+.popup-bg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(53, 53, 61, .4);
+}
+.popup{
+  position: relative;
+  background: @background_white;
+  border-radius: @main_radius;
+  box-shadow: @cards_shadow;
+  &-attention{
+    padding: 40px 24px;
+    max-width: 400px;
+  }
+  &__close-btn{
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    cursor: pointer;
+    transition: .3s;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+  &__title{
+    font-family: "Poppins-SemiBold", sans-serif;
+    font-size: 24px;
+    line-height: 40px;
+    color: @main_text;
+  }
+  &__description{
+    color: @body_text;
+  }
+}
+

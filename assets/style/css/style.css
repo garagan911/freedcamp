@@ -1027,6 +1027,58 @@ input[type=password]::placeholder {
 .custom-radio:disabled + label span {
   cursor: default;
 }
+.popup-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgba(53, 53, 61, 0.4);
+}
+.popup {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  -webkit-box-shadow: 1px 16px 60px rgba(147, 155, 183, 0.12);
+          box-shadow: 1px 16px 60px rgba(147, 155, 183, 0.12);
+}
+.popup-attention {
+  padding: 40px 24px;
+  max-width: 400px;
+}
+.popup__close-btn {
+  background: transparent;
+  border: none;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.popup__close-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.popup__title {
+  font-family: "Poppins-SemiBold", sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  color: #35353d;
+}
+.popup__description {
+  color: #6a7185;
+}
 .header {
   left: 0;
   top: 0;
