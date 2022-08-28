@@ -49,34 +49,40 @@
                     When the field is valid, you can use the class 'valid' when the field is invalid 'invalid
                     ----------------------------------------------------------------------------------------->
                     <label class="label-text position-relative">
-                        <svg class="position-absolute z-index-1" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z" stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg class="position-absolute z-index-1" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 20.5H7C4 20.5 2 19 2 15.5V8.5C2 5 4 3.5 7 3.5H17C20 3.5 22 5 22 8.5V15.5C22 19 20 20.5 17 20.5Z"
+                                  stroke="#969DB3" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                            <path d="M17 9L13.87 11.5C12.84 12.32 11.15 12.32 10.12 11.5L7 9" stroke="#969DB3"
+                                  stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
                         </svg>
-                        <img class="position-absolute info-field z-index-1 invalid-pic d-none" src="assets/images/login/Attention.svg" alt="">
-                        <img class="position-absolute info-field z-index-1 valid-pic d-none" src="assets/images/login/Check.svg" alt="">
+                        <img class="position-absolute info-field z-index-1 invalid-pic d-none"
+                             src="assets/images/login/Attention.svg" alt="">
+                        <img class="position-absolute info-field z-index-1 valid-pic d-none"
+                             src="assets/images/login/Check.svg" alt="">
                         <input class="form-field" type="text" placeholder="Email Address">
                     </label>
                     <label class="label-text position-relative">
                         <img class="position-absolute z-index-1" src="assets/images/login/Password.svg" alt="">
                         <input class="form-field" type="password" id="myInput" placeholder="Password">
-                        <img src="assets/images/login/Eye.svg" id="pass-status" class="eye position-absolute" aria-hidden="true" onClick="viewPassword()">
+                        <img src="assets/images/login/Eye.svg" id="pass-status" class="eye position-absolute"
+                             aria-hidden="true" onClick="viewPassword()">
 
                         <script>
-                            function viewPassword()
-                            {
+                            function viewPassword() {
                                 var passwordInput = document.getElementById('myInput');
                                 var passStatus = document.getElementById('pass-status');
 
-                                if (passwordInput.type == 'password'){
-                                    passwordInput.type='text';
-                                    passStatus.className='eye-slash position-absolute';
+                                if (passwordInput.type == 'password') {
+                                    passwordInput.type = 'text';
+                                    passStatus.className = 'eye-slash position-absolute';
                                     passStatus.src = "assets/images/login/Eye-text.svg";
 
-                                }
-                                else{
-                                    passwordInput.type='password';
-                                    passStatus.className='eye position-absolute';
+                                } else {
+                                    passwordInput.type = 'password';
+                                    passStatus.className = 'eye position-absolute';
                                     passStatus.src = "assets/images/login/Eye.svg";
                                 }
                             }
@@ -88,7 +94,8 @@
                     </div>
                     <button class="btn btn-main_big btn-continue text-white w-100 d-block">Continue</button>
                     <a class="btn_forgot-pass text-blue d-block" href="">Forgot Password?</a>
-                    <div class="text-gray login-with position-relative"><span class="bg-white position-relative z-index-1 text-dark">or login with</span></div>
+                    <div class="text-gray login-with position-relative"><span
+                            class="bg-white position-relative z-index-1 text-dark">or login with</span></div>
                     <div class="gmail_login">
                         <img src="assets/images/login/btn_google_signin.png" alt="">
                     </div>
@@ -171,9 +178,16 @@
             <path d="M0 120H1920V0L0 120Z" fill="white"/>
         </svg>
     </section>
-    <section class="featured position-relative">
+    <section class="featured position-relative pricing">
         <h2 class="featured_title text-dark text-center">Core Applications featured in every plan</h2>
         <div class="featured_container-fluid featured_slider-fluid d-flex">
+            <div class="file-edit_block">
+                <div class="file-edit_block-title">
+                    <div class="icon-block"><img src="assets/images/pricing/icon/Tasks.svg" alt="Calendar"></div>
+                    <span class="title">Tasks</span>
+                </div>
+                <div class="description">The most simple and intuitive way to stay organized.</div>
+            </div>
             <div class="file-edit_block">
                 <div class="file-edit_block-title">
                     <div class="icon-block"><img src="assets/images/file-edit/Calendar.svg" alt="Calendar"></div>
@@ -352,8 +366,8 @@
                 <source srcset="assets/images/pricing/table.svg" media="(max-width: 1024px)">
                 <img src="assets/images/pricing/Group 48095727.svg" alt="Flowers">
             </picture>
-<!--            <img class="position-absolute enterprise_bg" src="assets/images/pricing/Group 48095727.svg" alt="">-->
-<!--            <img class="position-absolute enterprise_bg" src="assets/images/pricing/table.svg" alt="">-->
+            <!--            <img class="position-absolute enterprise_bg" src="assets/images/pricing/Group 48095727.svg" alt="">-->
+            <!--            <img class="position-absolute enterprise_bg" src="assets/images/pricing/table.svg" alt="">-->
             <div class="enterprise_block">
                 <div class="text-up text-caption-blue tools-like_up2">Enterprise Benefits</div>
                 <h2 class="enterprise_title text-white">Freedcamp Enterprise</h2>
@@ -416,7 +430,8 @@
                     <span class="table_cell table_body table_cell-data cell-enterprise">250MB</span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Support <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Support <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -439,7 +454,8 @@
                     <span class="table_cell table_body table_cell-data cell-enterprise">Unlimited & Free</span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Core Apps <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Core Apps <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -470,7 +486,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">API <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">API <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -501,7 +518,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Email <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Email <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -588,7 +606,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Tags <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Tags <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -603,7 +622,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">File Edit <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">File Edit <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -616,7 +636,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Reports <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Reports <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -643,7 +664,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">White label <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">White label <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -655,7 +677,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">2FA <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">2FA <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -744,7 +767,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Bulk Edit <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Bulk Edit <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -758,7 +782,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Start Date <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Start Date <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -801,7 +826,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Table View <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Table View <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -861,7 +887,8 @@
 
                     <!--table body start-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Start date <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Start date <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -875,7 +902,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Bulk Edit <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Bulk Edit <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -973,7 +1001,8 @@
 
                     <!--table body start-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Wiki <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Wiki <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -986,7 +1015,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Invoices+ <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Invoices+ <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -999,7 +1029,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">CRM <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">CRM <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -1026,7 +1057,8 @@
                             src="assets/images/pricing/Vector (Stroke).svg" alt=""></span>
                     <!--table row end-->
                     <!--table row start-->
-                    <span class="table_cell table_body table_cell-title d-flex table-show">Overview <span class="tooltips mt-0">
+                    <span class="table_cell table_body table_cell-title d-flex table-show">Overview <span
+                            class="tooltips mt-0">
                         <span class="tooltip position-relative d-inline p-0 m-0"><img
                                 src="assets/images/pricing/Question.svg" alt=""> <span
                                 class="tooltip-info position-absolute">Easily link files from Google Drive just like it's a file you uploaded through the system.</span></span>
@@ -1108,9 +1140,11 @@
                 <div class="fe_manage-system_col manage-system_col text">
                     <div class="fe_manage-system-wrap">
                         <h2 class="tools-like_title text-dark">Active user billing</h2>
-                        <p class="user-billing title-xs">Freedcamp aims to always offer the most affordable and transparent
+                        <p class="user-billing title-xs">Freedcamp aims to always offer the most affordable and
+                            transparent
                             pricing and billing. Our
-                            <span class="text-dark title-m">Active User Warning System</span> helps you keep costs down by
+                            <span class="text-dark title-m">Active User Warning System</span> helps you keep costs down
+                            by
                             giving you an accurate count of the
                             active user count over your last billing period. This lets you lower the number of seats
                             purchased and in turn your next month’s bill. Check <span class="user-billing_violet">Billing FAQ</span>
@@ -1154,15 +1188,18 @@
             <div class="blocks">
                 <div class="block position-relative">
                     <img class="position-absolute block_img" src="assets/images/pricing/Individual.svg" alt="">
-                    <div class="title-s text-dark">Are you a student, teacher, or part of a non profit organisation?</div>
+                    <div class="title-s text-dark">Are you a student, teacher, or part of a non profit organisation?
+                    </div>
                     <p>And want to use Freedcamp to collaborate on projects? Eligibility requirements are explained in
-                        more detail in the Freedcamp <span class="user-billing_violet">for Nonprofits FAQ</span> and the Freedcamp <span class="user-billing_violet">for Education FAQ.</span></p>
+                        more detail in the Freedcamp <span class="user-billing_violet">for Nonprofits FAQ</span> and the
+                        Freedcamp <span class="user-billing_violet">for Education FAQ.</span></p>
                 </div>
                 <div class="block position-relative">
                     <img class="position-absolute block_img" src="assets/images/pricing/Team.svg" alt="">
                     <div class="title-s text-dark">Special Options for your team and your company</div>
                     <p>To be considered for the special pricing options based on your team and company qualifications,
-                        please fill out the Freedcamp <a href="/" class="user-billing_violet">for Nonprofits application</a> or the Freedcamp <a href="/" class="user-billing_violet">for Education
+                        please fill out the Freedcamp <a href="/" class="user-billing_violet">for Nonprofits
+                            application</a> or the Freedcamp <a href="/" class="user-billing_violet">for Education
                             application.</a></p>
                 </div>
             </div>
@@ -1235,6 +1272,112 @@
         <p class="popup__description">You do not have actibe projects to apply subscription, so please create at least one project first.</p>
     </div>
 </div>
+
+<div class="popup-bg">
+    <div class="popup popup-wrap popup-warning text-center">
+        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>
+        <h2 class="popup__title">Warning!</h2>
+        <p class="popup__description">You’re about to cancel your Trial on Pro Plan and you still have 7 Days left. Are you sure you want to proceed?</p>
+        <p class="popup__description">NOTE: Trial cancellation is irreversible operation, you can not start trial for the same plan twice</p>
+        <div class="popup-wrap-btn">
+            <button class="btn popup__btn cancel">Cancel Trial</button>
+            <button class="btn popup__btn continue">Continue Trial</button>
+        </div>
+    </div>
+</div>
+
+<div class="popup-bg big">
+    <div class="popup popup-wrap popup-contact-us text-center">
+        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>
+        <h2 class="popup__title">Contact Us</h2>
+        <form class="login_form-wrapper popup-form" action="">
+            <div class="row">
+                <label class="label-text position-relative text-left">
+                    <span class="d-block form-label">First name</span>
+                    <input class="form-field" type="text" placeholder="Write your first name">
+                </label>
+                <label class="label-text position-relative text-left">
+                    <span class="d-block form-label">last name</span>
+                    <input class="form-field" type="text" placeholder="Write your last name">
+                </label>
+            </div>
+            <div class="row">
+                <label class="label-text position-relative text-left">
+                    <span class="d-block form-label">email</span>
+                    <input class="form-field" type="text" placeholder="nastia.kazachenko@gmail.com">
+                </label>
+                <label class="label-text position-relative text-left">
+                    <span class="d-block form-label">phone number</span>
+                    <input class="form-field" type="text" placeholder="Enter your phone">
+                </label>
+            </div>
+            <label class="label-text position-relative text-left">
+                <span class="d-block form-label">company name</span>
+                <input class="form-field" type="text" placeholder="Enter your email">
+            </label>
+            <div class="row">
+                <label class="label-text position-relative text-left">
+                    <span class="d-block form-label">title</span>
+                    <input class="form-field" type="text" placeholder="Enter your email">
+                </label>
+                <label class="label-text position-relative text-left">
+                    <span class="d-block form-label">users</span>
+                    <input class="form-field" type="text" placeholder="Enter your phone">
+                </label>
+            </div>
+            <label class="label-text position-relative text-left">
+                <span class="d-block form-label">company name</span>
+                <textarea class="form-field" type="text" placeholder="Enter your email"></textarea>
+            </label>
+            <div class="form-group product_updates">
+                <input type="checkbox" id="logged">
+                <label for="logged">Send a copy to my email</label>
+            </div>
+            <a href="Sign_Up_with_Google_Step_3.html" class="btn btn-main_big text-white update-btn">Send</a>
+        </form>
+    </div>
+</div>
+
+<div class="popup-bg big">
+    <div class="popup popup-wrap popup-get-in-touch text-center">
+        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>
+        <div class="blocks">
+            <div class="block-text">
+                <h3 class="block-text__title">Have a question?</h3>
+                <p class="block-text__description">Just fill the form or <a href="">email us.</a> Most of the time we respond in minutes. Our clients often rate us as
+                    best at customer support in the software industry.</p>
+                <h3 class="block-text__title">Can’t wait?</h3>
+                <div class="cant-wait">
+                    <a href="" class="cant-wait__link"><img src="assets/images/pricing/popup-arrow-right.svg" alt=""> Free service? Which is the catch?</a>
+                    <div class="cant-wait__text">Freedcamp’s CEO talks about it on Quora</div>
+                </div>
+                <div class="cant-wait">
+                    <a href="" class="cant-wait__link"><img src="assets/images/pricing/popup-arrow-right.svg" alt=""> Check Latest updates</a>
+                    <div class="cant-wait__text">See what we are up to and what has been launched.</div>
+                </div>
+            </div>
+            <div class="block-form">
+                <h3 class="block-text__title">Get in Touch</h3>
+                <form class="login_form-wrapper popup-form" action="">
+                    <label class="label-text position-relative text-left">
+                        <span class="d-block form-label">your name</span>
+                        <input class="form-field" type="text" placeholder="Enter your name">
+                    </label>
+                    <label class="label-text position-relative text-left">
+                        <span class="d-block form-label">email</span>
+                        <input class="form-field" type="text" placeholder="Enter your email">
+                    </label>
+                    <label class="label-text position-relative text-left">
+                        <span class="d-block form-label">message</span>
+                        <textarea class="form-field" type="text" placeholder="Write your message here"></textarea>
+                    </label>
+                    <a href="Sign_Up_with_Google_Step_3.html" class="btn btn-main_big text-white update-btn">Send</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="assets/js/main.js"></script>
 <script src="assets/js/sliders.js"></script>
 </body>

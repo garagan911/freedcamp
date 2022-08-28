@@ -398,7 +398,7 @@ ul {
     }
   }
 }
-input[type=text], input[type=password]{
+input[type=text], input[type=password], textarea{
   width: 100%;
   background: @background_grey;
   backdrop-filter: blur(13px);
@@ -625,6 +625,7 @@ input[type=text], input[type=password]{
   left: 0;
   z-index: 100;
   background: rgba(53, 53, 61, .4);
+  padding: 20px;
 }
 .popup{
   position: relative;
@@ -634,6 +635,128 @@ input[type=text], input[type=password]{
   &-attention{
     padding: 40px 24px;
     max-width: 400px;
+  }
+  &-warning{
+    padding: 40px 24px 24px;
+    max-width: 500px;
+    .popup__description{
+      margin-top: 12px;
+    }
+  }
+  &-contact-us{
+    width: 100%;
+    max-width: 720px;
+    padding: 32px 40px 40px;
+    .login_form-wrapper{
+      margin-top: 24px;
+    }
+    .label-text, .product_updates{
+      margin-top: 8px;
+    }
+    .update-btn {
+      margin-top: 32px;
+    }
+  }
+  &-get-in-touch{
+    text-align: left;
+    max-width: 830px;
+    .blocks{
+      display: flex;
+    }
+    .block{
+      &-text, &-form{
+        max-width: 50%;
+        padding: 32px 40px;
+      }
+      &-text{
+        border-right: 1px solid @stroke_light;
+        a{
+          color: @main_blue;
+          text-decoration: none;
+        }
+        &__title{
+          font-family: "Poppins-SemiBold", sans-serif;
+          font-size: 16px;
+          line-height: 24px;
+          color: @main_text;
+          &:last-of-type{
+            margin-top: 32px;
+          }
+        }
+        &__description{
+          font-family: "Inter-Regular", sans-serif;
+          font-size: 14px;
+          line-height: 22px;
+          color: @body_text;
+          margin-top: 12px;
+        }
+        .cant-wait{
+          margin-top: 12px;
+          &:first-of-type{
+            margin-top: 16px;
+          }
+          &__link{
+            font-size: 14px;
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            img{
+              margin-right: 8px;
+            }
+          }
+          &__text{
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 4px;
+            padding-left: 29px;
+          }
+        }
+      }
+      &-form{
+        .update-btn{
+          max-width: 100%;
+          text-align: center;
+          margin-top: 32px;
+          padding-top: 12px;
+          padding-bottom: 12px;
+        }
+        .block-text__title{
+          margin-top: 0;
+        }
+        .login_form-wrapper{
+          margin-top: 24px;
+        }
+        textarea.form-field{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  &-wrap-btn{
+    display: flex;
+  }
+  &-form{
+    .form-field{
+      padding-left: 16px;
+      font-size: 16px;
+      line-height: 24px;
+      color: @main_text;
+      font-family: "Inter-Regular", sans-serif;
+    }
+    .form-label{
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .row{
+      flex-wrap: nowrap;
+      .label-text{
+        width: 100%;
+        max-width: 49%;
+      }
+    }
+    input[type=text], input[type=password], textarea{
+      padding: 15px 16px;
+    }
   }
   &__close-btn{
     background: transparent;
@@ -655,6 +778,36 @@ input[type=text], input[type=password]{
   }
   &__description{
     color: @body_text;
+  }
+  &__btn{
+    width: 100%;
+    max-width: 218px;
+    padding: 11px 15px;
+    font-family: "Inter-Bold", sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    border-width: 2px;
+    border-style: solid;
+    margin-top: 40px;
+
+    &.cancel{
+      border-color: #EBEEF2;
+      border-radius: 8px;
+      color: @main_text;
+      background: transparent;
+      margin-right: 11px;
+      &:hover{
+        border-color: @blue_4;
+        background: #EDF3FE;
+        color: @main_blue;
+      }
+    }
+    &.continue{
+      border-color: @main_blue;
+      background: @main_blue;
+      border-radius: 8px;
+      color: #fff;
+    }
   }
 }
 
