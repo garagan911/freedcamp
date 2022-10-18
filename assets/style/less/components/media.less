@@ -637,6 +637,14 @@
   .manage-system_row{
     justify-content: center;
   }
+  .pass{
+    &_manage-system{
+      .manage-system_row{
+        align-items: center;
+        justify-content: space-around;
+      }
+    }
+  }
   .po_manage-system_col .girl {
     max-width: 344px;
     left: 42px;
@@ -1002,6 +1010,13 @@
   .features .section-top {
     padding-bottom: 89px;
   }
+  .pass-system_col{
+    position: static !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    order: -1;
+    transform: unset !important;
+  }
 }
 
 @media screen and (max-width: 1023.98px){
@@ -1034,11 +1049,22 @@
   .user-billing{
     max-width: 400px;
   }
-  .pass_manage-system .item{
-    max-width: 30%;
-    align-items: baseline;
-    display: inline-grid;
-    margin-top: 88px;
+  .pass_manage-system {
+    .item{
+      max-width: 30%;
+      align-items: baseline;
+      display: inline-grid;
+      margin-top: 88px;
+    }
+    .manage-system_row{
+      .item{
+        display: flex;
+        align-items: center;
+        p{
+          text-align: left;
+        }
+      }
+    }
   }
   .fe_manage-system_col{
     display: flex;
@@ -1242,6 +1268,7 @@
       }
     }
   }
+
 }
 
 @media screen and (max-width: 991.98px){

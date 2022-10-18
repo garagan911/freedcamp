@@ -3553,6 +3553,16 @@ a.user-billing_violet:hover {
 .pass_manage-system .fe_manage-system_col.pic {
   padding-bottom: 0;
 }
+.pass-system_col {
+  position: static !important;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  -webkit-transform: unset !important;
+          transform: unset !important;
+}
 .enterprise_section-top {
   padding-top: 250px;
   padding-bottom: 380px;
@@ -7065,6 +7075,13 @@ a.user-billing_violet:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .pass_manage-system .manage-system_row {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
   .po_manage-system_col .girl {
     max-width: 344px;
     left: 42px;
@@ -7412,6 +7429,16 @@ a.user-billing_violet:hover {
   .features .section-top {
     padding-bottom: 89px;
   }
+  .pass-system_col {
+    position: static !important;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    -webkit-transform: unset !important;
+            transform: unset !important;
+  }
 }
 @media screen and (max-width: 1023.98px) {
   .integrate .blocks-row {
@@ -7489,6 +7516,17 @@ a.user-billing_violet:hover {
     display: -ms-inline-grid;
     display: inline-grid;
     margin-top: 88px;
+  }
+  .pass_manage-system .manage-system_row .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pass_manage-system .manage-system_row .item p {
+    text-align: left;
   }
   .fe_manage-system_col {
     display: -webkit-box;
