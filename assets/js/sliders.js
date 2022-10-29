@@ -1,13 +1,13 @@
 $('.pricing_slider').slick({
     speed: 300,
     slidesToShow: 4,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
     dots: false,
     centerMode: true,
     focusOnSelect: true,
-
+    variableWidth: true,
     responsive: [
         {
             breakpoint: 1025,
@@ -41,6 +41,7 @@ $('.blocks_slider-management').slick({
     nextArrow: $('.next-m'),
     dots: false,
     focusOnSelect: true,
+    variableWidth: true,
     responsive: [
         {
             breakpoint: 1025,
@@ -70,12 +71,15 @@ $('.blocks_slider-management').slick({
 
 $('.slider-clean-workflows').slick({
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
+    focusOnSelect: true,
     prevArrow: $('.prev2'),
     nextArrow: $('.next2'),
+    centerMode: true,
+    infinite: true,
     dots: false,
-    focusOnSelect: true,
+    variableWidth: true,
     responsive: [
         {
             breakpoint: 1025,

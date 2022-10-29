@@ -45,6 +45,7 @@
               padding: 16px 0 16px 38px;
               border-left: 2px solid @stroke;
               position: relative;
+              width: 100%;
               &.active{
                 &:before{
                   content: '';
@@ -232,7 +233,10 @@
     }
   }
 }
-
+.ep-path{
+  bottom: unset;
+  top: 0;
+}
 .loved-by{
   .line{
     width: 70px;
@@ -257,4 +261,72 @@
     bottom: 0;
     left: 0;
   }
+}
+
+//ul.tab {
+//  list-style-type: none;
+//  margin: 0;
+//  padding: 0;
+//  overflow: hidden;
+//  border: 1px solid #ccc;
+//  background-color: #f1f1f1;
+//}
+
+/* Float the list items side by side */
+//ul.tab li {float: left;}
+
+/* Style the links inside the list items */
+//ul.tab li a {
+//  display: inline-block;
+//  color: black;
+//  text-align: center;
+//  padding: 14px 16px;
+//  text-decoration: none;
+//  transition: 0.3s;
+//  font-size: 17px;
+//}
+
+/* Change background color of links on hover */
+//ul.tab li a:hover {
+//  background-color: #ddd;
+//}
+
+/* Create an active/current tablink class */
+//ul.tab li a:focus, .active {
+//  background-color: #ccc;
+//}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+  img{
+    max-width: 664px;
+  }
+  &.tab-2{
+    img{
+      //max-width: 664px;
+      width: 100%;
+      transform: scale(1.12) translateY(25px);
+    }
+  }
+  &.tab-8{
+    img{
+      max-width: 960px !important;
+      -webkit-transform: scale(1.12) translateY(25px);
+      transform: scale(1) translateY(0px) translateX(-152px);
+    }
+  }
+}
+
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }

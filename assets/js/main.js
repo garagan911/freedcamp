@@ -135,6 +135,7 @@ $('.featured_slider-fluid').slick({
     dots: false,
     centerMode: true,
     focusOnSelect: true,
+    variableWidth: true,
     responsive: [
         {
             breakpoint: 2075,
@@ -216,6 +217,7 @@ $('.blocks_slider').slick({
     slidesToScroll: 3,
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
+    variableWidth: true,
     responsive: [
         {
             breakpoint: 1024,

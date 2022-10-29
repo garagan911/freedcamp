@@ -104,7 +104,7 @@
 </header>
 <main>
     <section class="it_section-top enterprise_section-top bg-blue-gradient position-relative overflow-hidden">
-<!--        <img class="position-absolute pattern w-100" src="assets/images/passwords/Group 48096097.svg" alt="">-->
+        <img class="position-absolute pattern w-100 ep-path" src="assets/images/passwords/Group 48096097.svg" alt="">
         <img class="position-absolute pattern" src="assets/images/enterprise/Individual.svg" alt="">
         <div class="container it_section-top__container fe_section-top__container position-relative">
             <div class="wrap-top-row">
@@ -135,22 +135,54 @@
             <h2 class="text-center text-dark enterprise-benefits_title">Enterprise Benefits</h2>
             <div class="blocks d-flex">
                 <div class="block-select">
-                    <ul class="text-gray">
-                        <li class="active"><span class="number">01</span><span class="text">SSO with SAML</span></li>
-                        <li><span class="number">02</span><span class="text">Dashboards</span></li>
-                        <li><span class="number">03</span><span class="text">Professional Services</span></li>
-                        <li><span class="number">04</span><span class="text">2FA</span></li>
-                        <li><span class="number">05</span><span class="text">White Label</span></li>
-                        <li><span class="number">06</span><span class="text">Custom Fields for Projects</span></li>
-                        <li><span class="number">07</span><span class="text">Private Cloud</span></li>
-                        <li><span class="number">08</span><span class="text">Project Overview</span></li>
-                        <li><span class="number">09</span><span class="text">Daily data snapshots</span></li>
+                    <ul class="text-gray tab">
+                        <li class="tablinks active" onclick="openCity(event, 'tab-1')"><span class="number">01</span><span class="text">SSO with SAML</span></li>
+                        <li class="tablinks" onclick="openCity(event, 'tab-2')"><span class="number">02</span><span class="text">Dashboards</span></li>
+                        <li class="tablinks" onclick="openCity(event, 'tab-3')"><span class="number">03</span><span class="text">Professional Services</span></li>
+                        <li class="tablinks" onclick="openCity(event, 'tab-4')"><span class="number">04</span><span class="text">2FA</span></li>
+                        <li class="tablinks" onclick="openCity(event, 'tab-5')"><span class="number">05</span><span class="text">White Label</span></li>
+                        <li class="tablinks" onclick="openCity(event, 'tab-6')"><span class="number">06</span><span class="text">Custom Fields for Projects</span></li>
+                        <li class="tablinks" onclick="openCity(event, 'tab-7')"><span class="number">07</span><span class="text">Private Cloud</span></li>
+                        <li class="tablinks" onclick="openCity(event, 'tab-8')"><span class="number">08</span><span class="text">Project Overview</span></li>
+                        <li class="tablinks" onclick="openCity(event, 'tab-9')"><span class="number">09</span><span class="text">Daily data snapshots</span></li>
                     </ul>
                 </div>
-                <div class="block-pic bg-white">
+                <div class="block-pic bg-white tabcontent" id="tab-1" style="display: block;">
                     <img src="assets/images/enterprise/Group 48096098.svg" alt="Enterprise Benefits">
                     <p class="block-pic-text text-center">Provide access securely and instantly with Google, Azure, AWS,
                         Okta, Citrix or custom SAML identity provider.</p>
+                </div>
+                <div class="block-pic bg-white tabcontent tab-2" id="tab-2">
+                    <img src="assets/images/enterprise/pic-2.png" alt="Enterprise Benefits">
+                    <p class="block-pic-text text-center">Track progress and share results personally tailored for your team.</p>
+                </div>
+                <div class="block-pic bg-white tabcontent" id="tab-3">
+                    <img src="assets/images/enterprise/tab-3.png" alt="Enterprise Benefits">
+                    <p class="block-pic-text text-center">If you are looking for more hands-on support or need to customize Freedcamp for your teams.</p>
+                </div>
+                <div class="block-pic bg-white tabcontent" id="tab-4">
+                    <img src="assets/images/enterprise/tab-4.png" alt="Enterprise Benefits">
+                    <p class="block-pic-text text-center">Two-factor authentication provides an extra layer of security to the sign in process.</p>
+                </div>
+                <div class="block-pic bg-white tabcontent" id="tab-5">
+                    <img src="assets/images/enterprise/tab-5.png" alt="Enterprise Benefits">
+                    <p class="block-pic-text text-center">White Label allows customizing Freedcamp with your company's branding.</p>
+                </div>
+                <div class="block-pic bg-white tabcontent" id="tab-6">
+                    <img src="assets/images/enterprise/tab-6.png" alt="Enterprise Benefits">
+                    <p class="block-pic-text text-center"> Custom fields let you add additional attributes to Freedcamp projects.</p>
+                </div>
+                <div class="block-pic bg-white tabcontent" id="tab-7">
+                    <img src="assets/images/enterprise/tab-7.png" alt="Enterprise Benefits">
+                    <p class="block-pic-text text-center"> An isolated private instance of Freedcamp hosted by us in the Amazon region of your choosing for a fixed extra yearly cost.</p>
+                </div>
+                <div class="block-pic bg-white tabcontent tab-8" id="tab-8">
+                    <img src="assets/images/enterprise/tab-8.png" alt="Enterprise Benefits">
+                    <p class="block-pic-text text-center">Project's recap for project managers. Access project's users and their profiles.</p>
+                </div>
+                <div class="block-pic bg-white tabcontent" id="tab-9">
+                    <img src="assets/images/enterprise/tab-9.png" alt="Enterprise Benefits">
+                    <p class="block-pic-text text-center">In a regulated industry or have legal obligations to archive/store data? We can provide access to daily snapshots of all of your data.</p>
                 </div>
             </div>
         </div>
@@ -539,7 +571,21 @@
         percent[2].innerText = 20 + "%";
         percent[3].innerText = 19 + "%";
     }
-    resize()
+    resize();
+
+    function openCity(evt, cityName) {
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tabcontent.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
 </script>
 </body>
 </html>

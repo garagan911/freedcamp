@@ -466,7 +466,7 @@ main {
   overflow: hidden;
 }
 header.header {
-  z-index: 2;
+  z-index: 4;
 }
 .poppins-sb,
 h1,
@@ -609,6 +609,9 @@ ul li {
 }
 .bg-main_light_blue {
   background: #57b6f0;
+}
+.bg-light_blue {
+  background: #EDF3FE;
 }
 .bg-blue-5 {
   background: #edf3fe;
@@ -3370,14 +3373,16 @@ a.user-billing_violet:hover {
   margin-bottom: 40px;
 }
 .po_section-top__container {
-  max-width: 1240px;
+  max-width: 1360px;
 }
-.po_section-top__container .wrap-top-col.img img {
+.po_section-top__container .wrap-top-col .anim {
   left: 24px;
+  width: 100%;
+  max-width: 745px;
 }
 .po_section-top .bg-things {
   width: 100%;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 0;
 }
@@ -3390,7 +3395,7 @@ a.user-billing_violet:hover {
 }
 .po_section-top__col-text {
   width: 100%;
-  min-width: 576px;
+  max-width: 576px;
 }
 .po_section-top__caption {
   margin-top: 20px;
@@ -3615,6 +3620,7 @@ a.user-billing_violet:hover {
   padding: 16px 0 16px 38px;
   border-left: 2px solid #dcdee4;
   position: relative;
+  width: 100%;
 }
 .enterprise-benefits .blocks .block-select ul li.active:before {
   content: '';
@@ -3804,6 +3810,10 @@ a.user-billing_violet:hover {
       align-self: center;
   margin-left: 118px;
 }
+.ep-path {
+  bottom: unset;
+  top: 0;
+}
 .loved-by .line {
   width: 70px;
   height: 2px;
@@ -3826,6 +3836,46 @@ a.user-billing_violet:hover {
 .loved-by .bg-left {
   bottom: 0;
   left: 0;
+}
+/* Float the list items side by side */
+/* Style the links inside the list items */
+/* Change background color of links on hover */
+/* Create an active/current tablink class */
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+.tabcontent img {
+  max-width: 664px;
+}
+.tabcontent.tab-2 img {
+  width: 100%;
+  -webkit-transform: scale(1.12) translateY(25px);
+          transform: scale(1.12) translateY(25px);
+}
+.tabcontent.tab-8 img {
+  max-width: 960px !important;
+  -webkit-transform: scale(1.12) translateY(25px);
+  transform: scale(1) translateY(0px) translateX(-152px);
+}
+@-webkit-keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .tasks .title-pic {
   left: -10px;
@@ -3933,7 +3983,7 @@ a.user-billing_violet:hover {
 }
 .gantt-view {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 210px;
 }
 .gantt-view_container {
   max-width: 1386px;
@@ -4058,6 +4108,9 @@ a.user-billing_violet:hover {
   width: 120px;
   height: 2px;
   background: #ebeef2;
+}
+.clean-workflows .slider-clean-workflows_milestones .slide {
+  min-height: 500px;
 }
 .clean-workflows_slider-navigation .next2,
 .clean-workflows_slider-navigation .prev2 {
@@ -4731,10 +4784,25 @@ a.user-billing_violet:hover {
   margin: 12px auto 0;
 }
 .tags-mentions .manage-system_row {
-  margin-top: -85px;
+  margin-top: 0;
 }
 .tags-mentions .manage-system_row.first {
   margin-top: 0;
+}
+.tags-mentions .manage-system_row.second {
+  margin-top: 47px;
+}
+.tags-mentions .manage-system_row.third {
+  margin-top: 61px;
+}
+.tags-mentions .manage-system_row.fourth {
+  margin-top: 99px;
+}
+.tags-mentions .mobile {
+  display: none;
+}
+.tags-mentions .desktop {
+  display: block;
 }
 .tags-mentions .tools-like_title {
   margin-bottom: 16px;
@@ -4743,7 +4811,7 @@ a.user-billing_violet:hover {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  top: 12%;
+  top: 10%;
 }
 .tags-mentions .swiper-wrap_pass_manage .slick-dots li button {
   width: 8px;
@@ -6486,13 +6554,16 @@ a.user-billing_violet:hover {
 }
 @media screen and (min-width: 1601px) {
   .tags-mentions .it_section-top__col-text {
-    min-width: 690px;
+    max-width: 690px;
   }
 }
 @media screen and (max-width: 1800px) {
   .project-templates .gmail-outlook_pic {
     right: 8%;
     bottom: 3%;
+  }
+  .po_section-top .bg-things {
+    top: 0;
   }
 }
 @media screen and (max-width: 1705px) {
@@ -7221,12 +7292,24 @@ a.user-billing_violet:hover {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
+  .tags-mentions .manage-system_row.first {
+    margin-top: 0;
+  }
+  .tags-mentions .manage-system_row.second {
+    margin-top: 6px;
+  }
+  .tags-mentions .manage-system_row.third {
+    margin-top: -10px;
+  }
+  .tags-mentions .manage-system_row.fourth {
+    margin-top: 45px;
+  }
   .tags-mentions .manage-system_col.text p {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 24px;
   }
   .tags-mentions .manage-system_line {
-    top: 13%;
+    top: 10%;
     max-width: 16px;
   }
   .permissions-system-management .po_manage-system_col {
@@ -7490,6 +7573,12 @@ a.user-billing_violet:hover {
   }
   .integrate .blocks-row .block {
     margin: 0 auto;
+  }
+  .tags-mentions .mobile {
+    display: inline;
+  }
+  .tags-mentions .desktop {
+    display: none;
   }
   .addons .blocks {
     -ms-grid-columns: (1fr)[3];
@@ -9246,6 +9335,12 @@ a.user-billing_violet:hover {
     left: calc(50% - 80px);
     top: 57px;
   }
+  .current-task .it_section-top {
+    padding-bottom: 0;
+  }
+  .current-task .wrap-top-col .banner-top {
+    position: static;
+  }
   .create-better-systems .blocks {
     -ms-grid-columns: [col] 12px 164px 12px [col] 12px 164px;
     grid-template-columns: repeat(2, [col] 164px);
@@ -9484,6 +9579,11 @@ a.user-billing_violet:hover {
   .popup-get-in-touch .block-text {
     border-right: unset;
     border-top: 1px solid #ebeef2;
+  }
+  .tabcontent.tab-8 img {
+    max-width: 100% !important;
+    -webkit-transform: none;
+            transform: none;
   }
 }
 @media screen and (max-width: 600px) {
@@ -9880,6 +9980,16 @@ a.user-billing_violet:hover {
   }
   .bugs_blocks {
     margin-top: 32px;
+  }
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+  }
+  .tabcontent.tab-2 img {
+    -webkit-transform: scale(1.12) translateY(13px);
+            transform: scale(1.12) translateY(13px);
   }
 }
 @media screen and (max-width: 479.98px) {

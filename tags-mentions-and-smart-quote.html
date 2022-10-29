@@ -125,7 +125,9 @@
                     <button class="btn btn-top it_section-top__button">Try it free</button>
                 </div>
                 <div class="wrap-top-col">
-                    <img src="assets/images/tags-mentions/banner-top.svg" alt="banner-top">
+<!--                    <img src="assets/images/tags-mentions/banner-top.svg" alt="banner-top">-->
+                    <lottie-player class="banner-top-pic" src="assets/animation/Json-dimension fixed/tags mentions and smart quote/data.json" background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
                 </div>
             </div>
         </div>
@@ -139,7 +141,73 @@
             <div class="text-up text-center text-caption-blue tools-like_up2">all from one place</div>
             <h2 class="text-center text-dark multiple-projects_title">Get organized and gain complete visibility over
                 all your tasks</h2>
-            <div class="swiper-wrap_pass_manage swiper-active">
+            <div class="swiper-wrap_pass_manage desktop">
+                <div class="manage-system_row first">
+                    <div class="fe_manage-system_col tt_manage-system_col pic bg-transparent">
+                        <lottie-player class="banner-top-pic" src="assets/animation/JSON/Tags/data.json" background="transparent"
+                                       speed="1" loop autoplay></lottie-player>
+                    </div>
+                    <div class="fe_manage-system_col manage-system_col text">
+                        <h5 class="tools-like_title text-dark">Tags</h5>
+                        <p>Create custom tags for tasks, projects, and even comments in Freedcamp to create a searchable
+                            database of projects and ideas. You can tag projects themselves, as well as comments that
+                            are
+                            worth referencing later. </p>
+                        <p>Searching tags is super easy, simply click on a tag while holding CTRL. A second window pops
+                            up
+                            with a list of everything associated with that tag. </p>
+                        <p>You also have the ability to limit who can create tags (all users can add tags, but may not
+                            be
+                            able to create tags).</p>
+                    </div>
+                </div>
+                <div class="manage-system_row second">
+                    <div class="fe_manage-system_col tt_manage-system_col pic bg-transparent">
+                        <lottie-player class="banner-top-pic" src="assets/animation/JSON/Mentions/data.json" background="transparent"
+                                       speed="1" loop autoplay></lottie-player>
+                    </div>
+                    <div class="fe_manage-system_col manage-system_col text">
+                        <h5 class="tools-like_title text-dark">Mentions</h5>
+                        <p>Call people into the conversation with Mentions. Any user on your team (as well as Global
+                            Users)
+                            can be mentioned using @ followed by their name. The person mentioned will get a
+                            notification
+                            that takes them directly to the conversations, task, comment, etc., they’ve been mentioned
+                            in. </p>
+                    </div>
+
+                </div>
+                <div class="manage-system_row third">
+                    <div class="fe_manage-system_col tt_manage-system_col pic bg-transparent">
+                        <lottie-player class="banner-top-pic" src="assets/animation/JSON/Smart Links/data.json" background="transparent"
+                                       speed="1" loop autoplay></lottie-player>
+                    </div>
+                    <div class="fe_manage-system_col manage-system_col text">
+                        <h5 class="tools-like_title text-dark">Smart Links</h5>
+                        <p>Freedcamp uses a system called Smart Links to help you create tasks, events, or go to
+                            specific
+                            comments within Freedcamp. Drop in a link and automatically to the exact comment/task/event
+                            you’re supposed to look at. </p>
+                    </div>
+
+                </div>
+                <div class="manage-system_row fourth">
+                    <div class="fe_manage-system_col tt_manage-system_col pic bg-transparent">
+                        <lottie-player class="banner-top-pic" src="assets/animation/JSON/Smart quotes/data.json" background="transparent"
+                                       speed="1" loop autoplay></lottie-player>
+                    </div>
+                    <div class="fe_manage-system_col manage-system_col text">
+                        <h5 class="tools-like_title text-dark">Smart quotes</h5>
+                        <p>Smart quotes let you take specific sections of text and reply directly to them. This way you
+                            can
+                            make sure that everyone knows exactly what you’re responding to, rather than having to
+                            search
+                            through a paragraph of text to find the relevant parts. </p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="swiper-wrap_pass_manage swiper-active mobile">
                 <div class="manage-system_row first">
                     <div class="fe_manage-system_col tt_manage-system_col pic bg-transparent">
                         <img class="file w-100" src="assets/images/tags-mentions/pic-1.png" alt="man">
@@ -158,7 +226,7 @@
                             able to create tags).</p>
                     </div>
                 </div>
-                <div class="manage-system_row">
+                <div class="manage-system_row second">
                     <div class="fe_manage-system_col tt_manage-system_col pic bg-transparent">
                         <img class="file w-100" src="assets/images/tags-mentions/pic-2.png" alt="man">
                     </div>
@@ -173,7 +241,7 @@
                     </div>
 
                 </div>
-                <div class="manage-system_row">
+                <div class="manage-system_row third">
                     <div class="fe_manage-system_col tt_manage-system_col pic bg-transparent">
                         <img class="file w-100" src="assets/images/tags-mentions/pic-3.png" alt="man">
                     </div>
@@ -186,7 +254,7 @@
                     </div>
 
                 </div>
-                <div class="manage-system_row">
+                <div class="manage-system_row fourth">
                     <div class="fe_manage-system_col tt_manage-system_col pic bg-transparent">
                         <img class="file w-100" src="assets/images/tags-mentions/pic-4.png" alt="man">
                     </div>
@@ -203,6 +271,7 @@
             </div>
 
             <img class="position-absolute manage-system_line" src="assets/images/tags-mentions/line-big.svg" alt="line">
+<!--            <img class="position-absolute manage-system_line" src="assets/images/tags-mentions/line-tablet.svg" alt="line">-->
         </div>
     </section>
     <section class="bg-blue-gradient experience position-relative it_experience">
@@ -379,17 +448,20 @@
         slidesToScroll: 1,
         dots: true,
         focusOnSelect: true,
+        adaptiveHeight: true
     };
     $slick_slider.slick(settings);
 
     function checkWidth(init) {
         if ($(window).width() > 1024) {
+            console.log('BIG', init)
             if ($slick_slider.hasClass('slick-initialized')){
                 $slick_slider.slick('unslick');
-                $slick_slider.removeClass('swiper-active');
+                $('.swiper-wrap_pass_manage').removeClass('swiper-active');
                 return
             }
         } else {
+
             if (!init) {
                 $('.swiper-wrap_pass_manage').addClass('swiper-active');
                 return $slick_slider.slick(settings);

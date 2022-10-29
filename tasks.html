@@ -109,7 +109,7 @@
         </div>
     </div>
 </header>
-<main class="tasks">
+<main class="tasks current-task">
     <section class="it_section-top fe_section-top bg-pink position-relative">
         <img class="position-absolute pattern" src="assets/images/tasks/bg-top.svg" alt="">
         <!--        <img class="position-absolute pattern-2" src="assets/images/file-edit/Group 48096083.svg" alt="">-->
@@ -124,7 +124,9 @@
                     <button class="btn btn-top it_section-top__button">Try it free</button>
                 </div>
                 <div class="wrap-top-col">
-                    <img class="banner-top" src="assets/images/tasks/top-pic.svg" alt="banner-top">
+<!--                    <img class="banner-top" src="assets/images/tasks/top-pic.svg" alt="banner-top">-->
+                    <lottie-player class="banner-top" src="assets/animation/Json-dimension fixed/tasks/data.json" background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
                 </div>
             </div>
         </div>
@@ -326,8 +328,8 @@
                 clear view of what needs to be done, when. Timeline view helps you allocate resources across projects or
                 a portfolio of projects. </p>
             <div class="blocks d-flex">
-                <ul class="block_text">
-                    <li class="block_text-wrap active">
+                <ul class="block_text tab">
+                    <li class="block_text-wrap tablinks active" onclick="openCity(event, 'tab-1')" >
                         <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
                                                                  alt="icon-check"><span class="title-m text-dark title">Track dependencies</span>
                             <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
@@ -335,7 +337,7 @@
                         <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
                             remove dependencies, as needed to your project view.</p>
                     </li>
-                    <li class="block_text-wrap">
+                    <li class="block_text-wrap tablinks" onclick="openCity(event, 'tab-2')">
                         <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
                                                                  alt="icon-check"><span class="title-m text-dark title">Adjust entire project timelines</span>
                             <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
@@ -343,7 +345,7 @@
                         <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
                             remove dependencies, as needed to your project view.</p>
                     </li>
-                    <li class="block_text-wrap">
+                    <li class="block_text-wrap tablinks" onclick="openCity(event, 'tab-3')" >
                         <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
                                                                  alt="icon-check"><span class="title-m text-dark title">Auto-scheduling</span>
                             <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
@@ -351,7 +353,7 @@
                         <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
                             remove dependencies, as needed to your project view.</p>
                     </li>
-                    <li class="block_text-wrap">
+                    <li class="block_text-wrap tablinks" onclick="openCity(event, 'tab-4')" >
                         <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
                                                                  alt="icon-check"><span class="title-m text-dark title">Relative scheduling</span>
                             <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
@@ -359,7 +361,7 @@
                         <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
                             remove dependencies, as needed to your project view.</p>
                     </li>
-                    <li class="block_text-wrap">
+                    <li class="block_text-wrap tablinks" onclick="openCity(event, 'tab-5')" >
                         <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
                                                                  alt="icon-check"><span class="title-m text-dark title">See (and set) progress</span>
                             <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
@@ -367,7 +369,7 @@
                         <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
                             remove dependencies, as needed to your project view.</p>
                     </li>
-                    <li class="block_text-wrap">
+                    <li class="block_text-wrap tablinks" onclick="openCity(event, 'tab-6')" >
                         <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
                                                                  alt="icon-check"><span class="title-m text-dark title">Create a critical path</span>
                             <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
@@ -375,7 +377,7 @@
                         <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
                             remove dependencies, as needed to your project view.</p>
                     </li>
-                    <li class="block_text-wrap">
+                    <li class="block_text-wrap tablinks" onclick="openCity(event, 'tab-7')" >
                         <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
                                                                  alt="icon-check"><span class="title-m text-dark title">Drag and drop deadlines</span>
                             <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
@@ -383,7 +385,7 @@
                         <p class="text-body">Keep tabs on the various tasks related to your projects. You can add and
                             remove dependencies, as needed to your project view.</p>
                     </li>
-                    <li class="block_text-wrap">
+                    <li class="block_text-wrap tablinks" onclick="openCity(event, 'tab-8')" >
                         <div class="d-flex block_text-head"><img class="check-icon" src="assets/images/icons/check.svg"
                                                                  alt="icon-check"><span class="title-m text-dark title">Gantt for projects</span>
                             <img class="arrow" src="assets/images/tasks/icon-arrow-top.svg"
@@ -392,8 +394,45 @@
                             remove dependencies, as needed to your project view.</p>
                     </li>
                 </ul>
-                <div class="block_img">
-                    <img src="assets/images/tasks/pic-right-block.svg" alt="right-pic">
+                <div class="block_img tabcontent" id="tab-1" style="display: block;">
+<!--                    <img src="assets/images/tasks/pic-right-block.svg" alt="right-pic">-->
+                    <lottie-player src="assets/animation/JSON/track dependencies/data.json" background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
+                </div>
+                <div class="block_img tabcontent" id="tab-2">
+                    <!--                    <img src="assets/images/tasks/pic-right-block.svg" alt="right-pic">-->
+                    <lottie-player src="assets/animation/JSON/adjust entire project timelines/data.json" background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
+                </div>
+                <div class="block_img tabcontent" id="tab-3">
+                    <!--                    <img src="assets/images/tasks/pic-right-block.svg" alt="right-pic">-->
+                    <lottie-player src="assets/animation/JSON/auto-scheduling/data.json" background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
+                </div>
+                <div class="block_img tabcontent" id="tab-4">
+                    <!--                    <img src="assets/images/tasks/pic-right-block.svg" alt="right-pic">-->
+                    <lottie-player src="assets/animation/JSON/relative scheduling/data.json" background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
+                </div>
+                <div class="block_img tabcontent" id="tab-5">
+                    <!--                    <img src="assets/images/tasks/pic-right-block.svg" alt="right-pic">-->
+                    <lottie-player src="assets/animation/JSON/see (and set) progress/data.json" background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
+                </div>
+                <div class="block_img tabcontent" id="tab-6">
+                    <!--                    <img src="assets/images/tasks/pic-right-block.svg" alt="right-pic">-->
+                    <lottie-player src="assets/animation/JSON/create a critical path/data.json" background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
+                </div>
+                <div class="block_img tabcontent" id="tab-7">
+                    <!--                    <img src="assets/images/tasks/pic-right-block.svg" alt="right-pic">-->
+                    <lottie-player src="assets/animation/JSON/adjust entire project timelines/data.json" background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
+                </div>
+                <div class="block_img tabcontent" id="tab-8">
+                    <!--                    <img src="assets/images/tasks/pic-right-block.svg" alt="right-pic">-->
+                    <lottie-player src="assets/animation/JSON/gant for project/Gantt for projects.json" background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
                 </div>
             </div>
         </div>
@@ -655,6 +694,21 @@
         </div>
     </div>
 </footer>
+<script>
+    function openCity(evt, cityName) {
+        let i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tabcontent.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
 <script src="assets/js/sliders.js"></script>
 <script src="assets/js/main.js"></script>
 </body>

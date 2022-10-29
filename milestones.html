@@ -114,11 +114,12 @@
         <!--        <img class="position-absolute pattern" src="assets/images/file-edit/Mask Group.png" alt="">-->
         <picture class="position-absolute milestones_pattern">
             <source media="(max-width: 767px)" srcset="assets/images/milestones/top-bg-mobile.svg">
-            <source media="(max-width: 1024px) and (min-width: 768px)" srcset="assets/images/milestones/top-bg-tablet.svg">
+            <source media="(max-width: 1024px) and (min-width: 768px)"
+                    srcset="assets/images/milestones/top-bg-tablet.svg">
             <source media="(min-width: 1025px)" srcset="assets/images/milestones/top-bg.svg">
             <img src="assets/images/milestones/top-bg.svg" alt="bg">
         </picture>
-<!--        <img class="position-absolute milestones_pattern" src="assets/images/milestones/top-bg.svg" alt="">-->
+        <!--        <img class="position-absolute milestones_pattern" src="assets/images/milestones/top-bg.svg" alt="">-->
         <div class="container it_section-top__container fe_section-top__container position-relative">
             <div class="wrap-top-row">
                 <div class="wrap-top-col it_section-top__col-text">
@@ -130,7 +131,11 @@
                     <button class="btn btn-top it_section-top__button">Get organized</button>
                 </div>
                 <div class="wrap-top-col pic">
-                    <img class="banner-top-pic" src="assets/images/milestones/banner-top.svg" alt="banner-top">
+                    <!--                    <img class="banner-top-pic" src="assets/images/milestones/banner-top.svg" alt="banner-top">-->
+                    <lottie-player class="banner-top-pic"
+                                   src="assets/animation/Json-dimension fixed/milestones/data.json"
+                                   background="transparent"
+                                   speed="1" loop autoplay></lottie-player>
                 </div>
             </div>
         </div>
@@ -144,12 +149,15 @@
         <img class="position-absolute critical-point_bg-2" src="assets/images/milestones/section-2-bg2.svg" alt="bg">
         <div class="container critical-point_container">
             <div class="blocks d-flex">
-                <h2 class="block_title text-dark clients_title">Every critical point in your project <span class="text-white d-inline-block">in one view</span></h2>
+                <h2 class="block_title text-dark clients_title">Every critical point in your project <span
+                        class="text-white d-inline-block">in one view</span></h2>
                 <div class="block_text">
-                    <p class="body-l">Making sure things are going well can be tough. Sometimes, you think everyone is on track and
+                    <p class="body-l">Making sure things are going well can be tough. Sometimes, you think everyone is
+                        on track and
                         deadlines are being hit, but then you learn that people aren’t hitting those important points on
                         the timeline. </p>
-                    <p class="body-l">The Milestones app makes it easy to see all the important milestones in your projects to help you
+                    <p class="body-l">The Milestones app makes it easy to see all the important milestones in your
+                        projects to help you
                         understand how things are going, whether or not you’re on schedule or running behind, and
                         whether or not you’re reaching the ends of your sprints properly. You have the ability to attach
                         files and comments if you need them. And, <span class="text-dark">most importantly they can be give a priority and
@@ -166,56 +174,51 @@
         <img class="position-absolute clean-workflows_bg-1" src="assets/images/milestones/section-3-bg.svg" alt="bg">
         <div class="container clean-workflows_container">
             <h2 class="text-center text-dark gantt-view_title">Everything you need to…</h2>
-            <div class="slider-clean-workflows">
+            <div class="slider-clean-workflows slider-clean-workflows_milestones">
                 <div class="slide">
                     <div class="slide_icon bg-pink-3">
-                        <img src="assets/images/tasks/icon-slider/icon-3.svg" alt="icon">
+                        <img src="assets/images/milestones/icon-slide/Checkbos-o.svg" alt="icon">
                     </div>
-                    <h6 class="slide_title text-dark">Breaking down projects</h6>
-                    <p class="slide_description title-s">Split big projects into easily manageable deliverables and
-                        assignable milestones. </p>
+                    <h6 class="slide_title text-dark">Create the ideal order to work through</h6>
+                    <p class="slide_description title-s">Eliminate overlapping start and end dates across your projects.
+                        Freedcamp lets you create a granular second layer of visibility. </p>
                 </div>
                 <div class="slide">
                     <div class="slide_icon bg-blue-5">
-                        <img src="assets/images/tasks/icon-slider/icon-4.svg" alt="icon">
+                        <img src="assets/images/milestones/icon-slide/Checkbos.svg" alt="icon">
                     </div>
-                    <h6 class="slide_title text-dark">Accurately tracking time</h6>
-                    <p class="slide_description title-s">Keep track of how long projects take to complete to understand
-                        how long certain tasks take. And, you can use that information to create highly accurate
-                        estimates for quoting jobs to customers.</p>
+                    <h6 class="slide_title text-dark">Highlight specific points along a project timeline</h6>
+                    <p class="slide_description title-s">Link tasks to key moments along the timeline of a project like,
+                        Product ready for testing or Client Onboarded. You can filter milestones to see lists based
+                        on projects, team members and so on.</p>
                 </div>
                 <div class="slide">
                     <div class="slide_icon bg-orange-5">
-                        <img src="assets/images/tasks/icon-slider/icon-1.svg" alt="icon">
+                        <img src="assets/images/milestones/icon-slide/Vector.svg" alt="icon">
                     </div>
-                    <h6 class="slide_title text-dark">Adjusting timelines</h6>
-                    <p class="slide_description title-s">Easily delay or speed up parts of projects (or entire projects)
-                        with a few clicks. </p>
+                    <h6 class="slide_title text-dark">Plan scrum sprints</h6>
+                    <p class="slide_description title-s">Get clear goals and well-defined start and finish moments for
+                        sprints to keep your team focused on a successful outcome. Tasks can be stored by type
+                        (development, design, etc.) or by the person responsible for the task using the Milestones
+                        application.</p>
                 </div>
                 <div class="slide">
-                    <div class="slide_icon bg-sky-blue-3">
-                        <img src="assets/images/tasks/icon-slider/icon-2.svg" alt="icon">
+                    <div class="slide_icon bg-green_3">
+                        <img src="assets/images/milestones/icon-slide/Checkbos-g.svg" alt="icon">
                     </div>
-                    <h6 class="slide_title text-dark">Implementing bulk actions</h6>
-                    <p class="slide_description title-s">Stop doing one thing at a time and update all the relevant
-                        tasks at once. </p>
+                    <h6 class="slide_title text-dark">Capture user stories</h6>
+                    <p class="slide_description title-s">Milestones can be used by a single user story with a collection
+                        of ordered tasks, selected from the task lists that you create. This task list can be kept
+                        collapsed and out of your way. The Milestones application can show your progress on each user
+                        story. </p>
                 </div>
                 <div class="slide">
-                    <div class="slide_icon bg-pink-3">
-                        <img src="assets/images/tasks/icon-slider/icon-3.svg" alt="icon">
+                    <div class="slide_icon bg-light_blue">
+                        <img src="assets/images/milestones/icon-slide/Checkbos-b.svg" alt="icon">
                     </div>
-                    <h6 class="slide_title text-dark">Breaking down projects</h6>
-                    <p class="slide_description title-s">Split big projects into easily manageable deliverables and
-                        assignable milestones. </p>
-                </div>
-                <div class="slide">
-                    <div class="slide_icon bg-blue-5">
-                        <img src="assets/images/tasks/icon-slider/icon-4.svg" alt="icon">
-                    </div>
-                    <h6 class="slide_title text-dark">Accurately tracking time</h6>
-                    <p class="slide_description title-s">Keep track of how long projects take to complete to understand
-                        how long certain tasks take. And, you can use that information to create highly accurate
-                        estimates for quoting jobs to customers.</p>
+                    <h6 class="slide_title text-dark">Create initiatives</h6>
+                    <p class="slide_description title-s">Group tasks using status, assigned to, or category, and
+                        use Milestones to group them together as an initiative. </p>
                 </div>
             </div>
             <div class="blocks_slider-navigation clean-workflows_slider-navigation">

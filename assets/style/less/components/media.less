@@ -78,7 +78,7 @@
 
 @media screen and (min-width: 1601px) {
   .tags-mentions .it_section-top__col-text {
-    min-width: 690px;
+    max-width: 690px;
   }
 }
 
@@ -86,6 +86,9 @@
   .project-templates .gmail-outlook_pic {
     right: 8%;
     bottom: 3%;
+  }
+  .po_section-top .bg-things {
+    top: 0;
   }
 }
 
@@ -807,13 +810,25 @@
   .tags-mentions {
     .manage-system_row{
       justify-content: space-evenly;
+      &.first{
+        margin-top: 0;
+      }
+      &.second{
+        margin-top: 6px;
+      }
+      &.third{
+        margin-top: -10px;
+      }
+      &.fourth{
+        margin-top: 45px;
+      }
     }
     .manage-system_col.text p {
-      font-size: 16px;
-      line-height: 28px;
+      font-size: 14px;
+      line-height: 24px;
     }
     .manage-system_line {
-      top: 13%;
+      top: 10%;
       max-width: 16px;
     }
   }
@@ -1034,6 +1049,14 @@
 
         }
       }
+    }
+  }
+  .tags-mentions {
+    .mobile{
+      display: inline;
+    }
+    .desktop{
+      display: none;
     }
   }
   .addons .blocks {
@@ -2608,6 +2631,7 @@
   .reliable_row-trial .btn {
     margin: 24px auto 0;
   }
+
   .tasks{
     .it_section-top__title{
       font-size: 40px;
@@ -2653,6 +2677,17 @@
       max-width: 160px;
       left: calc(50% - 80px);
       top: 57px;
+    }
+  }
+  .current-task{
+    .it_section-top{
+      padding-bottom: 0;
+    }
+    .wrap-top-col{
+      //margin-top: 58px;
+      .banner-top{
+        position: static;
+      }
     }
   }
   .create-better-systems .blocks {
@@ -2848,6 +2883,14 @@
   .popup-get-in-touch .block-text {
     border-right: unset;
     border-top: 1px solid #ebeef2;
+  }
+  .tabcontent {
+    &.tab-8{
+      img{
+        max-width: 100% !important;
+        transform: none;
+      }
+    }
   }
 }
 
@@ -3185,6 +3228,17 @@
   }
   .bugs_blocks {
     margin-top: 32px;
+  }
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+    &.tab-2{
+      img{
+        transform: scale(1.12) translateY(13px);
+      }
+    }
   }
 }
 
