@@ -68,6 +68,25 @@
   .notification-email-in .tools-like_title.mob{
     display: none;
   }
+  .left-vectopr-3block, .right-vectopr-3block, .errow-5block, .top-pic-4block{
+    display: block;
+  }
+  .top-pic-4block{
+    right: 0;
+    top: 0;
+  }
+  .left-vectopr-3block{
+    left: 0;
+    top: -80px;
+  }
+  .right-vectopr-3block{
+    right: 0;
+    top: 25%;
+  }
+  .errow-5block{
+    right: 5%;
+    bottom: 14%;
+  }
 }
 
 @media screen and (min-width: 769px){
@@ -119,6 +138,23 @@
   .menu .block-big .block-head, .menu .block-big .block-wrap {
     max-width: 100%;
   }
+  .ep-path {
+    left: 2%;
+  }
+  .enterprise{
+    &_section-top{
+      padding-bottom: 399px;
+      .pattern{
+        right: -161px;
+        bottom: -15px;
+      }
+    }
+  }
+  .errow-5block {
+    right: 2%;
+    bottom: 16%;
+    max-width: 179px;
+  }
 }
 
 @media screen and (max-width: 1473px) {
@@ -151,6 +187,9 @@
   .milestones .critical-point_bg-1 {
     right: 0;
     top: -59px;
+  }
+  .ep-path {
+    left: 1%;
   }
 }
 
@@ -308,6 +347,9 @@
 }
 
 @media screen and (max-width: 1270px){
+  .errow-5block, .top-pic-4block{
+    display: none;
+  }
   .enterprise-benefits .blocks {
     flex-wrap: wrap;
     .block-select{
@@ -1043,9 +1085,38 @@
     order: -1;
     transform: unset !important;
   }
+  .enterprise_section-top .container {
+    max-width: 904px;
+  }
+  .enterprise_col-text .section-top_caption, .enterprise_col-text .section-top_description {
+    font-size: 14px;
+  }
+  .enterprise_section-top {
+    padding-bottom: 264px;
+  }
+  .enterprise_section-top .container .wrap-top-row {
+    margin-top: 22px;
+  }
+  .enterprise_section-top .pattern {
+    right: -110px;
+    bottom: -28px;
+    max-width: 115%;
+  }
+  .enterprise_col-text{
+    .it_section-top__title {
+      font-size: 56px;
+    }
+    .section-top_description {
+      font-size: 20px;
+    }
+  }
+
 }
 
 @media screen and (max-width: 1023.98px){
+  .left-vectopr-3block, .right-vectopr-3block, .errow-5block{
+    display: none;
+  }
   .integrate{
     .blocks-row{
       display: grid;
@@ -1595,7 +1666,7 @@
   }
   .enterprise_section-top {
     padding-top: 100px;
-    padding-bottom: 180px;
+    padding-bottom: 234px !important;
   }
   .our-mission .blocks .block_pic {
     max-width: 420px;
@@ -1696,6 +1767,11 @@
     box-shadow: unset;
     border-radius: unset;
     padding: 40px 40px 0;
+  }
+  .enterprise_section-top .pattern {
+    right: -59px;
+    bottom: -15px;
+    max-width: 772px;
   }
 }
 
@@ -1932,6 +2008,12 @@
   .it_section-top__title{
     max-width: 300px;
     margin: 0 auto;
+  }
+  .enterprise_section-top{
+    .it_section-top__title{
+      max-width: unset;
+      margin: unset;
+    }
   }
   .notification-email-in {
     .wrap-top-col .tt-caption {
@@ -2574,6 +2656,9 @@
     right: 24%;
     top: 55%;
   }
+  .enterprise_section-top{
+    padding-bottom: 301px!important;
+  }
   .enterprise_col-text{
     margin: 0 auto;
     text-align: center;
@@ -2584,19 +2669,22 @@
     .tt_section-top__title{
       font-size: 32px;
       line-height: 48px;
+      margin-top: 13px;
     }
     .section-top_description{
       font-size: 16px;
       line-height: 28px;
+      margin-top: 15px;
     }
     .btn-wrap{
       flex-wrap: wrap;
+      margin-top: 27px;
       button{
         width: 100%;
       }
       .btn-no-credit{
         margin-left: 0;
-        margin-top: 16px;
+        margin-top: 7px;
       }
     }
   }
@@ -2905,6 +2993,14 @@
         transform: none;
       }
     }
+  }
+  .enterprise_section-top .pattern {
+    right: -59px;
+    bottom: -15px;
+    max-width: 657px;
+  }
+  .enterprise_section-top .container .wrap-top-row {
+    margin-top: -3px;
   }
 }
 

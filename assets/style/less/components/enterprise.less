@@ -1,9 +1,15 @@
 .enterprise{
   &_section-top{
+    .container{
+      max-width: 1240px;
+      .wrap-top-row{
+        margin-top: 6px;
+      }
+    }
     padding-top: 250px;
-    padding-bottom: 380px;
+    padding-bottom: 409px;
     .pattern{
-      bottom: 0;
+      bottom: -5px;
       right: 0;
     }
 
@@ -11,15 +17,22 @@
   &_col-text{
     max-width: 483px;
     .it_section-top__title{
-      margin-top: 12px;
+      //font-size: 96px;
+      margin-top: 18px;
     }
     .section-top_description, .section-top_caption{
       font-size: 20px;
       line-height: 32px;
     }
+    .section-top_description{
+      margin-top: 30px;
+    }
     .btn-wrap{
       display: flex;
       margin-top: 40px;
+      .btn-main_dark{
+        line-height: 34px;
+      }
     }
     .btn-no-credit{
       padding: 0;
@@ -171,7 +184,11 @@
     }
   }
 }
-
+.multiple-projects{
+  svg.white-bg-up{
+    z-index: 1;
+  }
+}
 /* Relevant progress bar CSS */
 .bar {
   background: @background_grey;
@@ -235,7 +252,8 @@
 }
 .ep-path{
   bottom: unset;
-  top: 0;
+  left: 10%;
+  top: 17%;
 }
 .loved-by{
   .line{
