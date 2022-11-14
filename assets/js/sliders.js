@@ -6,8 +6,8 @@ $('.pricing_slider').slick({
     nextArrow: $('.next'),
     dots: false,
     centerMode: true,
-    focusOnSelect: true,
-    variableWidth: true,
+    // focusOnSelect: true,
+    // variableWidth: true,
     responsive: [
         {
             breakpoint: 1025,
