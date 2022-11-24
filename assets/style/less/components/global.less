@@ -444,8 +444,25 @@ input[type=text], input[type=password], textarea{
 .form-group label {
   position: relative;
   cursor: pointer;
-}
 
+}
+.form-checkbox{
+  .form-group label:before {
+    content:'';
+    -webkit-appearance: none;
+    //background: @main_green;
+    border: 2px solid #EBEEF2;
+    border-radius: 6px;
+    padding: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+    top: -5px;
+    left: -40px;
+    position: absolute;
+  }
+}
 .form-group label:before {
   content:'';
   -webkit-appearance: none;
@@ -454,11 +471,14 @@ input[type=text], input[type=password], textarea{
   border-radius: 6px;
   padding: 13px;
   display: inline-block;
-  position: relative;
   vertical-align: middle;
   cursor: pointer;
+  position: relative;
   margin-right: 10px;
+  top: -1px;
 }
+
+
 .form-group input:checked + label:before {
   background: @main_green;
   border: 2px solid @main_green;
@@ -555,7 +575,45 @@ input[type=text], input[type=password], textarea{
   opacity: 0.5;
   cursor: default;
 }
-
+.form-checkbox {
+  font-family: "Inter-Regular", sans-serif;
+  padding-left: 40px;
+  label{
+    line-height: 22px;
+    a{
+      font-family: "Inter-SemiBold", sans-serif;
+      text-decoration: none;
+      color: #4A86F7;
+    }
+  }
+  label:before {
+    content:'';
+    -webkit-appearance: none;
+    //background: @main_green;
+    border: 2px solid #EBEEF2;
+    border-radius: 6px;
+    padding: 13px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+    top: 10px;
+    left: -40px;
+    position: absolute;
+  }
+  input:checked+label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 17px;
+    width: 6px;
+    height: 12px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    left: -28px;
+  }
+}
 // ===========================
 // radio
 // ===========================
