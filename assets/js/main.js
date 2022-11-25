@@ -143,7 +143,6 @@ $('.featured_slider-fluid').slick({
                 slidesToShow: 7,
                 slidesToScroll: 2,
                 infinite: true,
-                dots: true
             }
         },
         {
@@ -152,7 +151,6 @@ $('.featured_slider-fluid').slick({
                 slidesToShow: 6,
                 slidesToScroll: 2,
                 infinite: true,
-                dots: true
             }
         },
         {
@@ -161,7 +159,6 @@ $('.featured_slider-fluid').slick({
                 slidesToShow: 5,
                 slidesToScroll: 2,
                 infinite: true,
-                dots: true
             }
         },
         {
@@ -170,7 +167,6 @@ $('.featured_slider-fluid').slick({
                 slidesToShow: 4,
                 slidesToScroll: 2,
                 infinite: true,
-                dots: true
             }
         },
         {
@@ -179,7 +175,6 @@ $('.featured_slider-fluid').slick({
                 slidesToShow: 3,
                 slidesToScroll: 2,
                 infinite: true,
-                dots: true
             }
         },
         {
@@ -188,7 +183,6 @@ $('.featured_slider-fluid').slick({
                 slidesToShow: 2,
                 slidesToScroll: 2,
                 infinite: true,
-                dots: true
             }
         },
         {
