@@ -15,6 +15,7 @@
     <script src="assets/vendor/jquery-3.6.0.min.js"></script>
     <script src="assets/vendor/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/vendor/slick.min.js"></script>
+    <script src="http://benalman.com/code/projects/jquery-throttle-debounce/jquery.ba-throttle-debounce.js"></script>
 </head>
 <body>
 <header class="header position-fixed d-flex">
@@ -1271,119 +1272,119 @@
     </div>
 </footer>
 
-<div class="popup-bg">
-    <div class="popup popup-wrap popup-attention text-center">
-        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>
-        <img src="assets/images/pricing/attention-Icon.svg" alt="attention">
-        <h2 class="popup__title">Attention!</h2>
-        <p class="popup__description">You do not have actibe projects to apply subscription, so please create at least one project first.</p>
-    </div>
-</div>
+<!--<div class="popup-bg">-->
+<!--    <div class="popup popup-wrap popup-attention text-center">-->
+<!--        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>-->
+<!--        <img src="assets/images/pricing/attention-Icon.svg" alt="attention">-->
+<!--        <h2 class="popup__title">Attention!</h2>-->
+<!--        <p class="popup__description">You do not have actibe projects to apply subscription, so please create at least one project first.</p>-->
+<!--    </div>-->
+<!--</div>-->
 
-<div class="popup-bg">
-    <div class="popup popup-wrap popup-warning text-center">
-        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>
-        <h2 class="popup__title">Warning!</h2>
-        <p class="popup__description">You’re about to cancel your Trial on Pro Plan and you still have 7 Days left. Are you sure you want to proceed?</p>
-        <p class="popup__description">NOTE: Trial cancellation is irreversible operation, you can not start trial for the same plan twice</p>
-        <div class="popup-wrap-btn">
-            <button class="btn popup__btn cancel">Cancel Trial</button>
-            <button class="btn popup__btn continue">Continue Trial</button>
-        </div>
-    </div>
-</div>
+<!--<div class="popup-bg">-->
+<!--    <div class="popup popup-wrap popup-warning text-center">-->
+<!--        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>-->
+<!--        <h2 class="popup__title">Warning!</h2>-->
+<!--        <p class="popup__description">You’re about to cancel your Trial on Pro Plan and you still have 7 Days left. Are you sure you want to proceed?</p>-->
+<!--        <p class="popup__description">NOTE: Trial cancellation is irreversible operation, you can not start trial for the same plan twice</p>-->
+<!--        <div class="popup-wrap-btn">-->
+<!--            <button class="btn popup__btn cancel">Cancel Trial</button>-->
+<!--            <button class="btn popup__btn continue">Continue Trial</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
-<div class="popup-bg big">
-    <div class="popup popup-wrap popup-contact-us text-center">
-        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>
-        <h2 class="popup__title">Contact Us</h2>
-        <form class="login_form-wrapper popup-form" action="">
-            <div class="row">
-                <label class="label-text position-relative text-left">
-                    <span class="d-block form-label">First name</span>
-                    <input class="form-field" type="text" placeholder="Write your first name">
-                </label>
-                <label class="label-text position-relative text-left">
-                    <span class="d-block form-label">last name</span>
-                    <input class="form-field" type="text" placeholder="Write your last name">
-                </label>
-            </div>
-            <div class="row">
-                <label class="label-text position-relative text-left">
-                    <span class="d-block form-label">email</span>
-                    <input class="form-field" type="text" placeholder="nastia.kazachenko@gmail.com">
-                </label>
-                <label class="label-text position-relative text-left">
-                    <span class="d-block form-label">phone number</span>
-                    <input class="form-field" type="text" placeholder="Enter your phone">
-                </label>
-            </div>
-            <label class="label-text position-relative text-left">
-                <span class="d-block form-label">company name</span>
-                <input class="form-field" type="text" placeholder="Enter your email">
-            </label>
-            <div class="row">
-                <label class="label-text position-relative text-left">
-                    <span class="d-block form-label">title</span>
-                    <input class="form-field" type="text" placeholder="Enter your email">
-                </label>
-                <label class="label-text position-relative text-left">
-                    <span class="d-block form-label">users</span>
-                    <input class="form-field" type="text" placeholder="Enter your phone">
-                </label>
-            </div>
-            <label class="label-text position-relative text-left">
-                <span class="d-block form-label">company name</span>
-                <textarea class="form-field" type="text" placeholder="Enter your email"></textarea>
-            </label>
-            <div class="form-group product_updates">
-                <input type="checkbox" id="logged">
-                <label for="logged">Send a copy to my email</label>
-            </div>
-            <a href="Sign_Up_with_Google_Step_3.html" class="btn btn-main_big text-white update-btn">Send</a>
-        </form>
-    </div>
-</div>
+<!--<div class="popup-bg big">-->
+<!--    <div class="popup popup-wrap popup-contact-us text-center">-->
+<!--        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>-->
+<!--        <h2 class="popup__title">Contact Us</h2>-->
+<!--        <form class="login_form-wrapper popup-form" action="">-->
+<!--            <div class="row">-->
+<!--                <label class="label-text position-relative text-left">-->
+<!--                    <span class="d-block form-label">First name</span>-->
+<!--                    <input class="form-field" type="text" placeholder="Write your first name">-->
+<!--                </label>-->
+<!--                <label class="label-text position-relative text-left">-->
+<!--                    <span class="d-block form-label">last name</span>-->
+<!--                    <input class="form-field" type="text" placeholder="Write your last name">-->
+<!--                </label>-->
+<!--            </div>-->
+<!--            <div class="row">-->
+<!--                <label class="label-text position-relative text-left">-->
+<!--                    <span class="d-block form-label">email</span>-->
+<!--                    <input class="form-field" type="text" placeholder="nastia.kazachenko@gmail.com">-->
+<!--                </label>-->
+<!--                <label class="label-text position-relative text-left">-->
+<!--                    <span class="d-block form-label">phone number</span>-->
+<!--                    <input class="form-field" type="text" placeholder="Enter your phone">-->
+<!--                </label>-->
+<!--            </div>-->
+<!--            <label class="label-text position-relative text-left">-->
+<!--                <span class="d-block form-label">company name</span>-->
+<!--                <input class="form-field" type="text" placeholder="Enter your email">-->
+<!--            </label>-->
+<!--            <div class="row">-->
+<!--                <label class="label-text position-relative text-left">-->
+<!--                    <span class="d-block form-label">title</span>-->
+<!--                    <input class="form-field" type="text" placeholder="Enter your email">-->
+<!--                </label>-->
+<!--                <label class="label-text position-relative text-left">-->
+<!--                    <span class="d-block form-label">users</span>-->
+<!--                    <input class="form-field" type="text" placeholder="Enter your phone">-->
+<!--                </label>-->
+<!--            </div>-->
+<!--            <label class="label-text position-relative text-left">-->
+<!--                <span class="d-block form-label">company name</span>-->
+<!--                <textarea class="form-field" type="text" placeholder="Enter your email"></textarea>-->
+<!--            </label>-->
+<!--            <div class="form-group product_updates">-->
+<!--                <input type="checkbox" id="logged">-->
+<!--                <label for="logged">Send a copy to my email</label>-->
+<!--            </div>-->
+<!--            <a href="Sign_Up_with_Google_Step_3.html" class="btn btn-main_big text-white update-btn">Send</a>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</div>-->
 
-<div class="popup-bg big">
-    <div class="popup popup-wrap popup-get-in-touch text-center">
-        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>
-        <div class="blocks">
-            <div class="block-text">
-                <h3 class="block-text__title">Have a question?</h3>
-                <p class="block-text__description">Just fill the form or <a href="">email us.</a> Most of the time we respond in minutes. Our clients often rate us as
-                    best at customer support in the software industry.</p>
-                <h3 class="block-text__title">Can’t wait?</h3>
-                <div class="cant-wait">
-                    <a href="" class="cant-wait__link"><img src="assets/images/pricing/popup-arrow-right.svg" alt=""> Free service? Which is the catch?</a>
-                    <div class="cant-wait__text">Freedcamp’s CEO talks about it on Quora</div>
-                </div>
-                <div class="cant-wait">
-                    <a href="" class="cant-wait__link"><img src="assets/images/pricing/popup-arrow-right.svg" alt=""> Check Latest updates</a>
-                    <div class="cant-wait__text">See what we are up to and what has been launched.</div>
-                </div>
-            </div>
-            <div class="block-form">
-                <h3 class="block-text__title">Get in Touch</h3>
-                <form class="login_form-wrapper popup-form" action="">
-                    <label class="label-text position-relative text-left">
-                        <span class="d-block form-label">your name</span>
-                        <input class="form-field" type="text" placeholder="Enter your name">
-                    </label>
-                    <label class="label-text position-relative text-left">
-                        <span class="d-block form-label">email</span>
-                        <input class="form-field" type="text" placeholder="Enter your email">
-                    </label>
-                    <label class="label-text position-relative text-left">
-                        <span class="d-block form-label">message</span>
-                        <textarea class="form-field" type="text" placeholder="Write your message here"></textarea>
-                    </label>
-                    <a href="Sign_Up_with_Google_Step_3.html" class="btn btn-main_big text-white update-btn">Send</a>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+<!--<div class="popup-bg big">-->
+<!--    <div class="popup popup-wrap popup-get-in-touch text-center">-->
+<!--        <button class="popup__close-btn"><img src="assets/images/pricing/button-close.svg" alt="close"></button>-->
+<!--        <div class="blocks">-->
+<!--            <div class="block-text">-->
+<!--                <h3 class="block-text__title">Have a question?</h3>-->
+<!--                <p class="block-text__description">Just fill the form or <a href="">email us.</a> Most of the time we respond in minutes. Our clients often rate us as-->
+<!--                    best at customer support in the software industry.</p>-->
+<!--                <h3 class="block-text__title">Can’t wait?</h3>-->
+<!--                <div class="cant-wait">-->
+<!--                    <a href="" class="cant-wait__link"><img src="assets/images/pricing/popup-arrow-right.svg" alt=""> Free service? Which is the catch?</a>-->
+<!--                    <div class="cant-wait__text">Freedcamp’s CEO talks about it on Quora</div>-->
+<!--                </div>-->
+<!--                <div class="cant-wait">-->
+<!--                    <a href="" class="cant-wait__link"><img src="assets/images/pricing/popup-arrow-right.svg" alt=""> Check Latest updates</a>-->
+<!--                    <div class="cant-wait__text">See what we are up to and what has been launched.</div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="block-form">-->
+<!--                <h3 class="block-text__title">Get in Touch</h3>-->
+<!--                <form class="login_form-wrapper popup-form" action="">-->
+<!--                    <label class="label-text position-relative text-left">-->
+<!--                        <span class="d-block form-label">your name</span>-->
+<!--                        <input class="form-field" type="text" placeholder="Enter your name">-->
+<!--                    </label>-->
+<!--                    <label class="label-text position-relative text-left">-->
+<!--                        <span class="d-block form-label">email</span>-->
+<!--                        <input class="form-field" type="text" placeholder="Enter your email">-->
+<!--                    </label>-->
+<!--                    <label class="label-text position-relative text-left">-->
+<!--                        <span class="d-block form-label">message</span>-->
+<!--                        <textarea class="form-field" type="text" placeholder="Write your message here"></textarea>-->
+<!--                    </label>-->
+<!--                    <a href="Sign_Up_with_Google_Step_3.html" class="btn btn-main_big text-white update-btn">Send</a>-->
+<!--                </form>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/sliders.js"></script>
