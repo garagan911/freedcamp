@@ -130,34 +130,19 @@ buttonLogin.click(() => {
 //slick slider
 
 $('.featured_slider-fluid').slick({
-    slidesToShow: 8,
+    slidesToShow: 6,
     slidesToScroll: 1,
     dots: false,
     centerMode: true,
     focusOnSelect: true,
     variableWidth: true,
+    infinite: true,
     responsive: [
-        {
-            breakpoint: 2075,
-            settings: {
-                slidesToShow: 7,
-                slidesToScroll: 2,
-                infinite: true,
-            }
-        },
-        {
-            breakpoint: 1815,
-            settings: {
-                slidesToShow: 6,
-                slidesToScroll: 2,
-                infinite: true,
-            }
-        },
         {
             breakpoint: 1675,
             settings: {
                 slidesToShow: 5,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 infinite: true,
             }
         },
@@ -165,7 +150,7 @@ $('.featured_slider-fluid').slick({
             breakpoint: 1380,
             settings: {
                 slidesToShow: 4,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 infinite: true,
             }
         },
@@ -173,7 +158,7 @@ $('.featured_slider-fluid').slick({
             breakpoint: 1140,
             settings: {
                 slidesToShow: 3,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 infinite: true,
             }
         },
@@ -181,7 +166,7 @@ $('.featured_slider-fluid').slick({
             breakpoint: 1024,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 infinite: true,
             }
         },
