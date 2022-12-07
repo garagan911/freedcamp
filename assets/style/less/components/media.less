@@ -3272,7 +3272,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .table_head, .table_cell {
+  .table_head, .table_cell, .table_head.cell-free {
     display: none;
   }
 
@@ -3288,7 +3288,11 @@
     text-align: right;
   }
 
-  .table-wrapper {
+  .table_head-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .table_body-wrap {
     grid-template-columns: repeat(2, 1fr);
   }
 

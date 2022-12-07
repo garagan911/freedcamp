@@ -297,17 +297,25 @@
 .slider-front-nav.stop-transform .slick-track {
   transform: translate3d(0px, 0px, 0px) !important;
 }
+
 .table{
   &-wrapper{
     margin-top: 24px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
     &:first-of-type{
       margin-top: 0;
     }
   }
   &_head{
     border-bottom: 1px solid @stroke_light;
+    &-wrap{
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      cursor: pointer;
+      //&:first-of-type{
+      //  margin-top: 0;
+      //}
+    }
     &.collapse{
       .collapse-text{
         max-width: 184px;
@@ -315,6 +323,8 @@
       .chevron{
         margin-right: 17px;
         max-width: 10px;
+        transform: rotate(-90deg);
+        transition: transform .3s;
       }
     }
     &.collapse{
@@ -324,6 +334,16 @@
     }
     &.price{
       padding-right: 12px;
+    }
+  }
+  &_body{
+    &-wrap{
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      //&:first-of-type{
+      //  margin-top: 0;
+      //}
     }
   }
   &_cell{
@@ -502,5 +522,24 @@ a.user-billing_violet{
 .pricing.featured{
   .featured_slider-fluid .file-edit_block-title .icon-block {
     background: aliceblue;
+  }
+}
+
+
+//accordion
+
+.table_body-wrap{
+  max-height: 0;
+  transition: max-height 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+.table_head-wrap{
+  &.is-open{
+    .collapse{
+      .chevron{
+        transform: rotate(0deg);
+      }
+    }
   }
 }
