@@ -179,16 +179,16 @@ $('.featured_slider-fluid').slick({
 $('.blocks_slider').slick({
     speed: 300,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
     variableWidth: true,
     responsive: [
         {
-            breakpoint: 1024,
+            breakpoint: 1025,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
+                slidesToScroll: 1,
                 infinite: true,
                 dots: true
             }
@@ -203,8 +203,11 @@ $('.blocks_slider').slick({
         {
             breakpoint: 540,
             settings: {
+                centerMode: true,
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
             }
         }
         // You can unslick at a given breakpoint now by adding:

@@ -542,6 +542,18 @@
   }
 }
 
+@media screen and (max-width: 1240px) {
+  .blocks_slider {
+    .slick-list {
+      padding: 0 24px;
+    }
+  }
+  .experience_container{
+    &.home{
+      padding: 0;
+    }
+  }
+}
 @media screen and (max-width: 1230px) {
   .freedcamp-people .blocks {
     justify-content: space-around;
@@ -4038,7 +4050,8 @@
   .experience {
     .blocks {
       &_item {
-        margin: 0;
+        width: 100%;
+        max-width: 340px;
       }
     }
   }
